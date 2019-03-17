@@ -228,7 +228,7 @@ hr.small {
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   margin-top: 0;
 }
@@ -399,7 +399,7 @@ body {
 }
 
 div.notepad-index-post-tags {
-    font-size: 16px;
+    font-size: 14px;
     float: none;
     color: black;
     padding-top: 1.25rem;
