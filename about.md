@@ -9,7 +9,7 @@ The Canadian Pacific Robotic Ocean Observing Facility is a state of the art faci
 
 Ocean change, its potential for life, and its potential as a source of energy are still poorly understood largely because of a lack of data. We want to understand what drives ocean and climate variability, which will allow us to better predict the weather and climate changes across Canada. We want to be able to better predict fish stocks in a timely manner so that competing economic and ecological concerns are properly balanced. We want to help move remote coastal communities and the country as a whole towards carbon-free energy sources by exploiting ocean waves and wind.
 
-<img src="/img/CPROOFSketch.jpg" alt="C-PROOF Schematic" style="width:85%">
+<img src="img/CPROOFSketch.jpg" alt="C-PROOF Schematic" style="width:85%">
 
 C-PROOF will deploy autonomous gliders and floats to explore and monitor the ocean using revolutionary new sensors to track life, quantify turbulence, and measure ocean nutrients. We will also deploy mooring arrays with innovative instrumentation capable of measuring ocean winds and waves with unprecedented fidelity.
 
