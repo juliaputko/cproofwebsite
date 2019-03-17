@@ -1,32 +1,37 @@
 ---
 layout: project
-title: "Members"
-description: "Collaborators working on this project."
+title: "People"
+description: "Team working on this project."
 header-img: "img/RecoveryMar19.png"
 category: members
 ---
 <hr>
 
+<h2>Investigators</h2>
 {% for member in site.data.members %} {% if member.visible == true %}
 
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
 
-	<h1>{{ member.name }}</h1>
+	<h3>{{ member.name }}</h3>
 
-	<h2>{{ member.role }}</h2>
+	{{ member.role }}
 
-	{% if member.github %}
-	<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
-	{% endif %}
-	{% if member.gplus %}
-	<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
-	{% endif %}
-	{% if member.url %}
-	<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
-	{% endif %}
 
 	</br>
-
+	{% if member.org %}
+	{{member.title}}, {{ member.org }}
+	{% endif %}
+{% if member.url %}
+<br>
+<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+{% endif %}
+{% if member.github %}
+<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+{% endif %}
+{% if member.gplus %}
+<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+{% endif %}
+<br/>
 	{% if member.bio %}
 	{{ member.bio }}
 	{% endif %}
@@ -34,3 +39,42 @@ category: members
 	<hr>
 
 {% endif %}{% endfor %}
+
+<h2> Technicians </h2>
+
+<h3>James Pegg</h3>
+Marine Technician<br>
+Institute of Ocean Sciences</br>
+Lead technician for C-PROOF, James comes from Pacific Biological Station
+where he specialized in submeersible vehicles.
+
+<h3>Katerina Colbourne</h3>
+Marine Technician<br>
+Univrsity of Victoria</br>
+Katerina joined C-PROOF after working with the Ocean Tracking Network at
+Dalhousie University.
+
+<h2>Scientific Collaborators</h2>
+<ul>
+
+<li> Lu, Youyu Research Scientist, Department of Fisheries and Oceans Bedford Institute of Ocean Sciences</li>
+<li>Pena, Angelica, Research Scientists, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+<li>Hunt, Brian Biological Oceanographer, Hakai Institute</li>
+<li>Hannah, Charles, Research Scientists, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+<li> Perry , Ian Research Scientist, Department of Fisheries and Oceans Pacific Biological Station</li>
+<li>Cullen, Jay Professor, University of Victoria, School of Earth and Ocean Sciences</li>
+<li>Allen, Susan Professor, University of British Columbia, Earth, Ocean, and Atmospheric Sciences</li>
+<li>Wild, Peter, Professor, Director IESVic, University of Victoria Mechanical Engineering</li>
+<li>Poullot, Benoit, Environment and Climate Change Canada Environmental Numerical Weather Pred.</li>
+<li>Fennel, Katja Professor Dalhousie University Department of Oceanography</li>
+<li>Riemann, Randy Director, BC. Hydro Resource Planning</li>
+<li>Wolk, Fabian President, Rockland Scientific Cascadia Coast Research</li>
+<li>Hiles, Clayton Principal Engineer, Cascadia Coast Research</li>
+<li>Dower, John Professor, University of Victoria Biology</li>
+<li>Miller, Lisa Research Scientist, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+<li>Ianson, Debby Research Scientist, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+<li>Brydon, Stephen Director, BC Ministry of Energy and Mines Innovative Clean Energy Fund</li>
+<li>Monahan, Adam Professor, University of Victoria, School of Earth and Ocean Sciences</li>
+<li>Hebert, David Research Scientist, Department of Fisheries and Oceans Bedford Institute of Oceanography</li>
+<li>Pawlowicz, Richard  Professor, University of British Columbia, Earth, Ocean, & Atmospheric Sciences</li>
+</ul>

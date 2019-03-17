@@ -5,21 +5,52 @@ header-img: "img/RecoveryMar19.png"
 
 <p>The Canadian-Pacific Robotic Ocean Observing Facility is a CFI/BCKDF-funded project to build  ocean observing
 capcacity off the British Columbia coast.  A fleet of autonomous gliders, floats, and moorings will provide ocean scientists
-with long-term monitoring of the ocean at the small scales important to resolve upper ocean physical and biological properties</p>
+with long-term monitoring of the ocean at the small scales important to resolve upper ocean physical and biological properties.</p>
 
 <hr/>
-<h2>Recent news</h2>
 
+<h2>Partners</h2>
+
+<h3>Funding</h3>
+
+<table style="width:100%">
+  <tr>
+  {% for partner in site.data.partners %}{% if partner.type == "funder" %}{% if partner.visible == true %}
+    <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
+    {% if forloop.index == 3 %}
+      </tr>
+      <tr>
+    {% endif %}
+  {% endif %}{% endif %}{% endfor %}
+</tr>
+</table>
+
+<h3>Industry Partners</h3>
+
+<tr>
+{% for partner in site.data.partners %}{% if partner.type == "industry" %}{% if partner.visible == true %}
+  <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
+  {% if forloop.index == 3 %}
+    </tr>
+    <tr>
+  {% endif %}
+{% endif %}{% endif %}{% endfor %}
+</tr>
+</table>
+
+<hr/>
+
+<h2>Recent news</h2>
 
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
+        <h4 class="post-title">            {{ post.title }}
+        </h4>
         {% if post.subtitle %}
-        <h3 class="post-subtitle">
+        <h5 class="post-subtitle">
             {{ post.subtitle }}
-        </h3>
+        </h5>
         {% endif %}
     </a>
     <p class="post-meta" style="margin-bottom:5px">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
