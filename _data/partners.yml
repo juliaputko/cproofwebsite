@@ -1,0 +1,68 @@
+# Members
+
+- name: Canadian Foundation of Innovation
+  img: img/logos/CFI.png
+  url: http://www.innovation.ca
+  type: funder
+  visible: true
+
+- name: British Columbia Knowldge Development Fund
+  img: img/logos/BCKDF.png
+  url: https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/technology-innovation/bckdf
+  type: funder
+  visible: true
+
+- name: Fisheries and Oceans Canada
+  img: img/logos/DFO.png
+  url: http://www.dfo-mpo.gc.ca/index-eng.htm
+  type: funder
+  visible: true
+
+- name: Hakai Institute
+  img: img/logos/Hakai.png
+  url: http://hakai.org
+  type: funder
+  visible: true
+
+- name: NSERC-CRSNG
+  img: img/logos/NSERC-CRSNG.png
+  url: http://www.nserc-crsng.gc.ca
+  type: funder
+  visible: true
+
+
+- name: Ocean Networks Canada
+  img: img/logos/ONC.png
+  url: http://www.oceannetworks.ca
+  type: funder
+  visible: true
+
+- name: Axys Technologies
+  img: img/logos/AXYS.jpg
+  url: http://axystechnologies.com
+  type: industry
+  visible: true
+
+- name: Teledyne-Webb Research
+  img: img/logos/teledyne.svg
+  url: http://www.teledynemarine.com/webb-research/
+  type: industry
+  visible: true
+
+- name: Alseamar Alcen
+  img: img/logos/alseamar.svg
+  url: https://www.alseamar-alcen.com
+  type: industry
+  visible: true
+
+- name: Rockland Scientific
+  img: img/logos/Rockland.png
+  url: https://rocklandscientific.com
+  type: industry
+  visible: true
+
+- name: ASL Environmental Sciences
+  img: img/logos/ASL.png
+  url: https://aslenv.com
+  type: industry
+  visible: true
