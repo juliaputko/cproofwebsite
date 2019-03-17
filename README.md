@@ -1,28 +1,26 @@
-# Project Pages
+# Page for C-PROOF website
 
-Project Pages is Jekyll Template specifically geared towards collaborative science. For more information, click [here](https://github.com/projectpages/project-pages/wiki/).
+Based off https://projectpages.github.io.  
 
-# Nav Bar Jumbles
+## Installing and editing.
 
-If you have seemingly random pages popping up on your Nav Bar recently, this is due to the fact that GitHub/Jekyll changed a fundemental rule they used to render pages. 
+The workflow is a typical `git` workflow.  You will need to install git.
 
-## CAUSE:
-It used to be that if a markdown file didn't have `---` frontmatter at the beginning, it wasn't rendered as a page. This was changed very recently (like in the last 2 days) so that every markdown file anywhere no matter what gets rendered as a page.  
+1. Fork the repository to your own repositories by clicking the `Fork` button
+on the upper-right in Github
 
-## FIX:
+2. Clone the repository to your machine: `git clone https://github.com/yourusername/website.git`
 
-1) Go to:
+3. Make the `c-proof` version of the webpage a `remote` called `upstream`
+`git remote add upstream https://github.com/c-proof/website.git`  We do this
+so we can sync with other people's changes as they are merged on the original.
 
-`project-pages/plugin/projector/` or `yourreponame/plugin/projector/` and delete the `README.md` file. This can be done graphically for the non-Git-savvy by simply going to your:
+4. Checkout a new branch:  `git checkout -b new-branch-name`
 
-GitHub account -> Your Profile -> Repositories -> Project-Pages/Your Repo -> Plugin -> projector 
+4.  Edit something;  If you add new files remember to do `git add newfilepath/newfilename`.
 
-and clicking on the files, then clicking on the "thrash can / delete this file" icon on the top right corner of the file.
+5. Commit changes: `git commit -a -m "EDIT: helpful message about your change"`
 
-2) Go to:
+6. Push the changes to *your* remote:   `git push origin new-branch-name`  
 
-`project-pages/css/theme/` or `yourreponame/css/theme/` and delete the `README.md` file. This can be done graphically for the non-Git-savvy by simply going to your:
-
-GitHub account -> Your Profile -> Repositories -> Project-Pages/Your Repo -> Plugin -> projector 
-
-and clicking on the files, then clicking on the "thrash can / delete this file" icon on the top right corner of the file.
+7 git will now suggest that you can make a pull request to `c-proof`.  Do so and then it will get merged if all is OK
