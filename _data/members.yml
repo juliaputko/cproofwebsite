@@ -3,24 +3,92 @@
 - name: Jody Klymak
   role: Principal Investigator
   img: http://valdez.seos.uvic.ca/~jklymak/images/JMKJune2011.jpg
+  org: University of Victoria
   github: jklymak
-  bio: Jody Klymak is a Professor of Oceanography at the University of Victoria.  He studies ocean mixing processes including internal waves, eddies, and fronts.
+  title:  Professor of Physical Oceanography
+  bio: Studies ocean mixing processes including internal waves, eddies, and fronts.
   url: http://web.uvic.ca/~jklymak/
   groups: gliders floats mooring
   visible: true
 
 - name: Brad Buckham
-  role: Co-Investigator; Lead Wave and Offshore Wind Observations
-  img: https://www.uvic.ca/engineering/mechanical/assets/images/photos/profiles/bbuckham.jpg
+  role: Co-Investigator; Lead wave and offshore wind observations
+  img: img/bbuckham.jpg
+  org: University of Victoria
   github:
-  bio: Brad Buckham is an Associate Professor in Ocean Engineering at the University of Victoria.  His group specializes in offshore renewable energy, with a particular focus on characterizing the British Columbia wave energy supply.
+  title:  Associate Professor in Ocean Engineering; Director West Coast Wave Initiative
+  bio: Specializes in offshore renewable energy, with a particular focus on characterizing the British Columbia wave energy supply.
   url: https://www.uvic.ca/research/projects/wcwi/index.php
   groups: energy
   visible: true
 
-- name: Surya R. Kalidindi
-  role: Materials Informatics
-  img: https://avatars1.githubusercontent.com/u/6601815?v=3&s=400
-  bio: Dr. Kalidindi’s research interests are broadly centered on designing material internal structure (including composition) for optimal performance in any selected application and identifying hybrid processing routes for its manufacture. To this end, he has employed a harmonious blend of experimental, theoretical, and numerical approaches in his research.
-  url: http://mined.gatech.edu/
-  visible: false
+- name: Roberta Hamme
+  role: Co-Investigator; Lead profiling floats
+  img: https://web.uvic.ca/~rhamme/rchpic4.jpg
+  org: University of Victotria
+  title: Associate Professor in Marine Chemistry,  Tier-II CRC in Ocean Carbon Dynamics
+  bio: Research works towards understanding what drives the cycles of gases like carbon dioxide and oxygen in the ocean.
+  url: https://web.uvic.ca/~rhamme/
+  visible: true
+
+- name: Stephanie Waterman
+  role: Co-Investigator; Lead gliders
+  img: http://www.stephaniewaterman.ca/Work/uploads/4/3/3/5/43351239/published/stephanie-waterman.jpg?1541102072
+  org: University of British Columbia
+  title: Assistant Professor Physical Oceanography, Tier-II CRC in Ocean Turbulence
+  url: http://www.stephaniewaterman.ca/Work/
+  visible: true
+  bio: Ocean turbulence & ocean mixing from both observational & theoretical perspectives.
+
+- name: Tetjana Ross
+  role: Co-Investigator
+  img: img/Ross.jpg
+  visible: true
+  title: Research Scientist
+  org: Institute of Ocean Sciences
+  bio: Novel techniques to observe the ocean and understand its dynamics.
+
+- name: Curran Crawford
+  role: Co-Investigator
+  img: img/Crawford.jpg
+  title: Associate Professor, Renewable Energy Technologies
+  org: University of Victoria
+  url: https://ssdl.uvic.ca
+  bio: Applies advanced modelling tools to simulate energy systems.
+  visible: true
+
+- name: Philippe Tortell
+  url: https://www.eoas.ubc.ca/people/philippetortell
+  role: Co-Investigator
+  img: img/tortell.jpg
+  title: Professor of Biological Oceanography
+  org: University of British Columbia
+  bio: A sea-going oceanographer with broad interests in marine biogeochemical cycles.
+  visible: true
+
+- name: Diana Varela
+  visible: true
+  img: img/varela.jpg
+  url: https://varelalab.wordpress.com
+  title: Professor, Phytoplankton Physiology
+  org: University of Victoria
+  role: Co-Investigator
+  bio: Seeks to understand variations in marine primary productivity and cycling of nutrient elements in the oceans.
+
+- name: Maycira Costa
+  visible: true
+  url: http://uvicspectral.com/#about-us
+  title: Professor, Ocean Optics
+  org: University of Victoria
+  role: Co-Investigator
+  bio: Invstigates the interaction of light eenergy with organic and inorganic material in ocean waters
+  img: img/costa.jpg
+
+- name: Roger Francois
+  visible: true
+  role: Co-Investigator
+  title: Professor of Chemical Oceanography, CRC Tier I
+  org: University of British Columbia
+  img: img/francois.jpg
+  url: https://www.eoas.ubc.ca/people/rogerfrancois
+  bio: Water column radiochemistry to constrain abyssal circulation and scavenging.

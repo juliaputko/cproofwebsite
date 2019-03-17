@@ -1,32 +1,37 @@
 ---
 layout: project
-title: "Members"
-description: "Collaborators working on this project."
+title: "People"
+description: "Team working on this project."
 header-img: "img/RecoveryMar19.png"
 category: members
 ---
 <hr>
 
+<h2>Investigators</h2>
 {% for member in site.data.members %} {% if member.visible == true %}
 
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
 
-	<h1>{{ member.name }}</h1>
+	<h3>{{ member.name }}</h3>
 
-	<h2>{{ member.role }}</h2>
+	{{ member.role }}
 
-	{% if member.github %}
-	<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
-	{% endif %}
-	{% if member.gplus %}
-	<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
-	{% endif %}
-	{% if member.url %}
-	<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
-	{% endif %}
 
 	</br>
-
+	{% if member.org %}
+	{{member.title}}, {{ member.org }}
+	{% endif %}
+{% if member.url %}
+<br>
+<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+{% endif %}
+{% if member.github %}
+<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+{% endif %}
+{% if member.gplus %}
+<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+{% endif %}
+<br/>
 	{% if member.bio %}
 	{{ member.bio }}
 	{% endif %}
@@ -34,3 +39,51 @@ category: members
 	<hr>
 
 {% endif %}{% endfor %}
+
+<h2>Scientific Collaborators</h2>
+<ul>
+
+<li> Lu, Youyu Research Scientist, Department of Fisheries and Oceans Bedford Institute of Ocean Sciences</li>
+
+Department of Fisheries and Oceans Institute of Ocean Sciences
+<li>Hunt, Brian Biological Oceanographer </li>
+
+<li> Perry , Ian Research Scientist
+Department of Fisheries and Oceans Pacific Biological Station</li>
+
+<li>Cullen, Jay Professor
+University of Victoria
+School of Earth and Ocean Sciences</li>
+<li>Allen, Susan Professor
+University of British Columbia
+Earth, Ocean, and Atmospheric Sciences</li>
+<li>Wild, Peter
+Professor, Director IESVic
+University of Victoria Mechanical Engineering</li>
+Environment and Climate Change Canada Environmental Numerical Weather Pred.
+
+<li>Fennel, Katja Professor
+Dalhousie University Department of Oceanography</li>
+BC. Hydro Resource Planning
+Wolk, Fabian President
+Rockland Scientific Cascadia Coast Research
+
+Hiles, Clayton Principal Engineer
+
+Dower, John Associate Professor
+University of Victoria Biology
+Miller, Lisa Research Scientist
+Ianson, Debby Research Scientist
+Department of Fisheries and Oceans Institute of Ocean Sciences
+Department of Fisheries and Oceans Institute of Ocean Sciences
+Brydon, Stephen Director
+BC Ministry of Energy and Mines Innovative Clean Energy Fund
+Monahan, Adam Professor
+University of Victoria
+School of Earth and Ocean Sciences
+Hebert, David Research Scientist
+Department of Fisheries and Oceans Bedford Institute of Oceanography
+Pawlowicz, Richard Associate Professor
+University of British Columbia
+Earth, Ocean, & Atmospheric Sciences
+</ul>
