@@ -1,20 +1,20 @@
 # Site settings
 title: C-PROOF
 description: "Canadian-Pacific Robotic Ocean Observing Facility"
-url: "https://projectpages.github.io"
+# base url w/o any subdirectoriries
+url: "http://cproof.uvic.ca"
 
 
 # Secondary Parameters
+# rest of non-domain base url...
 baseurl: ""
 header-img: img/RecoveryMar19.png
 headercolor: "#FFFFFF"
 # logo: /project-pages/img/logos/Project-Pages-New-Logo-Inverted.png
 
 # Tertiary Parameters
-github_username:  projectpages
-project_repository: project-pages
-g-analytics: UA-75881392-1
-altmetric: true
+github_username:  cproof
+project_repository: cproof
 
 # Build settings
 gems: [jekyll-paginate]
@@ -33,7 +33,7 @@ defaults:
       type: "pages"
     values:
       layout: "project"
-      header-img: "img/home-bg.jpg"
+      header-img: "img/RecoveryMar19.png"
 
 # Prose Settings
 prose:
