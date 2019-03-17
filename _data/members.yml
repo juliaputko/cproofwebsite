@@ -1,0 +1,26 @@
+# Members
+
+- name: Jody Klymak
+  role: Principal Investigator
+  img: http://valdez.seos.uvic.ca/~jklymak/images/JMKJune2011.jpg
+  github: jklymak
+  bio: Jody Klymak is a Professor of Oceanography at the University of Victoria.  He studies ocean mixing processes including internal waves, eddies, and fronts.
+  url: http://web.uvic.ca/~jklymak/
+  groups: gliders floats mooring
+  visible: true
+
+- name: Brad Buckham
+  role: Co-Investigator; Lead Wave and Offshore Wind Observations
+  img: https://www.uvic.ca/engineering/mechanical/assets/images/photos/profiles/bbuckham.jpg
+  github:
+  bio: Brad Buckham is an Associate Professor in Ocean Engineering at the University of Victoria.  His group specializes in offshore renewable energy, with a particular focus on characterizing the British Columbia wave energy supply.
+  url: https://www.uvic.ca/research/projects/wcwi/index.php
+  groups: energy
+  visible: true
+
+- name: Surya R. Kalidindi
+  role: Materials Informatics
+  img: https://avatars1.githubusercontent.com/u/6601815?v=3&s=400
+  bio: Dr. Kalidindi’s research interests are broadly centered on designing material internal structure (including composition) for optimal performance in any selected application and identifying hybrid processing routes for its manufacture. To this end, he has employed a harmonious blend of experimental, theoretical, and numerical approaches in his research.
+  url: http://mined.gatech.edu/
+  visible: false
