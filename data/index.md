@@ -10,9 +10,13 @@ Test deployments are starting to be available in a rudimentary form.  Of interes
 
 **All data here is preliminary and should not be used for science.**
 
-### Rosie713:
+### DFO-Rosie713:
 
-All of Rosie's deployments are [Here](../gliderdata/deployments/rosie713/)
+All of Rosie's deployments are [Here](../gliderdata/deployments/dfo-rosie713/)
+
+### DFO-Eva035:
+
+All of Rosie's deployments are [Here](../gliderdata/deployments/dfo-eva035/)
 
 ### Walle652:
 
