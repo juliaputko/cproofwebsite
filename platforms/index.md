@@ -6,7 +6,6 @@ header-img: "img/GliderWalle.jpg"
 category: platforms
 ---
 
-
 ## Gliders:
 
   - [Rosie713](Rosie/): Teledyne Webb G3
