@@ -16,11 +16,11 @@ All of Rosie's deployments are [Here](../gliderdata/deployments/dfo-rosie713/)
 
 ### DFO-Eva035:
 
-All of Rosie's deployments are [Here](../gliderdata/deployments/dfo-eva035/)
+All of Eva's deployments are [Here](../gliderdata/deployments/dfo-eva035/)
 
-### Walle652:
+### DFO-Walle652:
 
-All of Wall-e's deployments are [Here](../gliderdata/deployments/walle652/).
+All of Wall-e's deployments are [Here](../gliderdata/deployments/dfo-walle652/).
 
 ### Mike-rorider (Mike579):
 
