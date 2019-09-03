@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-140, 50], [-140, 51], [-141, 52]]
+      },
+      "properties": {
+        "deployment-start": "2013-01-22 10:24:59",
+        "name": "Walle",
+        "url": "http://cproof.uvic.ca",
+        "color": "#DD0000"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-144, 50], [-140, 51.5], [-141, 51]]
+      },
+      "properties": {
+        "deployment-start": "2014-01-22 10:24:59",
+        "name": "Walle2",
+        "url": "http://cproof.uvic.ca",
+        "color": "#00DD00",
+        "glider_type": "Slocum G2",
+        "active": "False"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "deployment-start": "2019-07-18 10:24:59",
+        "name": "dfo-walle652-20190718",
+        "url": "http://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20190718/",
+        "color": "#0000DD",
+        "glider_type": "Slocum G2",
+        "active": "True"
+      }
+    }
+  ]
+}
