@@ -1,0 +1,281 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-140, 50], [-140, 51], [-141, 52]]
+      },
+      "properties": {
+        "time": "2013-01-22 10:24:59",
+        "name": "Walle",
+        "url": "http://cproof.uvic.ca",
+        "color": "#DD0000"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-144, 50], [-140, 51.5], [-141, 51]]
+      },
+      "properties": {
+        "time": "2014-01-22 10:24:59",
+        "name": "Walle2",
+        "url": "http://cproof.uvic.ca",
+        "color": "#00DD00"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-147, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle10",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    },
+    {"type": "Feature",
+      "geometry":
+      { "type": "LineString",
+        "coordinates": [[-146, 50], [-146, 51.5], [-147, 51]]
+      },
+      "properties": {
+        "time": "2015-01-22 10:24:59",
+        "name": "Walle3",
+        "url": "http://cproof.uvic.ca",
+        "color": "#0000DD"
+      }
+    }
+  ]
+}
