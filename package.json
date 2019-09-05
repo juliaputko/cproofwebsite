@@ -18,5 +18,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll.git"
+    },
+    "dependencies": {
+        "bower": "^1.8.8",
+        "jQuery-QueryBuilder": "^2.5.2"
     }
 }
