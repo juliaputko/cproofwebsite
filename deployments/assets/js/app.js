@@ -109,6 +109,20 @@ var properties = [
   info: true
 }];
 
+// some stations...
+var LineP = {
+  "type": "FeatureCollection",
+  "name": "Line P Stations",
+  "features": [
+    { "type": "Feature", "properties": { "name": "P4" }, "geometry": { "type": "Point", "coordinates": [ -126. - 40./60., 48.+39./60. ] } },
+    { "type": "Feature", "properties": { "name": "P8" }, "geometry": { "type": "Point", "coordinates": [ -128. - 40./60., 48.+49./60. ] } },
+    { "type": "Feature", "properties": { "name": "P12" }, "geometry": { "type": "Point", "coordinates": [ -130. - 40./60., 48.+58.2/60. ] } },
+    { "type": "Feature", "properties": { "name": "P16" }, "geometry": { "type": "Point", "coordinates": [ -134. - 40./60., 49.+17./60. ] } },
+    { "type": "Feature", "properties": { "name": "P20" }, "geometry": { "type": "Point", "coordinates": [ -138. - 40./60., 49.+34./60. ] } },
+    { "type": "Feature", "properties": { "name": "P26" }, "geometry": { "type": "Point", "coordinates": [ -145., 50. ] } },
+  ]
+};
+
 $(function() {
   $(".title").html(config.title);
   $("#layer-name").html(config.layerName);
@@ -247,7 +261,6 @@ function resetHighlight(e) {
    featureLayer.resetStyle(e.target);
 }
 
-
 var featureLayer = L.geoJson(null, {
   name: "Glider Tracks",
   filter: function(feature, layer) {
@@ -289,6 +302,22 @@ var slocumIcon = L.icon({
   iconAnchor:   [18, 22]
 });
 
+var linepLayer = L.geoJson(null, {
+  pointToLayer: function(feature, latlng){
+    label = String(feature.properties.name); // Must convert to string, .bindTooltip can't use straight 'feature.properties.attribute'
+    var marker = new L.CircleMarker(latlng, {
+      radius: 2,
+      fillColor: 'darkblue',
+      color: 'darkblue',
+      opacity: 0.7,
+      fillOpacity: 0.7,
+      zIndexOffset: -10
+    });
+    return marker;
+  }
+})
+
+linepLayer.addData(LineP);
 
 var glideLayer = L.layerGroup(null, {name: "Glider Marker"})
 
@@ -328,7 +357,7 @@ $.getJSON(config.geojson, function (data) {
 });
 
 var map = L.map("map", {
-  layers: [mapboxOSM, mapboxOcean, featureLayer, highlightLayer, glideLayer]
+  layers: [mapboxOSM, mapboxOcean, featureLayer, highlightLayer, glideLayer, linepLayer]
 }).fitWorld();
 
 // ESRI geocoder
@@ -363,8 +392,9 @@ var baseLayers = {
   "Ocean Topography": mapboxOSM,
 };
 var overlayLayers = {
+  "Waypoints":      linepLayer,
   "Glider Tracks": featureLayer,
-  "Active Gliders": glideLayer
+  "Active Gliders": glideLayer,
 };
 var layerControl = L.control.layers(baseLayers, overlayLayers, {
   collapsed: isCollapsed
@@ -389,7 +419,12 @@ function urlFormatter (value, row, index) {
 function buildFilters() {
   $("#query-builder").queryBuilder({
     allow_empty: true,
-    filters: filters
+    filters: filters,
+    plugins: {
+      'sql-support': {
+        boolean_as_integer: false
+      }
+    }
   });
 }
 
@@ -405,6 +440,7 @@ function applyFilter() {
 		syncTable();
 	});
 }
+
 
 function buildTable() {
   $("#table").bootstrapTable({
@@ -430,8 +466,8 @@ function buildTable() {
     }
   });
 
-  //map.fitBounds(featureLayer.getBounds());
-  map.setView([50., -130], zoom=6)
+  map.fitBounds(featureLayer.getBounds());
+  // map.setView([50., -130], zoom=6)
 
   $(window).resize(function () {
     $("#table").bootstrapTable("resetView", {
