@@ -1,7 +1,7 @@
 var config = {
   geojson: "/gliderdata/deployments/cproof-deployments.geojson",
   title: "C-PROOF Glider Deployments",
-  layerName: "Gliders",
+  layerName: "Glider Tracks",
   sortProperty: "deployment_start",
   sortOrder: "desc"
 };
@@ -109,89 +109,6 @@ var properties = [
   info: true
 }];
 
-// old functions when there was a charts button.  See geojson-dashboard
-function drawCharts() {
-  // Status
-  $(function() {
-    var result = alasql("SELECT status AS label, COUNT(*) AS total FROM ? GROUP BY status", [features]);
-    var columns = $.map(result, function(status) {
-      return [[status.label, status.total]];
-    });
-    var chart = c3.generate({
-        bindto: "#status-chart",
-        data: {
-          type: "pie",
-          columns: columns
-        }
-    });
-  });
-
-  // Zones
-  $(function() {
-    var result = alasql("SELECT congress_park_inventory_zone AS label, COUNT(*) AS total FROM ? GROUP BY congress_park_inventory_zone", [features]);
-    var columns = $.map(result, function(zone) {
-      return [[zone.label, zone.total]];
-    });
-    var chart = c3.generate({
-        bindto: "#zone-chart",
-        data: {
-          type: "pie",
-          columns: columns
-        }
-    });
-  });
-
-  // Size
-  $(function() {
-    var sizes = [];
-    var regeneration = alasql("SELECT 'Regeneration (< 3\")' AS category, COUNT(*) AS total FROM ? WHERE CAST(dbh_2012_inches_diameter_at_breast_height_46 as INT) < 3", [features]);
-    var sapling = alasql("SELECT 'Sapling/poles (1-9\")' AS category, COUNT(*) AS total FROM ? WHERE CAST(dbh_2012_inches_diameter_at_breast_height_46 as INT) BETWEEN 1 AND 9", [features]);
-    var small = alasql("SELECT 'Small trees (10-14\")' AS category, COUNT(*) AS total FROM ? WHERE CAST(dbh_2012_inches_diameter_at_breast_height_46 as INT) BETWEEN 10 AND 14", [features]);
-    var medium = alasql("SELECT 'Medium trees (15-19\")' AS category, COUNT(*) AS total FROM ? WHERE CAST(dbh_2012_inches_diameter_at_breast_height_46 as INT) BETWEEN 15 AND 19", [features]);
-    var large = alasql("SELECT 'Large trees (20-29\")' AS category, COUNT(*) AS total FROM ? WHERE CAST(dbh_2012_inches_diameter_at_breast_height_46 as INT) BETWEEN 20 AND 29", [features]);
-    var giant = alasql("SELECT 'Giant trees (> 29\")' AS category, COUNT(*) AS total FROM ? WHERE CAST(dbh_2012_inches_diameter_at_breast_height_46 as INT) > 29", [features]);
-    sizes.push(regeneration, sapling, small, medium, large, giant);
-    var columns = $.map(sizes, function(size) {
-      return [[size[0].category, size[0].total]];
-    });
-    var chart = c3.generate({
-        bindto: "#size-chart",
-        data: {
-          type: "pie",
-          columns: columns
-        }
-    });
-  });
-
-  // Species
-  $(function() {
-    var result = alasql("SELECT species_sim AS label, COUNT(*) AS total FROM ? GROUP BY species_sim ORDER BY label ASC", [features]);
-    var chart = c3.generate({
-        bindto: "#species-chart",
-        size: {
-          height: 2000
-        },
-        data: {
-          json: result,
-          keys: {
-            x: "label",
-            value: ["total"]
-          },
-          type: "bar"
-        },
-        axis: {
-          rotated: true,
-          x: {
-            type: "category"
-          }
-        },
-        legend: {
-          show: false
-        }
-    });
-  });
-}
-
 $(function() {
   $(".title").html(config.title);
   $("#layer-name").html(config.layerName);
@@ -230,8 +147,6 @@ function buildConfig() {
       }
     }
   }];
-
-
 
   $.each(properties, function(index, value) {
     // Filter config
@@ -334,6 +249,7 @@ function resetHighlight(e) {
 
 
 var featureLayer = L.geoJson(null, {
+  name: "Glider Tracks",
   filter: function(feature, layer) {
     return feature.geometry.coordinates[0] !== 0 && feature.geometry.coordinates[1] !== 0;
   },
@@ -348,7 +264,6 @@ var featureLayer = L.geoJson(null, {
     };
   },
   onEachFeature: function (feature, layer) {
-    console.log(feature)
     if (feature.properties) {
       layer.on({
         click: function (e) {
@@ -368,6 +283,38 @@ var featureLayer = L.geoJson(null, {
   }
 });
 
+var slocumIcon = L.icon({
+  iconUrl: 'assets/images/slocum_glider.png',
+  iconSize:     [38, 45],
+  iconAnchor:   [18, 22]
+});
+
+
+var glideLayer = L.layerGroup(null, {name: "Glider Marker"})
+
+// This won't actually get added to the map, but will populate glideLayer
+var gliderLayer = L.geoJson(null, {
+  filter: function(feature, layer) {
+    return feature.geometry.coordinates[0] !== 0 && feature.geometry.coordinates[1] !== 0 &&  feature.properties.active == true;
+  },
+  style: function (feature) {
+    return {
+      color: "#000000",
+      weight: 0,
+      opacity: 0.0,
+      clickable: false
+    };
+  },
+  onEachFeature: function (feature, layer) {
+    numPts = feature.geometry.coordinates.length;
+    var beg = feature.geometry.coordinates[numPts-1];
+    var marker = L.marker([beg[1], beg[0]],
+      {icon: slocumIcon}
+    );
+    glideLayer.addLayer(marker)
+  }
+});
+
 // Fetch the GeoJSON file
 $.getJSON(config.geojson, function (data) {
   geojson = data;
@@ -375,12 +322,13 @@ $.getJSON(config.geojson, function (data) {
     return feature.properties;
   });
   featureLayer.addData(data);
+  gliderLayer.addData(data);
   buildConfig();
   $("#loading-mask").hide();
 });
 
 var map = L.map("map", {
-  layers: [mapboxOSM, mapboxOcean, featureLayer, highlightLayer]
+  layers: [mapboxOSM, mapboxOcean, featureLayer, highlightLayer, glideLayer]
 }).fitWorld();
 
 // ESRI geocoder
@@ -412,10 +360,11 @@ if (document.body.clientWidth <= 767) {
   isCollapsed = false;
 }
 var baseLayers = {
-  "Ocean Labels": mapboxOSM,
+  "Ocean Topography": mapboxOSM,
 };
 var overlayLayers = {
-  "<span id='layer-name'>GeoJSON Layer</span>": featureLayer
+  "Glider Tracks": featureLayer,
+  "Active Gliders": glideLayer
 };
 var layerControl = L.control.layers(baseLayers, overlayLayers, {
   collapsed: isCollapsed
@@ -497,10 +446,10 @@ function syncTable() {
     layer.feature.properties.leaflet_stamp = L.stamp(layer);
     if (map.hasLayer(featureLayer)) {
       tableFeatures.push(layer.feature.properties);
-// This limits to whats in the map, but we don't really want that....
-//      if (map.getBounds().contains(layer.getBounds())) {
-//        tableFeatures.push(layer.feature.properties);
-//      }
+      // This limits to whats in the map, but we don't really want that....
+      //      if (map.getBounds().contains(layer.getBounds())) {
+      //        tableFeatures.push(layer.feature.properties);
+      //      }
     }
   });
   $("#table").bootstrapTable("load", JSON.parse(JSON.stringify(tableFeatures)));
