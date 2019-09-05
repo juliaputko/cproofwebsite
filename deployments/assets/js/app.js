@@ -1,7 +1,7 @@
 var config = {
   geojson: "/gliderdata/deployments/cproof-deployments.geojson",
   title: "C-PROOF Glider Deployments",
-  layerName: "Gliders", 
+  layerName: "Gliders",
   sortProperty: "deployment_start",
   sortOrder: "desc"
 };
@@ -27,9 +27,12 @@ var properties = [
     sortable: true
   },
   filter: {
-    type: "boolean"
+    type: "boolean",
+    operators: ['equal', 'not_equal'],
+    input: 'radio',
+    values: [true, false],
   },
-  info: false
+  info: true
 },
 {
   value: "deployment_start",
