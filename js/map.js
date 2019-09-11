@@ -33,7 +33,7 @@ $.getJSON("/gliderdata/deployments/cproof-deployments.geojson", function (data) 
 });
 
 var map = L.map("mapfront", {
-  layers: [mapboxOSM, mapboxOcean, featureLayer]
+  layers:  [mapboxOcean, mapboxOSM, featureLayer]
 }).setView([50., -133], zoom=5.5)
 
 
@@ -47,9 +47,5 @@ var baseLayers = {
   "Ocean Labels": mapboxOSM,
 };
 
-// Filter table to only show features in current map bounds
-map.on("moveend", function (e) {
-});
-
-map.on("click", function(e) {
-});
+var layerControl = L.control.layers(baseLayers, overlayLayers, {
+}).addTo(map);
