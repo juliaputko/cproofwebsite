@@ -400,6 +400,8 @@ var layerControl = L.control.layers(baseLayers, overlayLayers, {
   collapsed: isCollapsed
 }).addTo(map);
 
+// scale: 
+L.control.scale().addTo(map);
 //cursor position lat/lng
 L.control.mousePosition().addTo(map);
 
