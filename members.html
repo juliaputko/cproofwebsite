@@ -54,6 +54,41 @@ Univrsity of Victoria</br>
 Cailin joined C-PROOF after working with the Ocean Tracking Network at
 Dalhousie University, and at Bamfield Marine Science Centre.
 
+<h2> Students and Post-docs </h2>
+
+{% for member in site.data.students %} {% if member.visible == true %}
+
+	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
+
+	<h3>{{ member.name }}</h3>
+
+	{{ member.role }}
+
+
+	</br>
+	{% if member.org %}
+	{{member.title}}, {{ member.org }}
+	{% endif %}
+{% if member.url %}
+<br>
+<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+{% endif %}
+{% if member.github %}
+<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+{% endif %}
+{% if member.gplus %}
+<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+{% endif %}
+<br/>
+	{% if member.bio %}
+	{{ member.bio }}
+	{% endif %}
+
+	<hr>
+
+{% endif %}{% endfor %}
+
+
 <h2>Scientific Collaborators</h2>
 <ul>
 
