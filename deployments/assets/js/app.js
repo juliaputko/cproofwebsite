@@ -253,7 +253,6 @@ function highlighttheLayer(target) {
 
 function highlightFeature(e) {
   var target = e.target;
-
   highlighttheLayer(target);
 }
 
@@ -400,7 +399,7 @@ var layerControl = L.control.layers(baseLayers, overlayLayers, {
   collapsed: isCollapsed
 }).addTo(map);
 
-// scale: 
+// scale:
 L.control.scale().addTo(map);
 //cursor position lat/lng
 L.control.mousePosition().addTo(map);

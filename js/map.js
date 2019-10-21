@@ -34,7 +34,7 @@ $.getJSON("/gliderdata/deployments/cproof-deployments.geojson", function (data) 
 
 var map = L.map("mapfront", {
   layers:  [mapboxOcean, mapboxOSM, featureLayer]
-}).setView([50., -133], zoom=5.5)
+}).setView([50., -133], zoom=5)
 
 
 // Larger screens get expanded layer control
