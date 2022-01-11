@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      New post-doc opportunity - Offshore ocean dynamics
+author:     Jody Klymak
+tags: 		jobs
+subtitle:  	Apps accepted until 15 May, 2021, start Nov 2021
+category:   jobs
+header-img: "img/Explorer19/TullyExplorer0999Sm.jpg"
+---
+<!-- Start Writing Below in Markdown -->
+
+Applications are invited for a two-year postdoctoral fellowship (PDF) to study mixed-layer dynamics and coastal-offshore exchange mechanisms in the Northeast Pacific using a diverse collection of ocean observations including ocean glider, Argo float, ship-based, and satellite data.
+
+Closes May 15 2021: [Postdoctoral Fellowship in Ocean Dynamics Affecting Open-Ocean Productivity and High-Seas Salmon](../img/IYS_PO_Postdoc_Ad202105.pdf)
+

@@ -1,0 +1,22 @@
+#map-container {
+  height: 300px;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+#loading-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.loading-indicator {
+  position: absolute;
+  width: 220px;
+  height: 19px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -110px;
+  z-index: 20001;
+}
+.loading-bar {
+  width: 100%;
+}
