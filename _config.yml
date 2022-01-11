@@ -2,7 +2,7 @@
 title: C-PROOF
 description: "Canadian-Pacific Robotic Ocean Observing Facility"
 # base url w/o any subdirectoriries
-url: "http://cproof.uvic.ca"
+url: "https://cproof.uvic.ca"
 
 
 # Secondary Parameters
@@ -15,6 +15,8 @@ headercolor: "#FFFFFF"
 # Tertiary Parameters
 github_username:  cproof
 project_repository: cproof
+twitter_username: cproof_uvic
+facebook_username: cproofuvic
 
 # Build settings
 gems: [jekyll-paginate]
@@ -22,8 +24,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: none
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
+exclude: [vendor, "less","node_modules","Gruntfile.js","package.json","README.md"]
 # Jekyll Settings
 
 defaults:

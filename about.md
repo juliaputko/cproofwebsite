@@ -2,7 +2,6 @@
 layout: project
 title: "About"
 description: "C-PROOF Mission"
-header-img: "img/RecoveryMar19.png"
 ---
 
 The Canadian Pacific Robotic Ocean Observing Facility is a state of the art facility to observe ocean changes in the Northeast Pacific Ocean.
