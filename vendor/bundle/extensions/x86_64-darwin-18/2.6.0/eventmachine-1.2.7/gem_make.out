@@ -1,0 +1,16 @@
+current directory: /Users/jklymak/Dropbox/CproofWebsite/vendor/bundle/gems/eventmachine-1.2.7/ext/fastfilereader
+/usr/local/opt/ruby/bin/ruby -I /usr/local/Cellar/ruby/2.6.3/lib/ruby/2.6.0 -r ./siteconf20200131-85754-l7t9s7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/jklymak/Dropbox/CproofWebsite/vendor/bundle/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /Users/jklymak/Dropbox/CproofWebsite/vendor/bundle/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/jklymak/Dropbox/CproofWebsite/vendor/bundle/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20200131-85754-1vda4ns
