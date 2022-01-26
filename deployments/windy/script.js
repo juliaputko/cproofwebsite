@@ -3,7 +3,8 @@ const options = {
     lat: 48,
     lon: -132,
     zoom: 5,
-    geojson: "/gliderdata/deployments/cproof-deployments.geojson",
+    geojson: "../processing/cproof-deployments.geojson",
+    //geojson: "/gliderdata/deployments/cproof-deployments.geojson",
 };
 
 
