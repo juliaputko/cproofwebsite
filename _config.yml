@@ -2,7 +2,7 @@
 title: C-PROOF
 description: "Canadian-Pacific Robotic Ocean Observing Facility"
 # base url w/o any subdirectoriries
-url: "https://cproof.uvic.ca"
+url: "https://valdez.seos.uvic.ca"
 
 
 # Secondary Parameters
@@ -13,8 +13,8 @@ headercolor: "#FFFFFF"
 # logo: /project-pages/img/logos/Project-Pages-New-Logo-Inverted.png
 
 # Tertiary Parameters
-github_username:  cproof
-project_repository: cproof
+github_username:  c-proof
+#project_repository: cproof
 twitter_username: cproof_uvic
 facebook_username: cproofuvic
 

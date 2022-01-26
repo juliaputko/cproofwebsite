@@ -1,5 +1,6 @@
 var config = {
-  geojson: "/gliderdata/deployments/cproof-deployments.geojson",
+  geojson: "../processing/cproof-deployments.geojson",
+  ///gliderdata/deployments/cproof-deployments.geojson",
   title: "C-PROOF Glider Deployments",
   layerName: "Glider Tracks",
   sortProperty: "deployment_start",
