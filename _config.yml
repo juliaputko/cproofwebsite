@@ -2,7 +2,8 @@
 title: C-PROOF
 description: "Canadian-Pacific Robotic Ocean Observing Facility"
 # base url w/o any subdirectoriries
-url: "https://valdez.seos.uvic.ca"
+# url: "https://valdez.seos.uvic.ca"
+url : "https://juliaputko.github.io/cproofwebsite/"
 
 
 # Secondary Parameters
