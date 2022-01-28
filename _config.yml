@@ -8,7 +8,7 @@ url : "https://juliaputko.github.io/cproofwebsite/"
 
 # Secondary Parameters
 # rest of non-domain base url...
-baseurl: ""
+baseurl: "/cproofwebsite"
 header-img: img/MikeSaanich19.jpg
 headercolor: "#FFFFFF"
 # logo: /project-pages/img/logos/Project-Pages-New-Logo-Inverted.png
