@@ -6,4 +6,13 @@ vendor/ruby/
 .bundle/
 Gemfile.lock
 
-gliderdata/
+gliderdata/deployments/.templates/
+gliderdata/deployments/dfo-bb046/
+gliderdata/deployments/dfo-walle652/
+
+
+gliderdata/deployments/.process_battery.log
+gliderdata/deployments/.process_map.log
+gliderdata/deployments/process-dfo-bb046-20210511_jp.sh
+gliderdata/deployments/updateweb.py
+gliderdata/deployments/.process.log
