@@ -26,4 +26,4 @@ category: platforms
 
 Under water gliders use a buoyancy engine to make themselves lighter and heavier than the seawater around them, causing them to float or sink.  They have hydrodynamic wings on them that turn some of this lift to forward thrust, allowing them to move through the water at 20-30 km/day.  Every 4-8 hours they surface and communicate home over satellite their GPS position and a subset of their data.  They also accept commands for where to go next, how to change sampling, etc.  
 
-![How a glider works](/cproofwebsite/img/GliderOps.png "How a glider works.")
+![How a glider works]("{{ site.baseurl }}"/img/GliderOps.png "How a glider works.")
