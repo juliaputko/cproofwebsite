@@ -1,8 +1,8 @@
 ---
-layout: project
+layout: project_jp
 title: "Platforms"
 description: "C-PROOF Platforms"
-header-img: "img/GliderWalle.jpg"
+header-img: "img/manygliders_jp.png"
 category: platforms
 ---
 
