@@ -16,6 +16,7 @@ headercolor: "#FFFFFF"
 # Tertiary Parameters
 github_username:  c-proof
 #project_repository: cproof
+project_repository: cproof
 twitter_username: cproof_uvic
 facebook_username: cproofuvic
 
@@ -41,7 +42,7 @@ defaults:
 prose:
   ignore: ['feed.xml', '/stl', '/ply', '/js', '/plugin', '/lib', '/projectors', '_layouts', '/_includes', 'Gruntfile.js', 'package.json', 'proselinks.jsonp', 'ppanchor.matin', '.gitignore', '/search', '/css', '/img', 'favicon.png','_data/*.json','LICENSES.md','README.md','colorscheme.scss','members.html','mentions.html','index.html']
   #siteurl: 'http://projectpages.github.io/project-pages/'
-  siteurl: 'https://juliaputko.github.io/cproofwebsite/'
+  siteurl: 
   ispp: true
   media: 'img'
   metadata:

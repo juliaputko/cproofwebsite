@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: ticker
 header-img: "img/MikeSaanich19.jpg"
 ---
 
@@ -14,10 +14,10 @@ integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqD
 crossorigin=""></script>
 
 
-
-<p>The Canadian-Pacific Robotic Ocean Observing Facility is a CFI/BCKDF-funded project to build  ocean observing
-capcacity off the British Columbia coast.  A fleet of autonomous gliders, floats, and moorings will provide ocean scientists
-with long-term monitoring of the ocean at the small scales important to resolve upper ocean physical and biological properties.</p>
+<p>The Canadian-Pacific Robotic Ocean Observing Facility was initiated with CFI/BCKDF funding to build ocean observing
+   capacity off the British Columbia coast. It operates a fleet of autonomous gliders, floats, and moorings providing 
+   ocean scientists with long-term monitoring of the ocean at the small scales important to resolve upper ocean physical 
+   and biological properties.</p>
 
 <h3> Deployments </h3>
 
@@ -29,9 +29,30 @@ C-PROOF glider deployments are under way!  Click on map to see list of deploymen
 
 <h2>Partners</h2>
 
-<h3>Funding</h3>
+<h3>Operational Partners</h3>
 
 <table style="width:100%">
+  <tr>
+  {% for partner in site.data.partners %}{% if partner.type == "opfunder1" %}{% if partner.visible == true %}
+    <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
+    {% if forloop.index == 3 %}
+      </tr>
+      <tr>
+    {% endif %}
+  {% endif %}{% endif %}{% endfor %}
+  {% for partner in site.data.partners %}{% if partner.type == "opfunder2" %}{% if partner.visible == true %}
+    <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="80" /></a> </td>
+    {% if forloop.index == 3 %}
+      </tr>
+      <tr>
+    {% endif %}
+  {% endif %}{% endif %}{% endfor %}
+</tr>
+</table>
+
+<h3>Funding</h3>
+
+<table style="width:100%"> 
   <tr>
   {% for partner in site.data.partners %}{% if partner.type == "funder" %}{% if partner.visible == true %}
     <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
@@ -44,7 +65,7 @@ C-PROOF glider deployments are under way!  Click on map to see list of deploymen
 </table>
 
 <h3>Industry</h3>
-
+<table style="width:100%"> 
 <tr>
 {% for partner in site.data.partners %}{% if partner.type == "industry" %}{% if partner.visible == true %}
   <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
@@ -56,10 +77,16 @@ C-PROOF glider deployments are under way!  Click on map to see list of deploymen
 </tr>
 </table>
 
-<hr/>
-<h2>Recent news</h2>
 
-{% for post in paginator.posts %}
+<hr/>
+<!--- <h2>Recent news</h2> --->  
+<h2>
+  <a href="/news.html">
+    Recent News
+  </a>
+</h2>
+
+{% for post in paginator.posts offset:1 limit:4 %}   <!-- jpnote added limit -->
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h4 class="post-title">            {{ post.title }}
