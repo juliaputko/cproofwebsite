@@ -65,12 +65,17 @@ var properties = [
   }
 },
 {
-  value: "url",
+  value: "url", 
   label: "URL",
   table: {
-    visible: false,
-    sortable: false
-  }
+    visible: true,  //jp added
+    sortable: true, //jp added 
+    formatter: urlFormatter,  //jp added 
+  },
+  filter: {
+    type: "string"  //jp added
+  },
+  info: true //jp added
 },
 {
   value: "glider_name",
@@ -196,6 +201,8 @@ function buildConfig() {
         }
       });
     }
+
+   
     // Table config
     if (value.table) {
       table.push({
@@ -206,6 +213,7 @@ function buildConfig() {
         if (table[index+1]) {
           table[index+1][key] = val;
         }
+      
       });
     }
   });
@@ -213,6 +221,8 @@ function buildConfig() {
   buildFilters();
   buildTable();
 }
+
+
 
 // Basemap Layers
 var mapboxOSM = L.tileLayer('https://server.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}', {
@@ -464,6 +474,8 @@ function buildTable() {
     columns: table,
     onClickRow: function (row) {
       // do something!
+      //row: the record corresponding to the clicked row, 
+      //$element: the tr element.
     },
     onDblClickRow: function (row) {
       // do something!
@@ -490,6 +502,8 @@ function syncTable() {
       //      if (map.getBounds().contains(layer.getBounds())) {
       //        tableFeatures.push(layer.feature.properties);
       //      }
+      
+      
     }
   });
   $("#table").bootstrapTable("load", JSON.parse(JSON.stringify(tableFeatures)));
@@ -625,6 +639,10 @@ $("#download-excel-btn").click(function() {
   $(".navbar-collapse.in").collapse("hide");
   return false;
 });
+
+//$("#apply-filter-btn").click(function() {
+//  applyFilter();
+//});
 
 $("#download-pdf-btn").click(function() {
   $("#table").tableExport({
