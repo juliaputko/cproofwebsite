@@ -1,18 +1,77 @@
 ---
-layout: project
+layout: project_jp
 title: "People"
 description: "C-PROOF team"
-header-img: "img/RecoveryMar19.png"
+header-img: "img/scenicglider_jp.jpg"
 category: members
 ---
 <hr>
+<!--- might not need the img part -->
+<style> 
+    img {  
+        float: left;
+    }
+    p {
+        overflow: hidden;
+		padding:0px; 
+   		margin:0px; 
+    }
+</style>
+
+
+<h2>Science Leads</h2>
+
+{% for member in site.data.members %} {% if member.type == "sciencelead" %}{% if member.visible == true %}
+
+	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
+
+	
+	<h3>{{ member.name }}</h3>
+	<p>
+	{{ member.role }}
+
+
+
+	{% if member.org %}
+	{{member.title}}, {{ member.org }}
+	{% endif %}
+{% if member.url %}
+<br>
+<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+{% endif %}
+{% if member.github %}
+<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+{% endif %}
+{% if member.gplus %}
+<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+{% endif %}
+<br/>
+	{% if member.bio %}
+	{{ member.bio }}
+	{% endif %}
+</p>
+
+	<hr>
+
+	<style>
+		img {
+			float: left;
+		}
+		p {
+			overflow: hidden;
+		}
+	</style>
+
+{% endif %}{% endif %}{% endfor %}
+
 
 <h2>Investigators</h2>
-{% for member in site.data.members %} {% if member.visible == true %}
+{% for member in site.data.members %} {% if member.type == "investigator" %}{% if member.visible == true %}
 
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
 
 	<h3>{{ member.name }}</h3>
+	<p>
 
 	{{ member.role }}
 
@@ -35,18 +94,30 @@ category: members
 	{% if member.bio %}
 	{{ member.bio }}
 	{% endif %}
-
+</p>
 	<hr>
 
-{% endif %}{% endfor %}
+{% endif %}{% endif %}{% endfor %}
 
-<h2> Technicians </h2>
+<h2> C-PROOF staff </h2>
 
 <h3>James Pegg</h3>
 Marine Technician<br>
 Institute of Ocean Sciences</br>
 Lead technician for C-PROOF, James comes from Pacific Biological Station
 where he specialized in submersible vehicles.
+
+<h3>Hayley Dosser</h3>
+Physical Scientist<br>
+Institute of Ocean Sciences</br>
+Hayley works with data management and sensors, 
+as well as mission planning and piloting.
+
+
+<h3>Chris Payne</h3>
+Title<br>
+University of British Columbia</br>
+Description
 
 <h2>Hakai Institute collaborators</h2>
 
@@ -56,9 +127,16 @@ Physical Oceanographer
 <h3>Wiley Evans</h3>
 Chemical Oceanographer
 
+
+<h3>Chris Mackenzie</h3>
+Research Technician
+Hakai Institute
+
+
+<!--- 
 <h3>Chris O'Sullivan</h3>
 Marine Technician
-
+-->
 <h2> Students and Post-docs </h2>
 
 {% for member in site.data.students %} {% if member.visible == true %}
@@ -94,6 +172,71 @@ Marine Technician
 {% endif %}{% endfor %}
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height: 900px;
+  padding: 20px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<hr>
+<h2>Scientific Collaborators</h2>
+
+<div class="row">
+  <div class="column" style="background-color:rgb(250, 250, 250);">
+   <!--- <h2>Column 1</h2>  --->
+    
+	<li>Lu, Youyu Research Scientist, Department of Fisheries and Oceans Bedford Institute of Ocean Sciences</li>
+	<li>Pena, Angelica, Research Scientists, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+	<li>Hunt, Brian Biological Oceanographer, Hakai Institute</li>
+	<li>Hannah, Charles, Research Scientists, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+	<li>Perry , Ian Research Scientist, Department of Fisheries and Oceans Pacific Biological Station</li>
+	<li>Cullen, Jay Professor, University of Victoria, School of Earth and Ocean Sciences</li>
+	<li>Allen, Susan Professor, University of British Columbia, Earth, Ocean, and Atmospheric Sciences</li>
+	<li>Wild, Peter, Professor, Director IESVic, University of Victoria Mechanical Engineering</li>
+	<li>Poullot, Benoit, Environment and Climate Change Canada Environmental Numerical Weather Pred.</li>
+	
+  </div>
+  <div class="column" style="background-color:rgb(250, 250, 250);">
+      <!---  <h2>Column 2</h2>--->
+   
+	<li>Fennel, Katja Professor Dalhousie University Department of Oceanography</li>
+	<li>Riemann, Randy Director, BC. Hydro Resource Planning</li>
+	<li>Wolk, Fabian President, Rockland Scientific Cascadia Coast Research</li>
+	<li>Hiles, Clayton Principal Engineer, Cascadia Coast Research</li>
+	<li>Dower, John Professor, University of Victoria Biology</li>
+	<li>Miller, Lisa Research Scientist, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+	<li>Ianson, Debby Research Scientist, Department of Fisheries and Oceans Institute of Ocean Sciences</li>
+	<li>Brydon, Stephen Director, BC Ministry of Energy and Mines Innovative Clean Energy Fund</li>
+	<li>Monahan, Adam Professor, University of Victoria, School of Earth and Ocean Sciences</li>
+	<li>Hebert, David Research Scientist, Department of Fisheries and Oceans Bedford Institute of Oceanography</li>
+	<li>Pawlowicz, Richard  Professor, University of British Columbia, Earth, Ocean, & Atmospheric Sciences</li>
+  </div>
+</div>
+
+
+
+
+</style>
+</head>
+<body>
+
+<hr>
 <h2>Scientific Collaborators</h2>
 <ul>
 
