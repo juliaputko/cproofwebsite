@@ -10,6 +10,7 @@
   url: http://web.uvic.ca/~jklymak/
   groups: gliders floats mooring
   visible: true
+  type: sciencelead
 
 - name: Brad Buckham
   role: Co-Investigator; Lead wave and offshore wind observations
@@ -21,6 +22,7 @@
   url: https://www.uvic.ca/research/projects/wcwi/index.php
   groups: energy
   visible: true
+  type: investigator 
 
 - name: Roberta Hamme
   role: Co-Investigator; Lead profiling floats
@@ -30,6 +32,7 @@
   bio: Research works towards understanding what drives the cycles of gases like carbon dioxide and oxygen in the ocean.
   url: https://web.uvic.ca/~rhamme/
   visible: true
+  type: sciencelead
 
 - name: Stephanie Waterman
   role: Co-Investigator; Lead gliders
@@ -39,6 +42,7 @@
   url: http://www.stephaniewaterman.ca/Work/
   visible: true
   bio: Ocean turbulence & ocean mixing from both observational & theoretical perspectives.
+  type: sciencelead
 
 - name: Tetjana Ross
   role: Co-Investigator
@@ -47,6 +51,7 @@
   title: Research Scientist
   org: Institute of Ocean Sciences
   bio: Novel techniques to observe the ocean and understand its dynamics.
+  type: sciencelead
 
 - name: Curran Crawford
   role: Co-Investigator
@@ -56,6 +61,7 @@
   url: https://ssdl.uvic.ca
   bio: Applies advanced modelling tools to simulate energy systems.
   visible: true
+  type: investigator 
 
 - name: Philippe Tortell
   url: https://www.eoas.ubc.ca/people/philippetortell
@@ -65,6 +71,7 @@
   org: University of British Columbia
   bio: A sea-going oceanographer with broad interests in marine biogeochemical cycles.
   visible: true
+  type: investigator 
 
 - name: Diana Varela
   visible: true
@@ -74,6 +81,7 @@
   org: University of Victoria
   role: Co-Investigator
   bio: Seeks to understand variations in marine primary productivity and cycling of nutrient elements in the oceans.
+  type: investigator 
 
 - name: Maycira Costa
   visible: true
@@ -83,6 +91,7 @@
   role: Co-Investigator
   bio: Invstigates the interaction of light eenergy with organic and inorganic material in ocean waters
   img: img/costa.jpg
+  type: investigator 
 
 - name: Roger Francois
   visible: true
@@ -92,3 +101,4 @@
   img: img/francois.jpg
   url: https://www.eoas.ubc.ca/people/rogerfrancois
   bio: Water column radiochemistry to constrain abyssal circulation and scavenging.
+  type: investigator 

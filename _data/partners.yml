@@ -8,7 +8,7 @@
 
 - name: British Columbia Knowldge Development Fund
   img: img/logos/BCKDF.png
-  url: https://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/technology-innovation/bckdf
+  url: https://www2.gov.bc.ca/gov/content/governments/technology-innovation/bckdf
   type: funder
   visible: true
 
@@ -39,7 +39,7 @@
 
 - name: Axys Technologies
   img: img/logos/AXYS.jpg
-  url: http://axystechnologies.com
+  url: https://axystech.wpengine.com/
   type: industry
   visible: true
 
@@ -67,3 +67,27 @@
   type: industry
   visible: true
   contact: Todd Mudge
+
+- name: Hakai Institute
+  img: img/logos/Hakai.png
+  url: http://hakai.org
+  type: opfunder1
+  visible: true
+
+- name: Fisheries and Oceans Canada
+  img: img/logos/DFO.png
+  url: http://www.dfo-mpo.gc.ca/index-eng.htm
+  type: opfunder1
+  visible: true
+
+- name: University of Victoria
+  img: img/logos/UVic.jpg
+  url: https://www.uvic.ca/
+  type: opfunder2
+  visible: true
+
+- name: University of British Columbia 
+  img: img/logos/UBC.png
+  url: https://www.ubc.ca/
+  type: opfunder2
+  visible: true
