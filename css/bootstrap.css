@@ -1402,11 +1402,11 @@ pre code {
 
 .containerjp {
  
-  max-width: calc(100% + 50em);
-  margin-left: -25em;
-  margin-right: -25em;
+  max-width: calc(100% + 2em);
+  margin-left: -1em;
+  margin-right: -1em;
   position: relative;
-  left: 210px;
+  left: 0px;
   overflow-x: hidden; 
 }
 @media (min-width: 768px) {

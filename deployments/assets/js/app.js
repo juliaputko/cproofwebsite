@@ -65,19 +65,6 @@ var properties = [
   }
 },
 {
-  value: "url", 
-  label: "URL",
-  table: {
-    visible: true,  //jp added
-    sortable: true, //jp added 
-    formatter: urlFormatter,  //jp added 
-  },
-  filter: {
-    type: "string"  //jp added
-  },
-  info: true //jp added
-},
-{
   value: "glider_name",
   label: "Glider Name",
   table: {
@@ -112,6 +99,20 @@ var properties = [
     type: "string"
   },
   info: true
+},
+{
+  value: "url", 
+  label: "URL",
+  table: {
+    visible: true,  //jp added
+    sortable: true, //jp added 
+    formatter: urlFormatter,  //jp added 
+    width: 300, 
+  },
+  filter: {
+    type: "string"  //jp added
+  },
+  info: true //jp added
 }];
 
 // some stations...

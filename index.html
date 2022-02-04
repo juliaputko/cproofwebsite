@@ -33,20 +33,24 @@ C-PROOF glider deployments are under way!  Click on map to see list of deploymen
 
 <table style="width:100%">
   <tr>
-  {% for partner in site.data.partners %}{% if partner.type == "opfunder1" %}{% if partner.visible == true %}
-    <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
-    {% if forloop.index == 3 %}
-      </tr>
-      <tr>
-    {% endif %}
-  {% endif %}{% endif %}{% endfor %}
-  {% for partner in site.data.partners %}{% if partner.type == "opfunder2" %}{% if partner.visible == true %}
+
+    {% for partner in site.data.partners %}{% if partner.type == "opfunder2" %}{% if partner.visible == true %}
     <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="80" /></a> </td>
     {% if forloop.index == 3 %}
       </tr>
       <tr>
     {% endif %}
   {% endif %}{% endif %}{% endfor %}
+  
+  
+    {% for partner in site.data.partners %}{% if partner.type == "opfunder1" %}{% if partner.visible == true %}
+    <td><a href="{{ partner.url }}"><img src="{{ partner.img }}" alt="{{ partner.name }}" border="3"  width="120" /></a> </td>
+    {% if forloop.index == 3 %}
+      </tr>
+      <tr>
+    {% endif %}
+  {% endif %}{% endif %}{% endfor %}
+  
 </tr>
 </table>
 

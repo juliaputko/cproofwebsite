@@ -2,7 +2,7 @@
 
 - name: Khush Jhugroo
   role: Postdoctoral fellow in coastal physical oceanography at the Hakai Institute and UBC
-  img: http://ocean-physics.seos.uvic.ca/~jklymak/images/JMKJune2011.jpg
+  img: img/KhushJhugroo.jpg
   org: 
   github: 
   title: 
@@ -14,11 +14,11 @@
 
 - name: Bernie Yang
   role: Postdoctoral fellow with C-PROOF at UVic
-  img: http://ocean-physics.seos.uvic.ca/~jklymak/images/JMKJune2011.jpg
+  img: img/BernieYang.jpg
   org: 
   github: 
   title:  
-  bio: investigating how offshore ocean dynamics affect ocean productivity and salmon migration paths in the northeast Pacific Ocean
+  bio: Investigating how offshore ocean dynamics affect ocean productivity and salmon migration paths in the northeast Pacific Ocean
   url: 
   groups: 
   visible: true
@@ -26,11 +26,11 @@
 
 - name: Julia Putko
   role: Co-op Student at UVic
-  img: http://ocean-physics.seos.uvic.ca/~jklymak/images/JMKJune2011.jpg
+  img: img/JuliaPutko.jpg
   org: 
   github: 
   title: 
-  bio: to write
+  bio:                                                           
   url: 
   groups: 
   visible: true
