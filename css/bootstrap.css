@@ -1399,17 +1399,17 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-/*
+
 .containerjp {
  
-  max-width: calc(100% + 50em);
-  margin-left: -25em;
-  margin-right: -25em;
+  max-width: calc(100% + 10em);
+  margin-left: -5em;
+  margin-right: -5em;
   position: relative;
   left: 210px;
   overflow-x: hidden; 
 }
-*/
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
