@@ -48,7 +48,7 @@ words about what C-PROOF is actively accomplishing.
 
 {% for post in site.data.inthenews %}{% if post.visible == true %}   <!---jp added  --->
 <div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
+    <a href="{{ post.url }}">
         <h4 class="post-title">            {{ post.title }}
         </h4>
         {% if post.subtitle %}
