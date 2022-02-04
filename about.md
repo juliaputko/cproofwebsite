@@ -37,7 +37,7 @@ These data sources will be shared with a wide array of partners and user groups 
 <h3>What We Do</h3>
 
 words about what C-PROOF is actively accomplishing. 
-<a href= '{{site.baseurl}}/platforms/'>Platforms</a>
+<a href= "{{ site.baseurl }}/platforms/">Platforms</a>
 
 
 <hr/>
