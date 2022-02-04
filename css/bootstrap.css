@@ -1409,6 +1409,7 @@ pre code {
   left: 0px;
   overflow-x: hidden; 
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
