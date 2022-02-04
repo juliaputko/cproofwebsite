@@ -14,7 +14,7 @@
 
 - name: Brad Buckham
   role: Co-Investigator; Lead wave and offshore wind observations
-  img: img/bbuckham.jpg
+  img: img/BradBuckham.jpg
   org: University of Victoria
   github:
   title:  Associate Professor in Ocean Engineering; Director West Coast Wave Initiative
@@ -50,7 +50,7 @@
   visible: true
   title: Research Scientist
   org: Institute of Ocean Sciences
-  bio: Novel techniques to observe the ocean and understand its dynamics.
+  bio: Novel techniques to observe the ocean and understand its dynamics.                                               
   type: sciencelead
 
 - name: Curran Crawford
@@ -75,7 +75,7 @@
 
 - name: Diana Varela
   visible: true
-  img: img/varela.jpg
+  img: img/diana-varela.jpg
   url: https://varelalab.wordpress.com
   title: Professor, Phytoplankton Physiology
   org: University of Victoria
@@ -102,3 +102,63 @@
   url: https://www.eoas.ubc.ca/people/rogerfrancois
   bio: Water column radiochemistry to constrain abyssal circulation and scavenging.
   type: investigator 
+
+- name: James Pegg
+  visible: true
+  role: Marine Technician
+  title: Institute of Ocean Sciences
+  org: 
+  img:
+  url: 
+  bio: Lead technician for C-PROOF, James comes from Pacific Biological Station where he specialized in submersible vehicles.
+  type: cproofstaff
+
+- name: Hayley Dosser
+  visible: true
+  role: Physical Scientist
+  title: Institute of Ocean Sciences
+  org: 
+  img: img/HayleyDosser.jpg
+  url: 
+  bio: Hayley works with data management and sensors, as well as mission planning and piloting.
+  type: cproofstaff
+
+- name: Chris Payne
+  visible: true
+  role: 
+  title: University of British Columbia
+  org: 
+  img:
+  url: 
+  bio: 
+  type: cproofstaff
+
+- name: Jennifer Jackson
+  visible: true
+  role: Physical Oceanographer
+  title: 
+  org: 
+  img:
+  url: 
+  bio: 
+  type: collaborators
+
+- name: Wiley Evans
+  visible: true
+  role: Chemical Oceanographer
+  title: 
+  org: 
+  img:
+  url: 
+  bio: 
+  type: collaborators
+
+- name: Chris Mackenzie
+  visible: true
+  role: Research Technician Hakai Institute
+  title: 
+  org: 
+  img: img/ChrisMackenzie.jpg
+  url: 
+  bio: 
+  type: collaborators
