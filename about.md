@@ -23,7 +23,7 @@ Ocean change, its potential for life, and its potential as a source of energy ar
 <div class="containerjp">
 <figure>
 <img src="img/CPROOFSketch.jpg" alt="C-PROOF Schematic">
-<figcaption style="text-align:left;padding: 6px;position:relative;left:500px;font-style: italic;font-size: 16px;">Fig1. Caption caption</figcaption>
+<figcaption style="text-align:left;padding: 6px;position:relative;left:50px;font-style: italic;font-size: 16px;">Fig1. Caption caption</figcaption>
 </figure>
 </div>
 
