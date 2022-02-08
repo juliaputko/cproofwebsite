@@ -23,13 +23,7 @@ Ocean change, its potential for life, and its potential as a source of energy ar
 <div class="containerjp">
 <figure>
 <img src="img/CPROOFSketch.jpg" alt="C-PROOF Schematic">
-<<<<<<< HEAD
 <figcaption style="text-align:left;padding: 6px;position:relative;left:50px;font-style: italic;font-size: 16px;">Fig1. Caption caption</figcaption>
-=======
-
-<figcaption style="text-align:left;padding: 6px;position:relative;left:50px;font-style: italic;font-size: 16px;">Fig1. Caption caption</figcaption>
-
->>>>>>> a69289889f769bf4af6dd3b53de6f1a5c056f0dd
 </figure>
 </div>
 
@@ -55,11 +49,7 @@ words about what C-PROOF is actively accomplishing.
 {% for post in site.data.inthenews %}{% if post.visible == true %}   <!---jp added  --->
 <div class="post-preview">
     <a href="{{ post.url }}">
-<<<<<<< HEAD
 	    
-=======
-
->>>>>>> a69289889f769bf4af6dd3b53de6f1a5c056f0dd
         <h4 class="post-title">            {{ post.title }}
         </h4>
         {% if post.subtitle %}
