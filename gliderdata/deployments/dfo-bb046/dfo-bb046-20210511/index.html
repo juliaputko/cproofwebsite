@@ -1,3 +1,7 @@
+---
+
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +15,6 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cproof.uvic.ca///data/" />
 <meta property="og:image" content="https://juliaputko.github.io/cproofwebsite/img/ControlRoomMar19.jpg">
-
 
 
 
@@ -156,6 +159,32 @@ h3 {font: sans-serif; color: #002277}
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <!-- <a href="/">Home</a>-->
+            <a href="{{ site.baseurl }}/">Home</a>
+           
+          </li>
+
+          <li>
+              <a href="{{ site.baseurl }}/about.html">About</a>
+          </li>
+
+          <li>
+              <a href="{{ site.baseurl }}/platforms/">Platforms</a>
+          </li>
+
+          <li>
+              <a href="{{ site.baseurl }}/data/">Data</a>
+          </li>
+
+          <li>
+              <a href="{{ site.baseurl }}/deployments/">Deployments</a>
+          </li>
+
+          <li>
+              <a href="{{ site.baseurl }}/members.html">People</a>
+          </li>
+          <!-- 
             <li>
                 <a href="/">Home</a>
             </li>
@@ -179,7 +208,7 @@ h3 {font: sans-serif; color: #002277}
             <li>
                 <a href="/members.html">People</a>
             </li>
-
+-->
         </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -264,6 +293,20 @@ h3 {font: sans-serif; color: #002277}
   <h3>Data links and directories: </h3>
   <div class="datagrid">
 
+
+<?php
+    echo '<ul>';
+    $files = ['deployment.yml', 'deploymentRealtime.yml'];
+    foreach($files as $file) {
+        if (file_exists($file)) {
+            $file_clean = explode('.', $file);
+            $file_clean = str_replace('-', ' ', $file_clean[0]);
+            $file_clean = ucfirst($file_clean);
+            echo '<li><a class="button" href="' . $file . '">' . $file_clean . '</a></li>';
+        }
+    }
+    echo '</ul>';
+?>
 
     <ul>
       <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
