@@ -108,7 +108,7 @@ var properties = [
     visible: true,  //jp added
     sortable: true, //jp added 
     formatter: urlFormatter,  //jp added 
-    width: 320, 
+    width: 300, 
   },
   filter: {
     type: "string"  //jp added
