@@ -7,8 +7,8 @@ vendor/ruby/
 Gemfile.lock
 
 gliderdata/deployments/.templates/
-gliderdata/deployments/dfo-bb046/
-gliderdata/deployments/dfo-walle652/
+gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/
+gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/
 
 
 gliderdata/deployments/.process_battery.log
