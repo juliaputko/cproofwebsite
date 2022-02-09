@@ -293,30 +293,33 @@ h3 {font: sans-serif; color: #002277}
   <h3>Data links and directories: </h3>
   <div class="datagrid">
 
-
-<?php
-    echo '<ul>';
-    $files = ['deployment.yml', 'deploymentRealtime.yml'];
-    foreach($files as $file) {
-        if (file_exists($file)) {
-            $file_clean = explode('.', $file);
-            $file_clean = str_replace('-', ' ', $file_clean[0]);
-            $file_clean = ucfirst($file_clean);
-            echo '<li><a class="button" href="' . $file . '">' . $file_clean . '</a></li>';
-        }
-    }
-    echo '</ul>';
-?>
-
     <ul>
+      {% for static_file in site.static_files %}
+        {% if static_file.path == './deployment.yml' %}
       <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
+        {% endif %}
+        {% if static_file.path == './deploymentRealtime.yml' %}
       <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
+        {% endif %}
+        {% if static_file.path == './dfo-bb046-20210511.kml' %}
       <li><a href='./dfo-bb046-20210511.kml'>Deployment KML</a></li>
+        {% endif %}
+        {% if static_file.path == './realtime_raw %}
       <li><a href='./realtime_raw'>Raw binary data</a></li>
+        {% endif %}
+        {% if static_file.path == './L0-timeseries/dfo-bb046-20210511.nc' %}
       <li><a href='./L0-timeseries/dfo-bb046-20210511.nc'>Time series [dfo-bb046-20210511.nc]</a></li>
+        {% endif %}
+        {% if static_file.path == '/L0-profiles/' %}
       <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
+        {% endif %}
+        {% if static_file.path == './L0-gridfiles/dfo-bb046-20210511_grid.nc' %}
       <li><a href='./L0-gridfiles/dfo-bb046-20210511_grid.nc'>Time-z grid of data [dfo-bb046-20210511_grid.nc]</a></li>
+        {% endif %}
+        {% if static_file.path == './figs/' %}
       <li><a href='./figs/'>Directory of figures</a></li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </div>
 
