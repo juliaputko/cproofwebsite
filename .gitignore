@@ -6,7 +6,7 @@ vendor/ruby/
 .bundle/
 Gemfile.lock
 
-gliderdata/deployments/.templates/
+
 
 
 
