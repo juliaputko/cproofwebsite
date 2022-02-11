@@ -7,13 +7,7 @@ vendor/ruby/
 Gemfile.lock
 
 
-
-
-
-
-
 gliderdata/deployments/.templates
-
 
 
 gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/.ipynb_checkpoints
@@ -28,7 +22,6 @@ gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/plotDeploymentMap.py
 gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/plottingconfig.yml
 
 !gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/index.html
-
 
 
 gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/.dinkumcache
