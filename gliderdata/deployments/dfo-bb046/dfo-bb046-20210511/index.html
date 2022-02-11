@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -160,9 +159,8 @@ h3 {font: sans-serif; color: #002277}
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <!-- <a href="/">Home</a>-->
+            
             <a href="{{ site.baseurl }}/">Home</a>
-           
           </li>
 
           <li>
@@ -184,31 +182,7 @@ h3 {font: sans-serif; color: #002277}
           <li>
               <a href="{{ site.baseurl }}/members.html">People</a>
           </li>
-          <!-- 
-            <li>
-                <a href="/">Home</a>
-            </li>
 
-            <li>
-                <a href="/about.html">About</a>
-            </li>
-
-            <li>
-                <a href="/platforms/">Platforms</a>
-            </li>
-
-            <li>
-                <a href="/data/">Data</a>
-            </li>
-
-            <li>
-                <a href="/deployments/">Deployments</a>
-            </li>
-
-            <li>
-                <a href="/members.html">People</a>
-            </li>
--->
         </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -218,7 +192,7 @@ h3 {font: sans-serif; color: #002277}
 
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('https://juliaputko.github.io/cproofwebsite/img/ControlRoomMar19.jpg')"> 
+<header class="intro-header" style="background-image: url('/img/ControlRoomMar19.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -294,32 +268,33 @@ h3 {font: sans-serif; color: #002277}
   <div class="datagrid">
 
     <ul>
-      {% for static_file in site.static_files %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/deployment.yml' %}
+      {% for static_file in site.static_files %}  <!--- eliminator --->
+        {% if static_file.path == './deployment.yml' %}
           <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/deploymentRealtime.yml' %}
-          <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/dfo-bb046-20210511.kml' %}
-          <li><a href='./dfo-bb046-20210511.kml'>Deployment KML</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/realtime_raw %}
-          <li><a href='./realtime_raw'>Raw binary data</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/L0-timeseries/dfo-bb046-20210511.nc' %}
-          <li><a href='./L0-timeseries/dfo-bb046-20210511.nc'>Time series [dfo-bb046-20210511.nc]</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/L0-profiles/' %}
-          <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/L0-gridfiles/dfo-bb046-20210511_grid.nc' %}
-          <li><a href='./L0-gridfiles/dfo-bb046-20210511_grid.nc'>Time-z grid of data [dfo-bb046-20210511_grid.nc]</a></li>
-        {% endif %}
-        {% if static_file.path == '/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/figs/' %}
-          <li><a href='./figs/'>Directory of figures</a></li>
-        {% endif %}
-      {% endfor %}
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./dfo-bb046-20210511.kml'>Deployment KML</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./realtime_raw/'>Raw binary data</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-timeseries/dfo-bb046-20210511.nc'>Time series [dfo-bb046-20210511.nc]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-gridfiles/dfo-bb046-20210511_grid.nc'>Time-z grid of data [dfo-bb046-20210511_grid.nc]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./figs/'>Directory of figures</a></li>
+          {% endif %}
+       
+        {% endfor %}
     </ul>
   </div>
 
