@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -160,54 +159,30 @@ h3 {font: sans-serif; color: #002277}
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">Home</a>
-           
+            
+            <a href="{{ site.baseurl }}/">Home</a>
           </li>
 
           <li>
-              <a href="/about.html">About</a>
+              <a href="{{ site.baseurl }}/about.html">About</a>
           </li>
 
           <li>
-              <a href="/platforms/">Platforms</a>
+              <a href="{{ site.baseurl }}/platforms/">Platforms</a>
           </li>
 
           <li>
-              <a href="/data/">Data</a>
+              <a href="{{ site.baseurl }}/data/">Data</a>
           </li>
 
           <li>
-              <a href="/deployments/">Deployments</a>
+              <a href="{{ site.baseurl }}/deployments/">Deployments</a>
           </li>
 
           <li>
-              <a href="/members.html">People</a>
+              <a href="{{ site.baseurl }}/members.html">People</a>
           </li>
-          <!-- 
-            <li>
-                <a href="/">Home</a>
-            </li>
 
-            <li>
-                <a href="/about.html">About</a>
-            </li>
-
-            <li>
-                <a href="/platforms/">Platforms</a>
-            </li>
-
-            <li>
-                <a href="/data/">Data</a>
-            </li>
-
-            <li>
-                <a href="/deployments/">Deployments</a>
-            </li>
-
-            <li>
-                <a href="/members.html">People</a>
-            </li>
--->
         </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -217,7 +192,7 @@ h3 {font: sans-serif; color: #002277}
 
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('https://juliaputko.github.io/cproofwebsite/img/ControlRoomMar19.jpg')">
+<header class="intro-header" style="background-image: url('/img/ControlRoomMar19.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -292,16 +267,34 @@ h3 {font: sans-serif; color: #002277}
   <h3>Data links and directories: </h3>
   <div class="datagrid">
 
-
     <ul>
-      <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
-      <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
-      <li><a href='./dfo-walle652-20210121.kml'>Deployment KML</a></li>
-      <li><a href='./realtime_raw'>Raw binary data</a></li>
-      <li><a href='./L0-timeseries/dfo-walle652-20210121.nc'>Time series [dfo-walle652-20210121.nc]</a></li>
-      <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
-      <li><a href='./L0-gridfiles/dfo-walle652-20210121_grid.nc'>Time-z grid of data [dfo-walle652-20210121_grid.nc]</a></li>
-      <li><a href='./figs/'>Directory of figures</a></li>
+      {% for static_file in site.static_files %}  <!--- eliminator --->
+        {% if static_file.path == './deployment.yml' %}
+          <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./dfo-walle652-20210121.kml'>Deployment KML</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./realtime_raw/'>Raw binary data</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-timeseries/dfo-walle652-20210121.nc'>Time series [dfo-walle652-20210121.nc]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-gridfiles/dfo-walle652-20210121_grid.nc'>Time-z grid of data [dfo-walle652-20210121_grid.nc]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./figs/'>Directory of figures</a></li>
+          {% endif %}
+       
+        {% endfor %}
     </ul>
   </div>
 
