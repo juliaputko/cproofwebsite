@@ -266,12 +266,6 @@ h3 {font: sans-serif; color: #002277}
   <h3>Data links and directories: </h3>
   <div class="datagrid">
     <ul>
-  {% for static_file in site.static_files %}
-    {%  if static_file.path == './deployment.yml' %}
-      <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
-    {%  endif %}
-  {%  endfor %}
-      <!--- 
     {% for static_file in site.static_files %}
       {%  if static_file.path == './deployment.yml' %}
         <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
@@ -298,7 +292,6 @@ h3 {font: sans-serif; color: #002277}
         <li><a href='./figs/'>Directory of figures</a></li>
       {%  endif %}
     {%  endfor %}
-    -->
     </ul>
   </div>
 
