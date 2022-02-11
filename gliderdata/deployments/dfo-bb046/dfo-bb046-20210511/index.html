@@ -266,6 +266,38 @@ h3 {font: sans-serif; color: #002277}
   <h3>Data links and directories: </h3>
   <div class="datagrid">
     <ul>
+
+
+
+      {% for static_file in site.static_files %}  <!--- eliminator --->
+        {% if static_file.path == './deployment.yml' %}
+          <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./dfo-bb046-20210511.kml'>Deployment KML</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./realtime_raw/'>Raw binary data</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-timeseries/dfo-bb046-20210511.nc'>Time series [dfo-bb046-20210511.nc]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./L0-gridfiles/dfo-bb046-20210511_grid.nc'>Time-z grid of data [dfo-bb046-20210511_grid.nc]</a></li>
+          {% endif %}
+          {% if static_file.path == './deployment.yml' %}
+            <li><a href='./figs/'>Directory of figures</a></li>
+          {% endif %}
+
+        {% endfor %}
+
+      <!---- 
     {% for static_file in site.static_files %}
       {%  if static_file.path == './deployment.yml' %}
         <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
@@ -292,7 +324,10 @@ h3 {font: sans-serif; color: #002277}
         <li><a href='./figs/'>Directory of figures</a></li>
       {%  endif %}
     {%  endfor %}
+     -->  
     </ul>
+
+  
   </div>
 
 
