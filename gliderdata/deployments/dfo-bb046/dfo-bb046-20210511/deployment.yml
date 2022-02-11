@@ -16,7 +16,7 @@ metadata:
   deployment_end: '2021-06-02'
   format_version: IOOS_Glider_NetCDF_v2.0.nc
   # id filled automatically...
-  glider_name: dfo-bb046
+  glider_name: dfo-bb
   glider_serial: '046'
   glider_model: SeaExplorer
   glider_instrument_name: seaexplorer
