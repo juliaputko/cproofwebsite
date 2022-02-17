@@ -136,12 +136,13 @@
 - name: Jennifer Jackson
   visible: true
   role: Physical Oceanographer
-  title: 
+  title: Research Scientist
   org: 
-  img:
+  img: img/JenniferJackson.jpg
   url: 
   bio: 
-  type: collaborators
+  type: investigator
+  type2: hakai
 
 - name: Wiley Evans
   visible: true
@@ -151,14 +152,14 @@
   img:
   url: 
   bio: 
-  type: collaborators
+  type2: hakai
 
 - name: Chris Mackenzie
   visible: true
-  role: Research Technician Hakai Institute
+  role: Hakai Institute Research Technician 
   title: 
   org: 
   img: img/ChrisMackenzie.jpg
   url: 
   bio: 
-  type: collaborators
+  type2: hakai
