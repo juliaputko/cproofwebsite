@@ -19,7 +19,7 @@ category: members
 
 	.sl {
 		overflow: hidden;
-		min-height: 100px;
+		min-height: 120px;
 	}
 
 	.stu {
@@ -80,7 +80,7 @@ category: members
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
 
 	<h3>{{ member.name }}</h3>
-	<p>
+	<p class="sl">
 
 	{{ member.role }}
 
@@ -104,6 +104,8 @@ category: members
 	{{ member.bio }}
 	{% endif %}
 </p>
+
+
 	<hr>
 
 {% endif %}{% endif %}{% endfor %}
@@ -115,9 +117,16 @@ category: members
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px;float:left; width:150px !important">
 {% endif %}
 	<h3>{{ member.name }}</h3>
+{% if member.img %}
 	<p class="staf">
+{% else %}
+	<p>
+{% endif %}	
+
+{% if member.role %}
 	{{ member.role }} 
 		<br>
+{% endif %}
 	{{ member.title }}
 {% if member.url %}
 <br>
@@ -140,16 +149,21 @@ category: members
 
 <h2>Hakai Institute collaborators</h2>
 
-{% for member in site.data.members %} {% if member.type == "hakai" %}{% if member.visible == true %}
+{% for member in site.data.members %} {% if member.type2 == "hakai" %}{% if member.visible == true %}
 {% if member.img %}
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px;float:left; width:150px !important">
 {% endif %}
 	<h3>{{ member.name }}</h3>
+{% if member.img %}
 	<p class="staf">
+{% else %}
+	<p>
+{% endif %}	
 	{{ member.role }}
 	</br>
+	{{member.title}}
 	{% if member.org %}
-	{{member.title}}, {{ member.org }}
+		{{ member.org }}
 	{% endif %}
 {% if member.url %}
 <br>
@@ -169,8 +183,10 @@ category: members
 	<hr>
 {% endif %}{% endif %}{% endfor %}
 
+<!--- 
 <h3>Jennifer Jackson</h3>
 Physical Oceanographer
+
 
 <h3>Wiley Evans</h3>
 Chemical Oceanographer
@@ -179,7 +195,7 @@ Chemical Oceanographer
 <h3>Chris Mackenzie</h3>
 Research Technician
 Hakai Institute
-
+-->
 
 <!--- 
 <h3>Chris O'Sullivan</h3>
