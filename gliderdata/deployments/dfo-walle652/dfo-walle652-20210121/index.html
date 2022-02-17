@@ -192,7 +192,7 @@ h3 {font: sans-serif; color: #002277}
 
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/ControlRoomMar19.jpg')">
+<header class="intro-header" style="background-image: url('{{ site.url }}/{{ site.baseurl }}/img/ControlRoomMar19.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -267,7 +267,7 @@ h3 {font: sans-serif; color: #002277}
   <h3>Data links and directories: </h3>
   <div class="datagrid">
     <ul>
-<!---    append to paths somehow  /gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/ 'deployment_name' -->
+    <!-- Check for existence of files and directories -->
     {% for static_file in site.static_files %}
       {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/deployment.yml' %}
         <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
@@ -278,22 +278,33 @@ h3 {font: sans-serif; color: #002277}
       {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/dfo-walle652-20210121.kml' %}
         <li><a href='./dfo-walle652-20210121.kml'>Deployment KML</a></li>
       {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/realtime_raw' %}
-        <li><a href='./realtime_raw'>Raw binary data</a></li>
-      {%  endif %}
       {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121.nc' %}
         <li><a href='./L0-timeseries/dfo-walle652-20210121.nc'>Time series [dfo-walle652-20210121.nc]</a></li>
-      {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-profiles/' %}
-        <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
       {%  endif %}
       {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-gridfiles/dfo-walle652-20210121_grid.nc' %}
         <li><a href='./L0-gridfiles/dfo-walle652-20210121_grid.nc'>Time-z grid of data [dfo-walle652-20210121_grid.nc]</a></li>
       {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/' %}
-        <li><a href='./figs/'>Directory of figures</a></li>
+      {% if static_file.path contains 'gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs' %}
+        <li><a href='./figs'>Directory of figures</a></li>
+        {%  break %}  
       {%  endif %}
     {%  endfor %}
+
+  {% for static_file in site.static_files %}
+      {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/realtime_raw/' %}
+        <li><a href='./realtime_raw'>Raw binary data</a></li>
+        {%  break %}
+      {%  endif %}
+  {%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-profiles/' %}
+      <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
+      {%  break %}
+    {%  endif %}
+{%  endfor %}
+
+
     </ul>
   </div>
 
