@@ -1,0 +1,2 @@
+https://cproof.uvic.ca/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/L0-timeseries/dfo-bb046-20210511_L0.nc
+https://cproof.uvic.ca/gliderdata/deployments/dfo-bb046/dfo-bb046-20210511/L0-gridfiles/dfo-bb046-20210511_grid.nc
