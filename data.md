@@ -5,96 +5,104 @@ description: "C-PROOF Mission"
 header-img: "img/MikeSaanich19.jpg"
 ---
 
+<script>
+//https://stackoverflow.com/questions/45615998/on-click-copy-to-clipboard/45616055
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+<style>
+/*https://stackoverflow.com/questions/7117073/add-a-tooltip-to-a-div*/
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    
+    /* customizable */
+    transition: 0.2s;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px silver;  
+    font-size: 12px;
+    line-height: 16px;
+}
+[data-tooltip]:hover:before {
+    opacity: 1;
+    /* customizable */
+    background: #979BA0;
+    margin-top: -35px;
+  /*  margin-left: 60px;*/
+}
+
+[data-tooltip]:not([data-tooltip-persistent]):before {
+    pointer-events: none;
+}
+
+</style>
 
 # Downloading Glider Data
 
 ## Setup:
 
-Install `wget` on your computer \
-Install Homebrew and type command `brew install wget` on macOS Sierra
+You will need to install the wget package onto your system in order to retrieve the data. \
+To show whether the wget package is installed on your system, type the command `wget` in a terminal window and press enter. \
+If you have wget installed, the system will print `wget: missing URL`. \
+Otherwise, it will print `wget command not found`.
 
-Install wget with Homebrew  
-Type command
-```
-brew install wget
-```
+### Install using Homebrew on macOS Sierra
 
-To download `all mission data`, type command
-```
-wget -N -i http://cproof.uvic.ca/gliderdata/deployments/mission_all.txt
-```
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy1" onclick="copyToClipboard('#copy1')">brew install wget
+</code></pre></div></div>
 
-To download `individual mission data`, type command 
-```
-wget -N -i http://cproof.uvic.ca/gliderdata/deployments/dfo- << glidername >>.txt
-```
-Ex. If I wanted all of `dfo-bb046's data`, type command 
+### Install on Ubuntu and Debian
 
-```
-wget -N -i http://cproof.uvic.ca/gliderdata/deployments/dfo-bb046.txt
-```
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy2" onclick="copyToClipboard('#copy2')">sudo apt install wget
+</code></pre></div></div>
 
-## If I want `Titles in Red`
+### Install on Windows
 
-## Get raw data:
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy3" onclick="copyToClipboard('#copy3')">  </code></pre></div></div>
 
-For these examples its being put in `realtime_raw`, though you can change
-that name, and should for post-processing data.  In this case, we are getting
-the data from Teledyne Webb directly by syncing our data directories with
-our computer.  The raw data could also come from a card offload.
+## Get mission data:
 
-The files have different suffixes if they come from the realtime data:
-`*.sbd` are the glider data and `*.tbd` are the science data.  For
-post-processing these would be `dbd` and `edb` respectively.
-
-All the files we want should go in here.  If you dont want to process all the
-files you can manually remove them.  
-
-### Get the headers:
-
-The slocums need to know the layout of the data in the files from `*.cac`
-files.  These often change if the glider changes setups, and need to be
-offloaded from the glider.  Put these files in `./cac/` so the processing
-can find the right files.
-
-Or get these from SFMC: `Configuration/Cache Files` and put them in `cac`
-
-
-### Get and edit the sensor filter file:
-
-```
-./dfo_rosie713_sensors.txt
-```
-This is the list of data to try and parse out of the slocum files.  These will
-get translated to netcdf files at the next steps.
-
-
-## Edit deployment info:
-
-Edit this to have correct glider name and as much meta info as needed.  
-`deploymentRealtime.yml`
-
-## Edit `process_deploymentRealtime.py`
-
-Note that you will want to edit this to have correct directories:
-Also, realtime and delayed time have different suffixies:
-
-```
-scisuffix    = 'tbd'
-glidersuffix = 'sbd'
-```
-
-## Run `python process_deploymentRealtime.py`
-
-This should do a number of steps:
-
-1. convert the `*.tdb/sbd` files to raw netcdf files (`realtime_rawnc/`) and then concatenate them to one or more merged files.  For instance in the
-example data, there are four files created: `dfo-rosie713-0097-rawdbd.nc`,
-`dfo-rosie713-0097-rawebd.nc`, `dfo-rosie713-0098-rawdbd.nc` and `dfo-rosie713-0098-rawebd.nc`, that are a concatenation of the missions.  These are not
-concatenated into one file because different missions sometimes have
-different sensors activated and they won't merge smoothly.  
-
-2. The science files are created in `L1_timeseries`, `L1_profiles`, and
+The science files are created in `L1_timeseries`, `L1_profiles`, and
 `L2_gridfiles`. These are proper nectdf files that have metadata and attributes, and should be compliant with US-IOOS standards.
 
-3. A plot will be made in `figs/`.  
+By default, the wget will download data to the directory the user is in. \
+If you would like save the data in a different location use the flag  \
+`--directory-prefix=outdir`  \
+ where `outdir` is the name of the directory you would like to download data to. 
+
+To download `all mission data`, type command
+
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy4" onclick="copyToClipboard('#copy4')">wget -N --directory-prefix=outdir --input-file=http://cproof.uvic.ca/gliderdata/deployments/mission_all.txt
+</code></pre></div></div>
+
+To download `individual mission data`, type command 
+
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy5" onclick="copyToClipboard('#copy5')">wget -N --directory-prefix=outdir --input-file=http://cproof.uvic.ca/gliderdata/deployments/dfo-[[ glidername ]].txt
+</code></pre></div></div>
+
+Ex. If you wanted all of `dfo-bb046's data`, type command 
+
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy6" onclick="copyToClipboard('#copy6')">wget -N --directory-prefix=dfo-bb046 --input-file=http://cproof.uvic.ca/gliderdata/deployments/dfo-bb046.txt
+</code></pre></div></div>
+
+To download data for a particular deployment line, type command
+
+Line P deployments
+
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy7" onclick="copyToClipboard('#copy7')">wget -N --directory-prefix=linep --input-file=http://cproof.uvic.ca/gliderdata/deployments/LineP.txt
+</code></pre></div></div>
+
+Calvert Island deployments
+
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy8" onclick="copyToClipboard('#copy8')">wget -N --directory-prefix=calvertisland --input-file=http://cproof.uvic.ca/gliderdata/deployments/CalvertIsland.txt
+</code></pre></div></div>
+

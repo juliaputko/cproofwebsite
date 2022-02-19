@@ -14,7 +14,7 @@
 <meta property="og:title" content="Data" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cproof.uvic.ca///data/" />
-<meta property="og:image" content="https://juliaputko.github.io/cproofwebsite/img/ControlRoomMar19.jpg">
+<meta property="og:image" content="https://juliaputko.github.io/cproofwebsite//img/gliderdeck1.jpg">
 
 
 
@@ -92,30 +92,45 @@ h3 {font: sans-serif; color: #002277}
 
 #figures {
   /* Prevent vertical gaps */
-  font: normal 12px/150% Arial, Helvetica, sans-serif;
-  -webkit-column-count: 5;
+  font: normal 13px/150% Arial, Helvetica, sans-serif;
+  -webkit-column-count: 3;
   -webkit-column-gap:   10px;
   -webkit-row-gap:      10px;
-  -moz-column-count:    5;
+  -moz-column-count:    3;
   -moz-column-gap:      10px;
-  column-count:         5;
+  column-count:         3;
   column-gap:           10px;
   row-gap:              10px;
+  max-width:            800px;
 }
 
-#figures img {
+#figure {
+  /* Prevent vertical gaps */
+  font: normal 13px/150% Arial, Helvetica, sans-serif;
+  -webkit-column-count: 1;
+  -webkit-column-gap:   10px;
+  -webkit-row-gap:      10px;
+  -moz-column-count:    1;
+  -moz-column-gap:      10px;
+  column-count:         1;
+  column-gap:           10px;
+  row-gap:              10px;
+  max-width:            800px;
+}
+
+#figure img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
 }
 @media (max-width: 1200px) {
   #figures {
-  -moz-column-count:    4;
-  -webkit-column-count: 4;
-  column-count:         4;
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1000px) 
   #figures {
   -moz-column-count:    3;
   -webkit-column-count: 3;
@@ -168,20 +183,22 @@ h3 {font: sans-serif; color: #002277}
             </li>
 
             <li>
+              <a href="{{ site.baseurl }}/data/">Data</a>
+          </li>
+
+            <li>
                 <a href="{{ site.baseurl }}/platforms/">Platforms</a>
             </li>
 
             <li>
-                <a href="{{ site.baseurl }}/data/">Data</a>
-            </li>
+              <a href="{{ site.baseurl }}/members.html">People</a>
+          </li>
 
             <li>
                 <a href="{{ site.baseurl }}/deployments/">Deployments</a>
             </li>
 
-            <li>
-                <a href="{{ site.baseurl }}/members.html">People</a>
-            </li>
+   
 
         </ul>
     </div>
@@ -192,7 +209,7 @@ h3 {font: sans-serif; color: #002277}
 
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('https://juliaputko.github.io/cproofwebsite/img/ControlRoomMar19.jpg')">
+<header class="intro-header" style="background-image: url('{{ site.url }}/{{ site.baseurl }}/img/gliderdeck1.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -207,6 +224,9 @@ h3 {font: sans-serif; color: #002277}
   </div>
 </header>
 
+<div class="container"></div>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
 <div class="container">
   <h3> dfo-bb046-20210511 </h3>
@@ -222,7 +242,7 @@ h3 {font: sans-serif; color: #002277}
     </table>
   </div>
 
-  <h4> Timeseries variables </h4>
+  <h3> Timeseries variables </h3>
   <section id="figures">
     
       heading [rad] <br/>
@@ -310,7 +330,7 @@ h3 {font: sans-serif; color: #002277}
 
 
   <h3> Figures </h3>
-  <section id="figures">
+  <section id="figure">
     
     <a href="./figs/Battery.png"><img src=./figs/Battery.png></a>
     
@@ -327,5 +347,10 @@ h3 {font: sans-serif; color: #002277}
     <a href="./figs/pcolor_dfo-bb046-20210511_last10d.png"><img src=./figs/pcolor_dfo-bb046-20210511_last10d.png></a>
     
   </section>
+</div>
+
+
+</div>
+</div>
 </div>
 </html>
