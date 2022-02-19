@@ -40,32 +40,6 @@ words about what C-PROOF is actively accomplishing.
 <a href= "{{ site.baseurl }}/platforms/">Platforms</a>
 
 
-<hr/>
-<h2>Publications</h2> 
-<h2>
-    In The News
-</h2>
-
-{% for post in site.data.inthenews %}{% if post.visible == true %}   <!---jp added  --->
-<div class="post-preview">
-    <a href="{{ post.url }}">
-	    
-        <h4 class="post-title">            {{ post.title }}
-        </h4>
-        {% if post.subtitle %}
-        <h5 class="post-subtitle">
-            {{ post.subtitle }}
-        </h5>
-        {% endif %}
-    </a>
-    <p class="post-meta" style="margin-bottom:5px">{% if post.author %}Posted by {{ post.author }} on {% endif %}  {{ post.date | date: "%B %-d, %Y" }}</p>
-	<div class="notepad-index-post-tags" style="">
-		{% for tag in post.tags %}<a href="{{ site.baseurl }}/search/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
-	</div>
-</div>
-<hr>
-{% endif %}
-{% endfor %}
 
 
 </body>
