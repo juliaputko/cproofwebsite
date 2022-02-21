@@ -9,7 +9,7 @@ category: platforms
 # Ocean Gliders:
 
 <figure>
-<img src="/img/gliderwater.jpg" alt="">
+<img src="{{ site.baseurl }}/img/gliderwater.jpg" alt="">
 <figcaption style="text-align:left;padding: 6px;position:relative;left:60px;font-style: italic;font-size: 17px;">[Source: Katrina Pyne, Hakai Media]</figcaption>
 </figure>
 
@@ -19,7 +19,7 @@ category: platforms
 
 Underwater ocean gliders are autonomous vehicles that use a buoyancy engine to make themselves lighter or heavier than the seawater around them, causing them to float or sink. They have hydrodynamic wings that turn some of this lift to forward thrust, allowing them to move through the water at 20-30 km/day. Every 4-8 hours they surface and call home, communicating over satellite to share their GPS position and a subset of their data. They also receive commands for where to go next and how to change their sampling. Our ocean gliders have sensors to measure ocean temperature and salinity, dissolved oxygen, chlorophyll, dissolved organic matter, turbidity, and even microstructure turbulence. 
 
-![How a glider works](/img/GliderOps.png "How a glider works.")
+![How a glider works]({{ site.baseurl }}/img/GliderOps.png "How a glider works.")
 
 <hr>
 
