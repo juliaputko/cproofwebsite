@@ -37,8 +37,22 @@ These data sources will be shared with a wide array of partners and user groups 
 <h3>What We Do</h3>
 
 words about what C-PROOF is actively accomplishing. 
+<br>
 <a href= '/platforms/'>Platforms</a>
 
+<h3>Publications</h3>
+
+<p>Wong Annie P. S., et al., 2020.<strong> Argo Data 1999–2019: Two Million Temperature-Salinity Profiles and Subsurface Velocity Observations From a Global Array of Profiling Floats</strong>, Frontiers in Marine Science, 7, doi:10.3389/fmars.2020.00700. 	 	 
+<a href='https://www.frontiersin.org/article/10.3389/fmars.2020.00700'>https://www.frontiersin.org/article/10.3389/fmars.2020.00700</a></p>
+
+<p>Roemmich Dean, et al., 2019.<strong> On the Future of Argo: A Global, Full-Depth, Multi-Disciplinary Array</strong>, Frontiers in Marine Science, 6, doi:10.3389/fmars.2019.00439.  	 
+<a href='https://www.frontiersin.org/article/10.3389/fmars.2019.00439/'>https://www.frontiersin.org/article/10.3389/fmars.2019.00439/</a></p>
+
+<p>Testor Pierre, et al., 2019.<strong> OceanGliders: A Component of the Integrated GOOS</strong>, Frontiers in Marine Science, 6, doi:10.3389/fmars.2019.00422.	 
+<a href='https://www.frontiersin.org/article/10.3389/fmars.2019.00422/'>https://www.frontiersin.org/article/10.3389/fmars.2019.00422/</a></p>
+
+<p>Barth John A., et al., 2019.<strong> Better Regional Ocean Observing Through Cross-National Cooperation: A Case Study From the Northeast Pacific</strong>, Frontiers in Marine Science, 6, doi:10.3389/fmars.2019.00093. 	 
+<a href='https://www.frontiersin.org/article/10.3389/fmars.2019.00093/'>https://www.frontiersin.org/article/10.3389/fmars.2019.00093/</a></p>
 
 
 
