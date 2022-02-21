@@ -86,7 +86,7 @@ p {
 # Biogeochemical Argo Floats
 
 <figure>
-<img src="/img/argodiagram.jpg" alt="">
+<img src="{{ site.baseurl}}/img/argodiagram.jpg" alt="">
 <figcaption style="text-align:left;padding:6px;position:relative;left:20px;font-style: italic;font-size: 17px;">A schematic illustration of the standard Argo “park-and-profile” mission. [Source: Woods Hole Oceanographic Institution]</figcaption>
 </figure>
 
