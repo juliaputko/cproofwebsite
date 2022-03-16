@@ -1,5 +1,5 @@
 ---
-layout: project_jp
+layout: data_jp
 title: "Data"
 description: "C-PROOF Mission"
 header-img: "img/MikeSaanich19.jpg"
@@ -67,12 +67,11 @@ Otherwise, it will print `wget command not found`.
 
 ### Install on Windows
 
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy3" onclick="copyToClipboard('#copy3')">  </code></pre></div></div>
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy3" onclick="copyToClipboard('#copy3')"><a href="https://www.gnu.org/software/wget/">https://www.gnu.org/software/wget/</a> </code></pre></div></div>
 
 ## Get mission data:
 
-The science files are created in `L1_timeseries`, `L1_profiles`, and
-`L2_gridfiles`. These are proper nectdf files that have metadata and attributes, and should be compliant with US-IOOS standards.
+The science files are created in `L0_timeseries` and `L0_gridfiles`. These are proper nectdf files that have metadata and attributes, and should be compliant with US-IOOS standards.
 
 By default, the wget will download data to the directory the user is in. \
 If you would like save the data in a different location use the flag  \
@@ -84,7 +83,7 @@ To download `all mission data`, type command
 <div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy4" onclick="copyToClipboard('#copy4')">wget -N --directory-prefix=outdir --input-file=http://cproof.uvic.ca/gliderdata/deployments/mission_all.txt
 </code></pre></div></div>
 
-To download `individual mission data`, type command 
+To download `individual glider data`, type command 
 
 <div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy5" onclick="copyToClipboard('#copy5')">wget -N --directory-prefix=outdir --input-file=http://cproof.uvic.ca/gliderdata/deployments/dfo-[[ glidername ]].txt
 </code></pre></div></div>
@@ -101,8 +100,8 @@ Line P deployments
 <div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy7" onclick="copyToClipboard('#copy7')">wget -N --directory-prefix=linep --input-file=http://cproof.uvic.ca/gliderdata/deployments/LineP.txt
 </code></pre></div></div>
 
-Calvert Island deployments
+Calvert Line deployments
 
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy8" onclick="copyToClipboard('#copy8')">wget -N --directory-prefix=calvertisland --input-file=http://cproof.uvic.ca/gliderdata/deployments/CalvertIsland.txt
+<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy8" onclick="copyToClipboard('#copy8')">wget -N --directory-prefix=calvertline --input-file=http://cproof.uvic.ca/gliderdata/deployments/CalvertLine.txt
 </code></pre></div></div>
 

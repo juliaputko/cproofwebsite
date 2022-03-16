@@ -1,11 +1,2 @@
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0333_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0328_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0330_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0329_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0323_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0325_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0322_L0.nc
 https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0324_L0.nc
-https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121-M0326_L0.nc
 https://cproof.uvic.ca/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-gridfiles/dfo-walle652-20210121_grid.nc
