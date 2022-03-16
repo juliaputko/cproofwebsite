@@ -21,3 +21,5 @@ gliderdata/deployments/process-dfo-bb046-20210511_jp.sh
 gliderdata/deployments/updateweb.py
 gliderdata/deployments/.process_battery.log
 gliderdata/deployments/.process_map.log
+
+gliderdata/deployments/__pycache__/
