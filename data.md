@@ -1,5 +1,5 @@
 ---
-layout: project_jp
+layout: data_jp
 title: "Data"
 description: "C-PROOF Mission"
 header-img: "img/MikeSaanich19.jpg"

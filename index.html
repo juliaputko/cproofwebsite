@@ -21,7 +21,24 @@ crossorigin=""></script>
 
 <h3> Deployments </h3>
 
+
+<header class="intro-header2" style="background-color:#6E7588;">
+  <div class="container">
+     <div class="row">
+        <div>
+            <div class="subheading" style="padding: 6px 0">
+                <h6 style="font-size:17px;color:white">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To date, our gliders have traveled {% include inputfile.html %} km.
+                </h6>
+            </div>
+        </div>
+      </div>
+   </div>
+ </header>
+
 C-PROOF glider deployments are under way!  Click on map to see list of deployments and access data:
+
+
 <a href="deployments/">
 <div id="mapfront" style="width: 100%; height: 400px;"></div>
 </a>
@@ -85,7 +102,7 @@ C-PROOF glider deployments are under way!  Click on map to see list of deploymen
 <hr/>
 <!--- <h2>Recent news</h2> --->  
 <h2>
-  <a href="/news.html">
+  <a href="{{ site.baseurl }}/search/index.html">
     Recent News
   </a>
 </h2>
@@ -102,9 +119,9 @@ C-PROOF glider deployments are under way!  Click on map to see list of deploymen
         {% endif %}
     </a>
     <p class="post-meta" style="margin-bottom:5px">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
-	<div class="notepad-index-post-tags" style="">
+<!--	<div class="notepad-index-post-tags" style="">
 		{% for tag in post.tags %}<a href="{{ site.baseurl }}/search/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
-	</div>
+	</div-->
 </div>
 <hr>
 {% endfor %}

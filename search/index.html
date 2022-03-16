@@ -1,8 +1,13 @@
 ---
 layout: page
-title: Search
-description: Search by keyword or tag.
+title: "Glider News"
+description: "C-PROOF Glider news"
+header-img: "img/MikeSaanich19.jpg"
 ---
+
+<!---layout: page
+title: Search
+description: Search by keyword or tag.  -->
 <form action="get" id="site_search">
 <center>
   <strong><a style="font-size:24px">Search:</a></strong>
@@ -18,7 +23,7 @@ description: Search by keyword or tag.
 <script src="{{ site.baseurl }}/js/search.js"></script>
 
 <ul class="tag-box inline"><div class="notepad-index-post-tags" style="">
-{% assign tags_list = site.tags %}  
+<!--{% assign tags_list = site.tags %}  
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %} 
       <a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a>
@@ -28,17 +33,45 @@ description: Search by keyword or tag.
       <a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a>
     {% endfor %}
   {% endif %}
+{% assign tags_list = nil %}-->
+
+
+
+{% assign tags_list = site.tags %}  
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %} 
+      <a href="#{{ tag }}">{{ tag | capitalize }} </a>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %} 
+      <a href="#{{ tag[0] }}">{{ tag[0] | capitalize }}</a>
+    {% endfor %}
+  {% endif %}
 {% assign tags_list = nil %}
+
+<a href="#inthe">In The News</a>
 </div></ul>
 
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
+
     {% assign pages_list = tag[1] %}  
     {% for post in pages_list %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
-      <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }} - <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+      <!--a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }} - <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a--> 
+      
+      <div class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+              <h3 class="post-title">            {{ post.title }}
+              </h3>
+          </a>
+          <p class="post-meta" style="margin-bottom:5px">{{ post.date | date: "%B %-d, %Y" }}</p>
+        </div>
+      
+      <hr>
+
       {% endif %}
       {% endif %}
     {% endfor %}
@@ -46,3 +79,40 @@ description: Search by keyword or tag.
     {% assign group = nil %}
   </ul>
 {% endfor %}
+
+
+<!--jp in the news -->
+
+<h2 id="inthe">
+  In The News
+</h2>
+
+{% for post in site.data.inthenews %}{% if post.visible == true %} 
+<ul class="post-preview">   <!---post-preview  -->
+    <a href="{{ post.url }}">
+        <h3 class="post-title">  {{ post.title }}
+        </h3>
+    </a>
+    <p class="post-meta" style="margin-bottom:5px">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <hr>
+  </ul>
+
+{% endif %}
+{% endfor %}
+
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next">
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+
+{% endif %}

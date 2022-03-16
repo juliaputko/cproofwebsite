@@ -6,10 +6,48 @@ header-img: "img/glidersonconcrete.jpg"
 category: platforms
 ---
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.img {
+  width: 700px;
+  padding-left: 30px;
+}
+ 
+.box {
+  width: 100%;
+  height: 150px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+p { 
+  margin-top: 0px; 
+  white-space: pre-line;
+  }
+  
+}
+
+</style>
+
 # Ocean Gliders:
 
 <figure>
-<img src="/img/gliderwater.jpg" alt="">
+<img class="img" src="/img/gliderwater.jpg" alt="">
 <figcaption style="text-align:left;padding: 6px;position:relative;left:60px;font-style: italic;font-size: 17px;">[Source: Katrina Pyne, Hakai Media]</figcaption>
 </figure>
 
@@ -25,31 +63,11 @@ Underwater ocean gliders are autonomous vehicles that use a buoyancy engine to m
 
 ## Meet the Fleet
 
+<body>
 
-<style>
-
-/* Create two equal columns that floats next to each other */
-.box {
-  /*margin-left: 30px;*/
-  width: 100%;
-  /*padding-left: 30px;
-  padding-left: 30px;
-  padding-top: 0px;*/
-  padding-bottom: 40px;
-  /*padding-left: 30px;*/
-  text-align: center;
-}
-
-p { 
-  margin-top: 0px; 
-  white-space: pre-line;
-  }
-  
-}
-
-</style>
-
-  <p class="box" style="background-color:rgb(250, 250, 250);">
+<div class="row">
+  <div class="column" >
+      <p class="box" style="background-color:rgb(250, 250, 250);">
       <strong> dfo-rosie713</strong>
       Teledyne Webb Slocum G3 1000 m glider
       Sensors: CTD, oxygen optode, and ECO-Puck 
@@ -67,7 +85,9 @@ p {
     Sensors: CTD, oxygen optode, ECO-Puck, 
     Rockland MicroRider turbulence sensor  
   </p>
-
+  </div>
+  <div class="column" >
+   
  <p class="box" style="background-color:rgb(250, 250, 250);">
     <strong>dfo-bb046  </strong>
     Alseamar SeaExplorer-X2 1000 m glider  
@@ -79,6 +99,10 @@ p {
     Alseamar SeaExplorer-X1 700 m glider  
     Sensors: CTD, oxygen optode, ECO-Puck  
   </p>
+  </div>
+</div>
+
+</body>
 
 
 <hr>
@@ -86,7 +110,7 @@ p {
 # Biogeochemical Argo Floats
 
 <figure>
-<img src="/img/argodiagram.jpg" alt="">
+<img class="img" src="/img/argodiagram.jpg" alt="">
 <figcaption style="text-align:left;padding:6px;position:relative;left:20px;font-style: italic;font-size: 17px;">A schematic illustration of the standard Argo “park-and-profile” mission. [Source: Woods Hole Oceanographic Institution]</figcaption>
 </figure>
 
@@ -121,31 +145,5 @@ tr>td {
 
 
 <br>
-
-
-
-
------------------------------------ 
-(to delete)
-
-
-
-
-  - [dfo-rosie713](Rosie/): Teledyne Webb G3
-    - 1000 m
-    - CTD, O2, Eco-puck
-  - dfo-walle652: Teledyne Webb G2
-    - 1000 m
-    - CTD, O2, Eco-puck
-  - mike579: (Mike-ro-rider) Teledyne Webb G2 (S. Waterman UBC)
-    - 1000 m
-    - CTD, O2, Rockland Micro-turbulence
-  - dfo-eva035: SeaExplorer v2
-    - 1000 m
-    - CTD, O2, Eco-puck
-
-#### What is an underwater glider?
-
-Under water gliders use a buoyancy engine to make themselves lighter and heavier than the seawater around them, causing them to float or sink.  They have hydrodynamic wings on them that turn some of this lift to forward thrust, allowing them to move through the water at 20-30 km/day.  Every 4-8 hours they surface and communicate home over satellite their GPS position and a subset of their data.  They also accept commands for where to go next, how to change sampling, etc.  
 
 

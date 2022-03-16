@@ -31,9 +31,179 @@ category: members
 		overflow: hidden;
 		min-height: 140px;
 	}
-	</style>
-</style>
 
+	* {
+     box-sizing: border-box;
+   }
+  
+   /* Create two equal columns that floats next to each other */
+   .columnl {
+     float: left;
+     width: 50%;
+     padding: 10px;
+    /* height: 300px; /* Should be removed. Only for demonstration */
+     border-right: 1px solid rgb(228, 226, 226);
+   }
+ 
+   .columnr {
+     float: left;
+     width: 50%;
+     padding: 10px;
+    /* height: 300px; /* Should be removed. Only for demonstration */
+    
+   }
+  
+   /* Clear floats after the columns */
+   .row:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+
+   br {
+	content: "";
+	margin: 2em;
+	display: block;
+	font-size: 24%;
+	}
+
+	.jptest {
+
+		width:100%
+	}
+
+	</style>
+
+
+<body>
+	<h2>C-PROOF Investigators</h2>
+  
+<div class="row">
+	<div class="columnl" ><!---style="background-color:#aaa;"  -->
+	  <h2>Glider and Float Science Leads</h2>
+	  {% for member in site.data.members %} {% if member.type == "sciencelead" %}{% if member.visible == true %}
+
+  <img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
+
+ 
+  <h3>{{ member.name }}</h3>
+  <p class="sl">
+  {{ member.role }}
+
+ <br>
+
+  {% if member.org %}
+  {{member.title}}, {{ member.org }}
+  {% endif %}
+{% if member.url %}
+<br>
+<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+{% endif %}
+{% if member.github %}
+<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+{% endif %}
+{% if member.gplus %}
+<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+{% endif %}
+<br/>
+<p class="jptest">
+  {% if member.bio %}
+  {{ member.bio }}
+  {% endif %}
+  <p>
+</p>
+
+  <hr>
+
+
+
+{% endif %}{% endif %}{% endfor %}
+
+
+<h2>Hakai Institute Investigators</h2>
+
+
+{% for member in site.data.members %} {% if member.type == "hakai" %}{% if member.visible == true %}
+{% if member.img %}
+	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px;float:left; width:150px !important">
+{% endif %}
+	<h3>{{ member.name }}</h3>
+{% if member.img %}
+	<p class="staf">
+{% else %}
+	<p>
+{% endif %}	
+	{{ member.role }}
+	</br>
+	{{member.title}}
+	{% if member.org %}
+		{{ member.org }}
+	{% endif %}
+{% if member.url %}
+<br>
+<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+{% endif %}
+{% if member.github %}
+<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+{% endif %}
+{% if member.gplus %}
+<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+{% endif %}
+<br/>
+	{% if member.bio %}
+	{{ member.bio }}
+	{% endif %}
+</p>
+	<hr>
+{% endif %}{% endif %}{% endfor %}
+
+
+
+	  <p></p>
+	</div>
+	<div class="columnr" >  <!---   style="background-color:#bbb;"-->
+	  <h2>Co-Investigators</h2>
+	  {% for member in site.data.members %} {% if member.type == "investigator" %}{% if member.visible == true %}
+
+	  <img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
+ 
+	  <h3>{{ member.name }}</h3>
+	  <p class="sl">
+ 
+	  {{ member.role }}
+ 
+ 
+	  </br>
+	  {% if member.org %}
+	  {{member.title}}, {{ member.org }}
+	  {% endif %}
+  {% if member.url %}
+  <br>
+  <span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
+  {% endif %}
+  {% if member.github %}
+  <span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
+  {% endif %}
+  {% if member.gplus %}
+  <span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
+  {% endif %}
+  <br/>
+  <p class="jptest">
+	  {% if member.bio %}
+	  {{ member.bio }}
+	  {% endif %}
+	</p>
+  </p>
+ 
+ 
+	  <hr>
+ 
+  {% endif %}{% endif %}{% endfor %}
+	 
+	  <p></p>
+	</div>
+  </div>
+<!-- 
 
 <h2>Science Leads</h2>
 
@@ -109,6 +279,7 @@ category: members
 	<hr>
 
 {% endif %}{% endif %}{% endfor %}
+ -->
 
 <h2> C-PROOF staff </h2>
 
@@ -146,10 +317,10 @@ category: members
 	<hr>
 {% endif %}{% endif %}{% endfor %}
 
-
+<!-- 
 <h2>Hakai Institute collaborators</h2>
 
-{% for member in site.data.members %} {% if member.type2 == "hakai" %}{% if member.visible == true %}
+{% for member in site.data.members %} {% if member.type == "hakai" %}{% if member.visible == true %}
 {% if member.img %}
 	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px;float:left; width:150px !important">
 {% endif %}
@@ -182,7 +353,7 @@ category: members
 </p>
 	<hr>
 {% endif %}{% endif %}{% endfor %}
-
+-->
 <!--- 
 <h3>Jennifer Jackson</h3>
 Physical Oceanographer
