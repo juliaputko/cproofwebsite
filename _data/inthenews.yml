@@ -8,6 +8,7 @@
   url: https://www.eoas.ubc.ca/news-events/news/1508310000
   type: 
   visible: true
+  visible2: true
 
 - title: DFO-UVic-UBC underwater glider
   subtitle: DFO-UVic-UBC underwater glider records unusually warm temperatures on maiden Pacific trip
@@ -26,6 +27,7 @@
   url: https://hakai.org/gliding-into-the-deep/
   type: 
   visible: true
+  visible2: true
 
 - title: Ocean Gliders of the BC Central Coast
   subtitle: Autonomous robots are dove into Queen Charlotte Sound to discover why it’s so productive and how it is changing.
@@ -35,6 +37,7 @@
   url: https://www.hakai.org/storymap/glider.html
   type: 
   visible: true
+  visible2: true
 
 - title: WALL-E Returns to Shore for a Tune-Up
   subtitle: Plucking an ocean glider from the sea is anything but simple.
