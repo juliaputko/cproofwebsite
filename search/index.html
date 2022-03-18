@@ -52,6 +52,28 @@ description: Search by keyword or tag.  -->
 <a href="#inthe">In The News</a>
 </div></ul>
 
+
+<!--jp in the news -->
+
+<h2 id="inthe">
+  In The News
+</h2>
+
+{% for post in site.data.inthenews %}{% if post.visible == true %} 
+<ul class="post-preview">   <!---post-preview  -->
+    <a href="{{ post.url }}">
+        <h3 class="post-title">  {{ post.title }}
+        </h3>
+    </a>
+    <p class="post-meta" style="margin-bottom:5px">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <hr>
+  </ul>
+
+{% endif %}
+{% endfor %}
+
+
+
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
   <ul class="post-list">
@@ -81,24 +103,7 @@ description: Search by keyword or tag.  -->
 {% endfor %}
 
 
-<!--jp in the news -->
 
-<h2 id="inthe">
-  In The News
-</h2>
-
-{% for post in site.data.inthenews %}{% if post.visible == true %} 
-<ul class="post-preview">   <!---post-preview  -->
-    <a href="{{ post.url }}">
-        <h3 class="post-title">  {{ post.title }}
-        </h3>
-    </a>
-    <p class="post-meta" style="margin-bottom:5px">{{ post.date | date: "%B %-d, %Y" }}</p>
-    <hr>
-  </ul>
-
-{% endif %}
-{% endfor %}
 
 
 {% if paginator.total_pages > 1 %}
