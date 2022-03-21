@@ -23,3 +23,5 @@ gliderdata/deployments/.process_battery.log
 gliderdata/deployments/.process_map.log
 
 gliderdata/deployments/__pycache__/
+
+gliderdata/deployments/exclude.txt
