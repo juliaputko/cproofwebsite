@@ -6,45 +6,9 @@ header-img: "img/glidersonconcrete.jpg"
 category: platforms
 ---
 
-<style>
-* {
-  box-sizing: border-box;
-}
+<body class="platforms">
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.img {
-  width: 700px;
-  padding-left: 30px;
-}
- 
-.box {
-  width: 100%;
-  height: 150px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-
-p { 
-  margin-top: 0px; 
-  white-space: pre-line;
-  }
-  
-}
-
-</style>
-
-# Ocean Gliders:
+<h1>Ocean Gliders:</h1>
 
 <figure>
 <img class="img" src="/img/gliderwater.jpg" alt="">
@@ -52,8 +16,7 @@ p {
 </figure>
 
 
-
-### What is an ocean glider? 
+<h3>What is an ocean glider? </h3>
 
 Underwater ocean gliders are autonomous vehicles that use a buoyancy engine to make themselves lighter or heavier than the seawater around them, causing them to float or sink. They have hydrodynamic wings that turn some of this lift to forward thrust, allowing them to move through the water at 20-30 km/day. Every 4-8 hours they surface and call home, communicating over satellite to share their GPS position and a subset of their data. They also receive commands for where to go next and how to change their sampling. Our ocean gliders have sensors to measure ocean temperature and salinity, dissolved oxygen, chlorophyll, dissolved organic matter, turbidity, and even microstructure turbulence. 
 
@@ -61,9 +24,8 @@ Underwater ocean gliders are autonomous vehicles that use a buoyancy engine to m
 
 <hr>
 
-## Meet the Fleet
+<h2> Meet the Fleet</h2>
 
-<body>
 
 <div class="row">
   <div class="column" >
@@ -102,12 +64,11 @@ Underwater ocean gliders are autonomous vehicles that use a buoyancy engine to m
   </div>
 </div>
 
-</body>
-
 
 <hr>
 
-# Biogeochemical Argo Floats
+
+<h1>Biogeochemical Argo Floats</h1>
 
 <figure>
 <img class="img" src="/img/argodiagram.jpg" alt="">
@@ -115,19 +76,15 @@ Underwater ocean gliders are autonomous vehicles that use a buoyancy engine to m
 </figure>
 
 
-### About biogeochemical Argo floats
+<h3>About biogeochemical Argo floats</h3>
 
 The goal of <a href='https://biogeochemical-argo.org/'>Biogeochemical-Argo</a> is to develop a global network of Argo profiling floats with biogeochemical sensors onboard. Argo is an international program with thousands of profiling floats measuring water properties globally. Each float is an autonomous instrument that drifts with the ocean currents and moves up and down through the ocean, returning to the surface to communicate data via satellite. Argo floats measure temperature and salinity, and biogeochemical floats also measure additional properties that describe the biology and chemistry of the ocean. C-PROOF contributes instruments to core Argo floats. 
 
 
-### C-PROOF Argo floats
+<h3>C-PROOF Argo floats</h3>
 
-<style>
-tr>td {
-  padding-bottom: 1em;
-}
-</style>
-<table> <!--border="0"-->
+
+<table> 
 
  <tr>
     <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902549'><b>4902549</b></a></td>
@@ -145,5 +102,6 @@ tr>td {
 
 
 <br>
+</body>
 
 

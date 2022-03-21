@@ -5,16 +5,7 @@ description: "C-PROOF Mission"
 header-img: "img/MikeSaanich19.jpg"
 ---
 
-<style>
-
-html,body
-{
-    overflow-x: hidden; 
-}
-
-</style>
-
-<body>
+<body class="about" >
 
 The Canadian Pacific Robotic Ocean Observing Facility uses state of the art technology to observe changes in the Northeast Pacific Ocean. The ocean and marine ecosystems are still poorly understood in many areas largely because of a lack of data. C-PROOF works to understand what drives ocean and climate variability, and our data is used to better predict weather and climate changes across Canada. Additionally, we collaborate with our partners to improve timely predictions of fish stocks so that economic and ecological concerns can be properly addressed. We also want to explore the ocean’s potential as a source of energy, which will help remote coastal communities and the country as a whole move towards carbon-free energy sources that rely on ocean waves and wind.
 </body>
@@ -25,7 +16,6 @@ The Canadian Pacific Robotic Ocean Observing Facility uses state of the art tech
 <figcaption style="text-align:center;font-style: italic;font-size: 16px;">Diagram showing C-PROOF’s long-term vision for observing the Northeast Pacific Ocean, which includes a fleet of autonomous ocean gliders, profiling floats, wave-powered moorings, and buoys in coastal waters.</figcaption>
 </figure>
 </div>
-
 
 
 <body>
