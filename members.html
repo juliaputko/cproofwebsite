@@ -5,82 +5,14 @@ description: "C-PROOF team"
 header-img: "img/scenicglider_jp_crop.jpg"
 category: members
 ---
-<!--header-img: "img/RecoveryMar19.png" > --> 
 
-<!--- might not need the img part -->
-<style> 
-    img {  
-        float: left;
-    }
-    p {
-        overflow: hidden;
-		padding:0px; 
-   		margin:0px; 
-    }
+<hr>
 
-	.sl {
-		overflow: hidden;
-		min-height: 130px;
-	}
-
-	.stu {
-		overflow: hidden;
-		min-height: 150px;
-	}
-
-	.staf {
-		overflow: hidden;
-		min-height: 140px;
-	}
-
-	* {
-     box-sizing: border-box;
-   }
-  
-   /* Create two equal columns that floats next to each other */
-   .columnl {
-     float: left;
-     width: 50%;
-     padding: 10px;
-    /* height: 300px; /* Should be removed. Only for demonstration */
-     border-right: 1px solid rgb(228, 226, 226);
-   }
- 
-   .columnr {
-     float: left;
-     width: 50%;
-     padding: 10px;
-    /* height: 300px; /* Should be removed. Only for demonstration */
-    
-   }
-  
-   /* Clear floats after the columns */
-   .row:after {
-     content: "";
-     display: table;
-     clear: both;
-   }
-
-   br {
-	content: "";
-	margin: 2em;
-	display: block;
-	font-size: 24%;
-	}
-
-	.jptest {
-
-		width:100%
-	}
-
-	</style>
-
-
-<body>
+<body class="people">
 	<h2>C-PROOF Investigators</h2>
   
 <div class="row">
-	<div class="columnl" ><!---style="background-color:#aaa;"  -->
+	<div class="columnl" >
 	  <h2>Glider and Float Science Leads</h2>
 	  {% for member in site.data.members %} {% if member.type == "sciencelead" %}{% if member.visible == true %}
 
@@ -113,11 +45,7 @@ category: members
   {% endif %}
   <p>
 </p>
-
   <hr>
-
-
-
 {% endif %}{% endif %}{% endfor %}
 
 
@@ -161,10 +89,9 @@ category: members
 {% endif %}{% endif %}{% endfor %}
 
 
-
-	  <p></p>
+	<p></p>
 	</div>
-	<div class="columnr" >  <!---   style="background-color:#bbb;"-->
+	<div class="columnr" >  
 	  <h2>Co-Investigators</h2>
 	  {% for member in site.data.members %} {% if member.type == "investigator" %}{% if member.visible == true %}
 
@@ -198,7 +125,6 @@ category: members
 	</p>
   </p>
  
- 
 	  <hr>
  
   {% endif %}{% endif %}{% endfor %}
@@ -206,83 +132,7 @@ category: members
 	  <p></p>
 	</div>
   </div>
-<!-- 
 
-<h2>Science Leads</h2>
-
-{% for member in site.data.members %} {% if member.type == "sciencelead" %}{% if member.visible == true %}
-
-	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
-
-	
-	<h3>{{ member.name }}</h3>
-	<p class="sl">
-	{{ member.role }}
-
-
-
-	{% if member.org %}
-	{{member.title}}, {{ member.org }}
-	{% endif %}
-{% if member.url %}
-<br>
-<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
-{% endif %}
-{% if member.github %}
-<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
-{% endif %}
-{% if member.gplus %}
-<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
-{% endif %}
-<br/>
-	{% if member.bio %}
-	{{ member.bio }}
-	{% endif %}
-</p>
-
-	<hr>
-
-
-
-{% endif %}{% endif %}{% endfor %}
-
-
-<h2>Investigators</h2>
-{% for member in site.data.members %} {% if member.type == "investigator" %}{% if member.visible == true %}
-
-	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
-
-	<h3>{{ member.name }}</h3>
-	<p class="sl">
-
-	{{ member.role }}
-
-
-	</br>
-	{% if member.org %}
-	{{member.title}}, {{ member.org }}
-	{% endif %}
-{% if member.url %}
-<br>
-<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
-{% endif %}
-{% if member.github %}
-<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
-{% endif %}
-{% if member.gplus %}
-<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
-{% endif %}
-<br/>
-	{% if member.bio %}
-	{{ member.bio }}
-	{% endif %}
-</p>
-
-
-	<hr>
-
-{% endif %}{% endif %}{% endfor %}
- -->
 
 <h2> C-PROOF staff </h2>
 
@@ -320,61 +170,6 @@ category: members
 	<hr>
 {% endif %}{% endif %}{% endfor %}
 
-<!-- 
-<h2>Hakai Institute collaborators</h2>
-
-{% for member in site.data.members %} {% if member.type == "hakai" %}{% if member.visible == true %}
-{% if member.img %}
-	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px;float:left; width:150px !important">
-{% endif %}
-	<h3>{{ member.name }}</h3>
-{% if member.img %}
-	<p class="staf">
-{% else %}
-	<p>
-{% endif %}	
-	{{ member.role }}
-	</br>
-	{{member.title}}
-	{% if member.org %}
-		{{ member.org }}
-	{% endif %}
-{% if member.url %}
-<br>
-<span class="social-share-googleplus"><a href="{{ member.url }}" title="Google Plus"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Website</a></span>
-{% endif %}
-{% if member.github %}
-<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span>
-{% endif %}
-{% if member.gplus %}
-<span class="social-share-googleplus"><a href="{{ member.gplus }}" title="Google Plus"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Google Plus</a></span>
-{% endif %}
-<br/>
-	{% if member.bio %}
-	{{ member.bio }}
-	{% endif %}
-</p>
-	<hr>
-{% endif %}{% endif %}{% endfor %}
--->
-<!--- 
-<h3>Jennifer Jackson</h3>
-Physical Oceanographer
-
-
-<h3>Wiley Evans</h3>
-Chemical Oceanographer
-
-
-<h3>Chris Mackenzie</h3>
-Research Technician
-Hakai Institute
--->
-
-<!--- 
-<h3>Chris O'Sullivan</h3>
-Marine Technician
--->
 <h2> Students and Post-docs </h2>
 
 {% for member in site.data.students %} {% if member.visible == true %}
@@ -412,33 +207,12 @@ Marine Technician
 {% endif %}{% endfor %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  height: 1050px;
-  padding: 20px;
-  
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
 <hr>
 <h2>Scientific Collaborators</h2>
 
 <div class="row">
   <div class="column" style="background-color:rgb(250, 250, 250);">
-   <!--- <h2>Column 1</h2>  --->
     
     <h4>Youyu Lu</h4>
 		Research Scientist, Department of Fisheries and Oceans Bedford Institute of Ocean Sciences
@@ -461,7 +235,6 @@ Marine Technician
 	
   </div>
   <div class="column" style="background-color:rgb(250, 250, 250);">
-      <!---  <h2>Column 2</h2>--->
    
 	<h4>Katja Fennel</h4>
 		Professor Dalhousie University Department of Oceanography
@@ -493,3 +266,5 @@ Marine Technician
 <body>
 
 <hr>
+
+
