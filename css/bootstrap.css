@@ -6427,9 +6427,10 @@ width:100%
 
 /* Create two equal columns that floats next to each other */
 .people .column {
+  background-color:rgb(250, 250, 250);
   float: left;
   width: 50%;
-  height: 1050px;
+  height: 1080px;
   padding: 20px;
   
 }
