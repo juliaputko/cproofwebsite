@@ -326,6 +326,76 @@ h3 {font: sans-serif; color: #002277}
 
 
   <h3> Figures </h3>
+
+<ul class="tag-box inline"><div class="notepad-index-post-tags" >
+
+<a href="#maps">Maps</a>
+<a href="#profile">Profile plots</a>
+<a href="#variable">Variable plots</a>
+<a href="#technical">Technical plots</a>
+</div></ul>
+
+
+<h4 id="maps"> Maps</h4>
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/mapdfo-dfo-bb046-20210511.png' %}
+
+<a href="./figs/mapdfo-dfo-bb046-20210511.png"><img src=mapdfo-dfo-bb046-20210511.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+<h4 id="profile"> Profile plots</h4>
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pvp_dfo-bb046-20210511.png' %}
+
+<a href="./figs/pvp_dfo-bb046-20210511.png"><img src=./figs/pvp_dfo-bb046-20210511.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/ts_dfo-bb046-20210511.png' %}
+<a href="./figs/ts_dfo-bb046-20210511.png"><img src=./figs/ts_dfo-bb046-20210511.png></a>
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor_dfo-bb046-20210511_last10d.png' %}
+<a href="./figs/pcolor_dfo-bb046-20210511_last10d.png"><img src=./figs/pcolor_dfo-bb046-20210511_last10d.png></a>
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor_dfo-bb046-20210511.png' %}
+<a href="./figs/pcolor_dfo-bb046-20210511.png"><img src=./figs/pcolor_dfo-bb046-20210511.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor400_dfo-bb046-20210511.png' %}
+<a href="./figs/pcolor400_dfo-bb046-20210511.png"><img src=./figs/pcolor400_dfo-bb046-20210511.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+
+
+
+<h4 id="variable"> Variable plots</h4>
+
+
+
+<h4 id="technical"> Technical plots</h4>
+
+<h4> All</h4>
+
   <section id="figure">
     
     <a href="./figs/Battery.png"><img src=./figs/Battery.png></a>
@@ -342,6 +412,8 @@ h3 {font: sans-serif; color: #002277}
     
     <a href="./figs/pcolor_dfo-bb046-20210511_last10d.png"><img src=./figs/pcolor_dfo-bb046-20210511_last10d.png></a>
     
+
+
   </section>
 </div>
 

@@ -326,6 +326,76 @@ h3 {font: sans-serif; color: #002277}
 
 
   <h3> Figures </h3>
+
+<ul class="tag-box inline"><div class="notepad-index-post-tags" >
+
+<a href="#maps">Maps</a>
+<a href="#profile">Profile plots</a>
+<a href="#variable">Variable plots</a>
+<a href="#technical">Technical plots</a>
+</div></ul>
+
+
+<h4 id="maps"> Maps</h4>
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/mapdfo-dfo-walle652-20210121.png' %}
+
+<a href="./figs/mapdfo-dfo-walle652-20210121.png"><img src=mapdfo-dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+<h4 id="profile"> Profile plots</h4>
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pvp_dfo-walle652-20210121.png' %}
+
+<a href="./figs/pvp_dfo-walle652-20210121.png"><img src=./figs/pvp_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/ts_dfo-walle652-20210121.png' %}
+<a href="./figs/ts_dfo-walle652-20210121.png"><img src=./figs/ts_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121_last10d.png' %}
+<a href="./figs/pcolor_dfo-walle652-20210121_last10d.png"><img src=./figs/pcolor_dfo-walle652-20210121_last10d.png></a>
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121.png' %}
+<a href="./figs/pcolor_dfo-walle652-20210121.png"><img src=./figs/pcolor_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor400_dfo-walle652-20210121.png' %}
+<a href="./figs/pcolor400_dfo-walle652-20210121.png"><img src=./figs/pcolor400_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+
+
+
+<h4 id="variable"> Variable plots</h4>
+
+
+
+<h4 id="technical"> Technical plots</h4>
+
+<h4> All</h4>
+
   <section id="figure">
     
     <a href="./figs/ts_dfo-walle652-20210121.png"><img src=./figs/ts_dfo-walle652-20210121.png></a>
@@ -340,6 +410,8 @@ h3 {font: sans-serif; color: #002277}
     
     <a href="./figs/mapdfo-walle652-20210121.png"><img src=./figs/mapdfo-walle652-20210121.png></a>
     
+
+
   </section>
 </div>
 
