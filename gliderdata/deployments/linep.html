@@ -215,7 +215,7 @@ h3 {font: sans-serif; color: #002277}
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="site-heading" style="padding: 75px 0">
 
-                <h1>dfo-bb046046</h1>
+                <h1>Line P deployment Jan 2021.</h1>
                 <hr class="small">
                 <span class="subheading">C-PROOF Data</span>
             </div>
@@ -228,28 +228,51 @@ h3 {font: sans-serif; color: #002277}
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="container">
-  <h3> dfo-bb046-20210511 </h3>
+<!--div class="container">
+
+  
+  <h3> dfo-walle652-20210121 </h3>
   <div class="datagrid">
     <table>
         <tr><th>Deployment</th><th>Description</th><th>Dates</th><th>Geographic Extent</th></tr>
           <tr>
-            <td>dfo-bb046-20210511</td>
-            <td>Calvert Island deployment</td>
-            <td>2021-05-12T02:12:55<br/>2021-06-02T19:28:36
-            <td>50.892 51.711 N<br/>-130.417 -128.107 E</td>
+            <td>dfo-walle652-20210121</td>
+            <td>Line P deployment Jan 2021.</td>
+            <td>2021-01-21T16:43:11<br/>2021-05-18T16:54:15
+            <td>48.590 50.010 N<br/>-144.952 -126.136 E</td>
           </tr>
     </table>
-  </div>
+  </div-->
 
-  <h3> Timeseries variables </h3>
-  <section id="figures">
+
+
+  <h3> Line P deployment Jan 2021. Missions </h3>
+  <section>
+
+  
+  
+       <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/">dfo-walle652-20210121</a> <br/>
+ 
+    
+  
+
+
+
+
+  </section>
+
+  <!--h3> Timeseries variables </h3>
+  <section>
     
       heading [rad] <br/>
     
       pitch [rad] <br/>
     
       roll [rad] <br/>
+    
+      waypoint_latitude [degree_north] <br/>
+    
+      waypoint_longitude [degree_east] <br/>
     
       conductivity [S m-1] <br/>
     
@@ -269,10 +292,6 @@ h3 {font: sans-serif; color: #002277}
     
       distance_over_ground [km] <br/>
     
-      profile_index [1] <br/>
-    
-      profile_direction [1] <br/>
-    
       salinity [1e-3] <br/>
     
       potential_density [kg m-3] <br/>
@@ -280,6 +299,26 @@ h3 {font: sans-serif; color: #002277}
       density [kg m-3] <br/>
     
       potential_temperature [Celsius] <br/>
+    
+  </section-->
+
+
+
+  <h3> Recent Figures </h3>
+  <section id="figure">
+  
+    
+    <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/ts_dfo-walle652-20210121.png"><img src= "{{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/ts_dfo-walle652-20210121.png"></a>
+    
+    <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121.png"><img src= "{{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121.png"></a>
+    
+    <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pvp_dfo-walle652-20210121.png"><img src= "{{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pvp_dfo-walle652-20210121.png"></a>
+    
+    <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor400_dfo-walle652-20210121.png"><img src= "{{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor400_dfo-walle652-20210121.png"></a>
+    
+    <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121_last10d.png"><img src= "{{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121_last10d.png"></a>
+    
+    <a href=" {{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/mapdfo-walle652-20210121.png"><img src= "{{ site.baseurl }}/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/mapdfo-walle652-20210121.png"></a>
     
   </section>
 
@@ -289,47 +328,44 @@ h3 {font: sans-serif; color: #002277}
     <ul>
     <!-- Check for existence of files and directories -->
     {% for static_file in site.static_files %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/deployment.yml' %}
+      {%  if static_file.path == '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/deployment.yml' %}
         <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
       {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/deploymentRealtime.yml' %}
+      {%  if static_file.path == '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/deploymentRealtime.yml' %}
         <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
       {%  endif %} 
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/dfo-bb046-20210511.kml' %}
-        <li><a href='./dfo-bb046-20210511.kml'>Deployment KML</a></li>
+      {%  if static_file.path == '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/dfo-walle652-20210121.kml' %}
+        <li><a href='./dfo-walle652-20210121.kml'>Deployment KML</a></li>
       {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/L0-timeseries/dfo-bb046-20210511.nc' %}
-        <li><a href='./L0-timeseries/dfo-bb046-20210511.nc'>Time series [dfo-bb046-20210511.nc]</a></li>
+      {%  if static_file.path == '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/L0-timeseries/dfo-walle652-20210121.nc' %}
+        <li><a href='./L0-timeseries/dfo-walle652-20210121.nc'>Time series [dfo-walle652-20210121.nc]</a></li>
       {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/L0-gridfiles/dfo-bb046-20210511_grid.nc' %}
-        <li><a href='./L0-gridfiles/dfo-bb046-20210511_grid.nc'>Time-z grid of data [dfo-bb046-20210511_grid.nc]</a></li>
+      {%  if static_file.path == '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/L0-gridfiles/dfo-walle652-20210121_grid.nc' %}
+        <li><a href='./L0-gridfiles/dfo-walle652-20210121_grid.nc'>Time-z grid of data [dfo-walle652-20210121_grid.nc]</a></li>
       {%  endif %}
-      {% if static_file.path contains 'gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs' %}
+      {% if static_file.path contains 'gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs' %}
         <li><a href='./figs'>Directory of figures</a></li>
         {%  break %}  
       {%  endif %}
     {%  endfor %}
 
   {% for static_file in site.static_files %}
-      {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/realtime_raw/' %}
+      {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/realtime_raw/' %}
         <li><a href='./realtime_raw'>Raw binary data</a></li>
         {%  break %}
       {%  endif %}
   {%  endfor %}
 
-  <!-- add link! raw netcdf data 
-  !! realtime_rawnc !!  > Raw data  -->
-
 
   {% for static_file in site.static_files %}
-      {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/realtime_rawnc/' %}
+      {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/realtime_rawnc/' %}
         <li><a href='./realtime_rawnc'>Raw netcdf data files</a></li>
         {%  break %}
       {%  endif %}
   {%  endfor %}
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/L0-profiles/' %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/L0-profiles/' %}
       <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
       {%  break %}
     {%  endif %}
@@ -363,25 +399,25 @@ h3 {font: sans-serif; color: #002277}
 
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/mapdfo-bb046-20210511.png' %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/mapdfo-walle652-20210121.png' %}
 
-<a href="./figs/mapdfo-bb046-20210511.png"><img src=./figs/mapdfo-bb046-20210511.png></a>
-
-{%  endif %}
-{%  endfor %}
-
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/jp1_mapdfo-bb046-20210511.png' %}
-
-<a href="./figs/jp1_mapdfo-bb046-20210511.png"><img src=./figs/jp1_mapdfo-bb046-20210511.png></a>
+<a href="./figs/mapdfo-walle652-20210121.png"><img src=./figs/mapdfo-walle652-20210121.png></a>
 
 {%  endif %}
 {%  endfor %}
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/jp2_mapdfo-bb046-20210511.png' %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/jp1_mapdfo-walle652-20210121.png' %}
 
-<a href="./figs/jp2_mapdfo-bb046-20210511.png"><img src=./figs/jp2_mapdfo-bb046-20210511.png></a>
+<a href="./figs/jp1_mapdfo-walle652-20210121.png"><img src=./figs/jp1_mapdfo-walle652-20210121.png></a>
+
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/jp2_mapdfo-walle652-20210121.png' %}
+
+<a href="./figs/jp2_mapdfo-walle652-20210121.png"><img src=./figs/jp2_mapdfo-walle652-20210121.png></a>
 
 {%  endif %}
 {%  endfor %}
@@ -395,22 +431,22 @@ h3 {font: sans-serif; color: #002277}
 
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/jp_ts_dfo-bb046-20210511.png' %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/jp_ts_dfo-walle652-20210121.png' %}
 
-<a href="./figs/jp_ts_dfo-bb046-20210511.png"><img src=./figs/jp_ts_dfo-bb046-20210511.png></a>
+<a href="./figs/jp_ts_dfo-walle652-20210121.png"><img src=./figs/jp_ts_dfo-walle652-20210121.png></a>
 {%  endif %}
 {%  endfor %}
 
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/ts_dfo-bb046-20210511.png' %}
-<a href="./figs/ts_dfo-bb046-20210511.png"><img src=./figs/ts_dfo-bb046-20210511.png></a>
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/ts_dfo-walle652-20210121.png' %}
+<a href="./figs/ts_dfo-walle652-20210121.png"><img src=./figs/ts_dfo-walle652-20210121.png></a>
 {%  endif %}
 {%  endfor %}
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/vv_ts_dfo-bb046-20210511.png' %}
-<a href="./figs/vv_ts_dfo-bb046-20210511.png"><img src=./figs/vv_ts_dfo-bb046-20210511.png></a>
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/vv_ts_dfo-walle652-20210121.png' %}
+<a href="./figs/vv_ts_dfo-walle652-20210121.png"><img src=./figs/vv_ts_dfo-walle652-20210121.png></a>
 {%  endif %}
 {%  endfor %}
 
@@ -419,21 +455,21 @@ h3 {font: sans-serif; color: #002277}
 <!--** depth v time plots**  -- super colourful ones -->
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor_dfo-bb046-20210511_last10d.png' %}
-<a href="./figs/pcolor_dfo-bb046-20210511_last10d.png"><img src=./figs/pcolor_dfo-bb046-20210511_last10d.png></a>
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121_last10d.png' %}
+<a href="./figs/pcolor_dfo-walle652-20210121_last10d.png"><img src=./figs/pcolor_dfo-walle652-20210121_last10d.png></a>
 {%  endif %}
 {%  endfor %}
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor_dfo-bb046-20210511.png' %}
-<a href="./figs/pcolor_dfo-bb046-20210511.png"><img src=./figs/pcolor_dfo-bb046-20210511.png></a>
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121.png' %}
+<a href="./figs/pcolor_dfo-walle652-20210121.png"><img src=./figs/pcolor_dfo-walle652-20210121.png></a>
 {%  endif %}
 {%  endfor %}
 
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor400_dfo-bb046-20210511.png' %}
-<a href="./figs/pcolor400_dfo-bb046-20210511.png"><img src=./figs/pcolor400_dfo-bb046-20210511.png></a>
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/pcolor400_dfo-walle652-20210121.png' %}
+<a href="./figs/pcolor400_dfo-walle652-20210121.png"><img src=./figs/pcolor400_dfo-walle652-20210121.png></a>
 {%  endif %}
 {%  endfor %}
 
@@ -450,7 +486,7 @@ h3 {font: sans-serif; color: #002277}
 glider is measuring - status of the machine itself** -->
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/battery.png' %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/battery.png' %}
 <a href="./figs/battery.png"><img src=./figs/battery.png></a>
 {%  endif %}
 {%  endfor %}
@@ -460,9 +496,9 @@ glider is measuring - status of the machine itself** -->
 <!--** put temp salinity plots separate ** -->
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pvp_dfo-bb046-20210511.png' %}
+    {%  if static_file.path contains '/gliderdata/deployments/Line P deployment Jan 2021./dfo-walle652-20210121/figs/pvp_dfo-walle652-20210121.png' %}
 
-<a href="./figs/pvp_dfo-bb046-20210511.png"><img src=./figs/pvp_dfo-bb046-20210511.png></a>
+<a href="./figs/pvp_dfo-walle652-20210121.png"><img src=./figs/pvp_dfo-walle652-20210121.png></a>
 {%  endif %}
 {%  endfor %}
 

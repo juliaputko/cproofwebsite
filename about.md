@@ -7,6 +7,9 @@ header-img: "img/MikeSaanich19.jpg"
 
 <body class="about" >
 
+<h4><a href='gliderdata/deployments/calvert.html'>Story Page for Calvert Line</a></h4><br>
+<h4><a href='gliderdata/deployments/linep.html'>Story Page for Line P</a></h4><br>
+
 The Canadian Pacific Robotic Ocean Observing Facility uses state of the art technology to observe changes in the Northeast Pacific Ocean. The ocean and marine ecosystems are still poorly understood in many areas largely because of a lack of data. C-PROOF works to understand what drives ocean and climate variability, and our data is used to better predict weather and climate changes across Canada. Additionally, we collaborate with our partners to improve timely predictions of fish stocks so that economic and ecological concerns can be properly addressed. We also want to explore the ocean’s potential as a source of energy, which will help remote coastal communities and the country as a whole move towards carbon-free energy sources that rely on ocean waves and wind.
 </body>
 

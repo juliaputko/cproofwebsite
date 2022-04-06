@@ -1,6 +1,6 @@
 ---
 layout: data_jp
-title: "Data"
+title: "Wget Data"
 description: "C-PROOF Mission"
 header-img: "img/MikeSaanich19.jpg"
 ---

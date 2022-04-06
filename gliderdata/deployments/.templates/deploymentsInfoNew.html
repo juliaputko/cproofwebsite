@@ -190,6 +190,10 @@ h3 {font: sans-serif; color: #002277}
               <a href="{{ '{{' }} site.baseurl {{ '}}' }}/members.html">People</a>
           </li>
 
+          <li>
+              <a href="{{ '{{' }} site.baseurl {{ '}}' }}/datapage.html">Data</a>
+          </li>
+
             <li>
                 <a href="{{ '{{' }} site.baseurl {{ '}}' }}/deployments/">Deployments</a>
             </li>
@@ -279,12 +283,25 @@ h3 {font: sans-serif; color: #002277}
       {{ '{%' }}  endif {{ '%}' }}
   {{ '{%' }}  endfor {{ '%}' }}
 
+  <!-- add link! raw netcdf data 
+  !! realtime_rawnc !!  > Raw data  -->
+
+
+  {{ '{%' }} for static_file in site.static_files {{ '%}' }}
+      {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/realtime_rawnc/' {{ '%}' }}
+        <li><a href='./realtime_rawnc'>Raw netcdf data files</a></li>
+        {{ '{%' }}  break {{ '%}' }}
+      {{ '{%' }}  endif {{ '%}' }}
+  {{ '{%' }}  endfor {{ '%}' }}
+
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
     {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/L0-profiles/' {{ '%}' }}
       <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
       {{ '{%' }}  break {{ '%}' }}
     {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
+
+
 
 
     </ul>
@@ -295,34 +312,60 @@ h3 {font: sans-serif; color: #002277}
 
 <ul class="tag-box inline"><div class="notepad-index-post-tags" >
 
-<a href="#maps">Maps</a>
+<a href="#maps">Trajectory plots</a>
 <a href="#profile">Profile plots</a>
 <a href="#variable">Variable plots</a>
 <a href="#technical">Technical plots</a>
 </div></ul>
 
+<section id="figure">
+<h4 id="maps"> Trajectory plots</h4>
 
-<h4 id="maps"> Maps</h4>
+<!--** anything that is an actual map - actual map on it **
+** lat v lon **
+**lon v time ** 
+** lat c time **-->
+
 
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
-    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/mapdfo-{{ deploy_name }}.png' {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/map{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/mapdfo-{{ deploy_name }}.png"><img src=mapdfo-{{ deploy_name }}.png></a>
+<a href="./figs/map{{ deploy_name }}.png"><img src=./figs/map{{ deploy_name }}.png></a>
+
 {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
+
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp1_map{{ deploy_name }}.png' {{ '%}' }}
+
+<a href="./figs/jp1_map{{ deploy_name }}.png"><img src=./figs/jp1_map{{ deploy_name }}.png></a>
+
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
+
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp2_map{{ deploy_name }}.png' {{ '%}' }}
+
+<a href="./figs/jp2_map{{ deploy_name }}.png"><img src=./figs/jp2_map{{ deploy_name }}.png></a>
+
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
+
 
 
 <h4 id="profile"> Profile plots</h4>
 
+<!--** temp v depth  **
+** variable v depth ** ?? -->
+
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
-    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pvp_{{ deploy_name }}.png' {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp_ts_{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/pvp_{{ deploy_name }}.png"><img src=./figs/pvp_{{ deploy_name }}.png></a>
+<a href="./figs/jp_ts_{{ deploy_name }}.png"><img src=./figs/jp_ts_{{ deploy_name }}.png></a>
 {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
-
 
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
@@ -330,6 +373,16 @@ h3 {font: sans-serif; color: #002277}
 <a href="./figs/ts_{{ deploy_name }}.png"><img src=./figs/ts_{{ deploy_name }}.png></a>
 {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
+
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/vv_ts_{{ deploy_name }}.png' {{ '%}' }}
+<a href="./figs/vv_ts_{{ deploy_name }}.png"><img src=./figs/vv_ts_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
+
+<h4 id="variable"> Variable plots</h4>
+
+<!--** depth v time plots**  -- super colourful ones -->
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
     {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pcolor_{{ deploy_name }}_last10d.png' {{ '%}' }}
@@ -354,22 +407,39 @@ h3 {font: sans-serif; color: #002277}
 
 
 
-<h4 id="variable"> Variable plots</h4>
 
 
 
 <h4 id="technical"> Technical plots</h4>
 
-<h4> All</h4>
+<!--** battery status -- nothing to do iwth glider location nothing to do with what 
+glider is measuring - status of the machine itself** -->
 
-  <section id="figure">
-    {% for fig in figs %}
-    <a href="{{ fig }}"><img src={{ fig }}></a>
-    {% endfor %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/battery.png' {{ '%}' }}
+<a href="./figs/battery.png"><img src=./figs/battery.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
-  </section>
+<h4> Other</h4>
+<!--** put temp salinity plots separate ** -->
+
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pvp_{{ deploy_name }}.png' {{ '%}' }}
+
+<a href="./figs/pvp_{{ deploy_name }}.png"><img src=./figs/pvp_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
+
+</section>
+
+
+
+
 </div>
+
+
 
 
 </div>
