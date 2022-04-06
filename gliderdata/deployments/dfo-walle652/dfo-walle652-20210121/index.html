@@ -190,6 +190,10 @@ h3 {font: sans-serif; color: #002277}
               <a href="{{ site.baseurl }}/members.html">People</a>
           </li>
 
+          <li>
+              <a href="{{ site.baseurl }}/datapage.html">Data</a>
+          </li>
+
             <li>
                 <a href="{{ site.baseurl }}/deployments/">Deployments</a>
             </li>
@@ -232,8 +236,8 @@ h3 {font: sans-serif; color: #002277}
           <tr>
             <td>dfo-walle652-20210121</td>
             <td>Line P deployment Jan 2021.</td>
-            <td>2021-01-21T16:43:11<br/>2021-05-18T16:54:15
-            <td>48.590 50.010 N<br/>-144.952 -126.136 E</td>
+            <td>2021-01-21T16:56:52<br/>2021-01-21T16:59:19
+            <td>0.000 0.000 N<br/>0.000 0.000 E</td>
           </tr>
     </table>
   </div>
@@ -313,6 +317,17 @@ h3 {font: sans-serif; color: #002277}
       {%  endif %}
   {%  endfor %}
 
+  <!-- add link! raw netcdf data 
+  !! realtime_rawnc !!  > Raw data  -->
+
+
+  {% for static_file in site.static_files %}
+      {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/realtime_rawnc/' %}
+        <li><a href='./realtime_rawnc'>Raw netcdf data files</a></li>
+        {%  break %}
+      {%  endif %}
+  {%  endfor %}
+
 {% for static_file in site.static_files %}
     {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/L0-profiles/' %}
       <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
@@ -321,27 +336,144 @@ h3 {font: sans-serif; color: #002277}
 {%  endfor %}
 
 
+
+
     </ul>
   </div>
 
 
   <h3> Figures </h3>
-  <section id="figure">
-    
-    <a href="./figs/ts_dfo-walle652-20210121.png"><img src=./figs/ts_dfo-walle652-20210121.png></a>
-    
-    <a href="./figs/pcolor_dfo-walle652-20210121.png"><img src=./figs/pcolor_dfo-walle652-20210121.png></a>
-    
-    <a href="./figs/pvp_dfo-walle652-20210121.png"><img src=./figs/pvp_dfo-walle652-20210121.png></a>
-    
-    <a href="./figs/pcolor400_dfo-walle652-20210121.png"><img src=./figs/pcolor400_dfo-walle652-20210121.png></a>
-    
-    <a href="./figs/pcolor_dfo-walle652-20210121_last10d.png"><img src=./figs/pcolor_dfo-walle652-20210121_last10d.png></a>
-    
-    <a href="./figs/mapdfo-walle652-20210121.png"><img src=./figs/mapdfo-walle652-20210121.png></a>
-    
-  </section>
+
+<ul class="tag-box inline"><div class="notepad-index-post-tags" >
+
+<a href="#maps">Trajectory plots</a>
+<a href="#profile">Profile plots</a>
+<a href="#variable">Variable plots</a>
+<a href="#technical">Technical plots</a>
+</div></ul>
+
+<section id="figure">
+<h4 id="maps"> Trajectory plots</h4>
+
+<!--** anything that is an actual map - actual map on it **
+** lat v lon **
+**lon v time ** 
+** lat c time **-->
+
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/mapdfo-walle652-20210121.png' %}
+
+<a href="./figs/mapdfo-walle652-20210121.png"><img src=./figs/mapdfo-walle652-20210121.png></a>
+
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/jp1_mapdfo-walle652-20210121.png' %}
+
+<a href="./figs/jp1_mapdfo-walle652-20210121.png"><img src=./figs/jp1_mapdfo-walle652-20210121.png></a>
+
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/jp2_mapdfo-walle652-20210121.png' %}
+
+<a href="./figs/jp2_mapdfo-walle652-20210121.png"><img src=./figs/jp2_mapdfo-walle652-20210121.png></a>
+
+{%  endif %}
+{%  endfor %}
+
+
+
+<h4 id="profile"> Profile plots</h4>
+
+<!--** temp v depth  **
+** variable v depth ** ?? -->
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/jp_ts_dfo-walle652-20210121.png' %}
+
+<a href="./figs/jp_ts_dfo-walle652-20210121.png"><img src=./figs/jp_ts_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/ts_dfo-walle652-20210121.png' %}
+<a href="./figs/ts_dfo-walle652-20210121.png"><img src=./figs/ts_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/vv_ts_dfo-walle652-20210121.png' %}
+<a href="./figs/vv_ts_dfo-walle652-20210121.png"><img src=./figs/vv_ts_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+<h4 id="variable"> Variable plots</h4>
+
+<!--** depth v time plots**  -- super colourful ones -->
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121_last10d.png' %}
+<a href="./figs/pcolor_dfo-walle652-20210121_last10d.png"><img src=./figs/pcolor_dfo-walle652-20210121_last10d.png></a>
+{%  endif %}
+{%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121.png' %}
+<a href="./figs/pcolor_dfo-walle652-20210121.png"><img src=./figs/pcolor_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor400_dfo-walle652-20210121.png' %}
+<a href="./figs/pcolor400_dfo-walle652-20210121.png"><img src=./figs/pcolor400_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+
+
+
+
+
+
+<h4 id="technical"> Technical plots</h4>
+
+<!--** battery status -- nothing to do iwth glider location nothing to do with what 
+glider is measuring - status of the machine itself** -->
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/battery.png' %}
+<a href="./figs/battery.png"><img src=./figs/battery.png></a>
+{%  endif %}
+{%  endfor %}
+
+
+<h4> Other</h4>
+<!--** put temp salinity plots separate ** -->
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pvp_dfo-walle652-20210121.png' %}
+
+<a href="./figs/pvp_dfo-walle652-20210121.png"><img src=./figs/pvp_dfo-walle652-20210121.png></a>
+{%  endif %}
+{%  endfor %}
+
+</section>
+
+
+
+
 </div>
+
+
 
 
 </div>

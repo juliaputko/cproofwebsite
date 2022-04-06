@@ -175,27 +175,27 @@ h3 {font: sans-serif; color: #002277}
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="{{ site.baseurl }}/">Home</a>
+                <a href="{{ '{{' }} site.baseurl {{ '}}' }}/">Home</a>
             </li>
 
             <li>
-                <a href="{{ site.baseurl }}/about.html">About</a>
+                <a href="{{ '{{' }} site.baseurl {{ '}}' }}/about.html">About</a>
             </li>
 
             <li>
-                <a href="{{ site.baseurl }}/platforms/">Platforms</a>
+                <a href="{{ '{{' }} site.baseurl {{ '}}' }}/platforms/">Platforms</a>
             </li>
 
             <li>
-              <a href="{{ site.baseurl }}/members.html">People</a>
+              <a href="{{ '{{' }} site.baseurl {{ '}}' }}/members.html">People</a>
           </li>
 
           <li>
-              <a href="{{ site.baseurl }}/datapage.html">Data</a>
+              <a href="{{ '{{' }} site.baseurl {{ '}}' }}/datapage.html">Data</a>
           </li>
 
             <li>
-                <a href="{{ site.baseurl }}/deployments/">Deployments</a>
+                <a href="{{ '{{' }} site.baseurl {{ '}}' }}/deployments/">Deployments</a>
             </li>
 
    
@@ -209,13 +209,13 @@ h3 {font: sans-serif; color: #002277}
 
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/img/gliderdeck1.jpg')">
+<header class="intro-header" style="background-image: url('{{ '{{' }} site.baseurl {{ '}}' }}/img/gliderdeck1.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="site-heading" style="padding: 75px 0">
 
-                <h1>dfo-bb046046</h1>
+                <h1>{{ line_ }}</h1>
                 <hr class="small">
                 <span class="subheading">C-PROOF Data</span>
             </div>
@@ -228,59 +228,54 @@ h3 {font: sans-serif; color: #002277}
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="container">
-  <h3> dfo-bb046-20210511 </h3>
+<!--div class="container">
+
+  
+  <h3> {{ deploy_name }} </h3>
   <div class="datagrid">
     <table>
         <tr><th>Deployment</th><th>Description</th><th>Dates</th><th>Geographic Extent</th></tr>
           <tr>
-            <td>dfo-bb046-20210511</td>
-            <td>Calvert Island deployment</td>
-            <td>2021-05-12T02:12:55<br/>2021-06-02T19:28:36
-            <td>50.892 51.711 N<br/>-130.417 -128.107 E</td>
+            <td>{{ att['deployment_name'] }}</td>
+            <td>{{ att['comment'] }}</td>
+            <td>{{ att['time_coverage_start'] }}<br/>{{att['time_coverage_end']}}
+            <td>{{ "%.3f"|format(att['geospatial_lat_min']) }} {{ "%.3f"|format(att['geospatial_lat_max'])}} N<br/>{{"%.3f"|format(att['geospatial_lon_min'])}} {{"%.3f"|format(att['geospatial_lon_max'])}} E</td>
           </tr>
     </table>
-  </div>
+  </div-->
 
-  <h3> Timeseries variables </h3>
-  <section id="figures">
+
+
+  <h3> {{ line_ }} Missions </h3>
+  <section>
+
+  {% for mission in all_ %}
+  
+       <a href=" {{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/">{{ mission }}</a> <br/>
+ 
     
-      heading [rad] <br/>
-    
-      pitch [rad] <br/>
-    
-      roll [rad] <br/>
-    
-      conductivity [S m-1] <br/>
-    
-      temperature [Celsius] <br/>
-    
-      pressure [dbar] <br/>
-    
-      chlorophyll [mg m-3] <br/>
-    
-      cdom [ppb] <br/>
-    
-      backscatter_700 [1] <br/>
-    
-      oxygen_concentration [umol l-1] <br/>
-    
-      temperature_oxygen [Celsius] <br/>
-    
-      distance_over_ground [km] <br/>
-    
-      profile_index [1] <br/>
-    
-      profile_direction [1] <br/>
-    
-      salinity [1e-3] <br/>
-    
-      potential_density [kg m-3] <br/>
-    
-      density [kg m-3] <br/>
-    
-      potential_temperature [Celsius] <br/>
-    
+  {% endfor %}
+
+
+
+
+  </section>
+
+  <!--h3> Timeseries variables </h3>
+  <section>
+    {% for key in keys %}
+      {{ key }} <br/>
+    {% endfor %}
+  </section-->
+
+
+
+  <h3> Recent Figures </h3>
+  <section id="figure">
+  
+    {% for mission in all_ %}{% for fig in figs %}
+    <a href=" {{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}{{ fig }}"><img src= "{{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}{{ fig }}"></a>
+    {% endfor %}{% endfor %}
   </section>
 
 
@@ -288,52 +283,49 @@ h3 {font: sans-serif; color: #002277}
   <div class="datagrid">
     <ul>
     <!-- Check for existence of files and directories -->
-    {% for static_file in site.static_files %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/deployment.yml' %}
+    {{ '{%' }} for static_file in site.static_files {{ '%}' }}
+      {{ '{%' }}  if static_file.path == '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/deployment.yml' {{ '%}' }}
         <li><a href='./deployment.yml'>Deployment metadata (deployment.yml)</a></li>
-      {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/deploymentRealtime.yml' %}
+      {{ '{%' }}  endif {{ '%}' }}
+      {{ '{%' }}  if static_file.path == '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/deploymentRealtime.yml' {{ '%}' }}
         <li><a href='./deploymentRealtime.yml'>Deployment Realtime metadata (deploymentRealtime.yml)</a></li>
-      {%  endif %} 
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/dfo-bb046-20210511.kml' %}
-        <li><a href='./dfo-bb046-20210511.kml'>Deployment KML</a></li>
-      {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/L0-timeseries/dfo-bb046-20210511.nc' %}
-        <li><a href='./L0-timeseries/dfo-bb046-20210511.nc'>Time series [dfo-bb046-20210511.nc]</a></li>
-      {%  endif %}
-      {%  if static_file.path == '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/L0-gridfiles/dfo-bb046-20210511_grid.nc' %}
-        <li><a href='./L0-gridfiles/dfo-bb046-20210511_grid.nc'>Time-z grid of data [dfo-bb046-20210511_grid.nc]</a></li>
-      {%  endif %}
-      {% if static_file.path contains 'gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs' %}
+      {{ '{%' }}  endif {{ '%}' }} 
+      {{ '{%' }}  if static_file.path == '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/{{ deploy_name }}.kml' {{ '%}' }}
+        <li><a href='./{{ deploy_name}}.kml'>Deployment KML</a></li>
+      {{ '{%' }}  endif {{ '%}' }}
+      {{ '{%' }}  if static_file.path == '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/L0-timeseries/{{ deploy_name }}.nc' {{ '%}' }}
+        <li><a href='./L0-timeseries/{{ deploy_name }}.nc'>Time series [{{ deploy_name}}.nc]</a></li>
+      {{ '{%' }}  endif {{ '%}' }}
+      {{ '{%' }}  if static_file.path == '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/L0-gridfiles/{{ deploy_name}}_grid.nc' {{ '%}' }}
+        <li><a href='./L0-gridfiles/{{ deploy_name}}_grid.nc'>Time-z grid of data [{{ deploy_name}}_grid.nc]</a></li>
+      {{ '{%' }}  endif {{ '%}' }}
+      {{ '{%' }} if static_file.path contains 'gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs' {{ '%}' }}
         <li><a href='./figs'>Directory of figures</a></li>
-        {%  break %}  
-      {%  endif %}
-    {%  endfor %}
+        {{ '{%' }}  break {{ '%}' }}  
+      {{ '{%' }}  endif {{ '%}' }}
+    {{ '{%' }}  endfor {{ '%}' }}
 
-  {% for static_file in site.static_files %}
-      {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/realtime_raw/' %}
+  {{ '{%' }} for static_file in site.static_files {{ '%}' }}
+      {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/realtime_raw/' {{ '%}' }}
         <li><a href='./realtime_raw'>Raw binary data</a></li>
-        {%  break %}
-      {%  endif %}
-  {%  endfor %}
-
-  <!-- add link! raw netcdf data 
-  !! realtime_rawnc !!  > Raw data  -->
+        {{ '{%' }}  break {{ '%}' }}
+      {{ '{%' }}  endif {{ '%}' }}
+  {{ '{%' }}  endfor {{ '%}' }}
 
 
-  {% for static_file in site.static_files %}
-      {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/realtime_rawnc/' %}
+  {{ '{%' }} for static_file in site.static_files {{ '%}' }}
+      {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/realtime_rawnc/' {{ '%}' }}
         <li><a href='./realtime_rawnc'>Raw netcdf data files</a></li>
-        {%  break %}
-      {%  endif %}
-  {%  endfor %}
+        {{ '{%' }}  break {{ '%}' }}
+      {{ '{%' }}  endif {{ '%}' }}
+  {{ '{%' }}  endfor {{ '%}' }}
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/L0-profiles/' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/L0-profiles/' {{ '%}' }}
       <li><a href='./L0-profiles/'>Directory of profiles [netcdf]</a></li>
-      {%  break %}
-    {%  endif %}
-{%  endfor %}
+      {{ '{%' }}  break {{ '%}' }}
+    {{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
 
@@ -362,29 +354,29 @@ h3 {font: sans-serif; color: #002277}
 
 
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/mapdfo-bb046-20210511.png' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/map{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/mapdfo-bb046-20210511.png"><img src=./figs/mapdfo-bb046-20210511.png></a>
+<a href="./figs/map{{ deploy_name }}.png"><img src=./figs/map{{ deploy_name }}.png></a>
 
-{%  endif %}
-{%  endfor %}
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/jp1_mapdfo-bb046-20210511.png' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp1_map{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/jp1_mapdfo-bb046-20210511.png"><img src=./figs/jp1_mapdfo-bb046-20210511.png></a>
+<a href="./figs/jp1_map{{ deploy_name }}.png"><img src=./figs/jp1_map{{ deploy_name }}.png></a>
 
-{%  endif %}
-{%  endfor %}
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/jp2_mapdfo-bb046-20210511.png' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp2_map{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/jp2_mapdfo-bb046-20210511.png"><img src=./figs/jp2_mapdfo-bb046-20210511.png></a>
+<a href="./figs/jp2_map{{ deploy_name }}.png"><img src=./figs/jp2_map{{ deploy_name }}.png></a>
 
-{%  endif %}
-{%  endfor %}
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
 
@@ -394,48 +386,48 @@ h3 {font: sans-serif; color: #002277}
 ** variable v depth ** ?? -->
 
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/jp_ts_dfo-bb046-20210511.png' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp_ts_{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/jp_ts_dfo-bb046-20210511.png"><img src=./figs/jp_ts_dfo-bb046-20210511.png></a>
-{%  endif %}
-{%  endfor %}
+<a href="./figs/jp_ts_{{ deploy_name }}.png"><img src=./figs/jp_ts_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/ts_dfo-bb046-20210511.png' %}
-<a href="./figs/ts_dfo-bb046-20210511.png"><img src=./figs/ts_dfo-bb046-20210511.png></a>
-{%  endif %}
-{%  endfor %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/ts_{{ deploy_name }}.png' {{ '%}' }}
+<a href="./figs/ts_{{ deploy_name }}.png"><img src=./figs/ts_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/vv_ts_dfo-bb046-20210511.png' %}
-<a href="./figs/vv_ts_dfo-bb046-20210511.png"><img src=./figs/vv_ts_dfo-bb046-20210511.png></a>
-{%  endif %}
-{%  endfor %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/vv_ts_{{ deploy_name }}.png' {{ '%}' }}
+<a href="./figs/vv_ts_{{ deploy_name }}.png"><img src=./figs/vv_ts_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 <h4 id="variable"> Variable plots</h4>
 
 <!--** depth v time plots**  -- super colourful ones -->
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor_dfo-bb046-20210511_last10d.png' %}
-<a href="./figs/pcolor_dfo-bb046-20210511_last10d.png"><img src=./figs/pcolor_dfo-bb046-20210511_last10d.png></a>
-{%  endif %}
-{%  endfor %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pcolor_{{ deploy_name }}_last10d.png' {{ '%}' }}
+<a href="./figs/pcolor_{{ deploy_name }}_last10d.png"><img src=./figs/pcolor_{{ deploy_name }}_last10d.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor_dfo-bb046-20210511.png' %}
-<a href="./figs/pcolor_dfo-bb046-20210511.png"><img src=./figs/pcolor_dfo-bb046-20210511.png></a>
-{%  endif %}
-{%  endfor %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pcolor_{{ deploy_name }}.png' {{ '%}' }}
+<a href="./figs/pcolor_{{ deploy_name }}.png"><img src=./figs/pcolor_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pcolor400_dfo-bb046-20210511.png' %}
-<a href="./figs/pcolor400_dfo-bb046-20210511.png"><img src=./figs/pcolor400_dfo-bb046-20210511.png></a>
-{%  endif %}
-{%  endfor %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pcolor400_{{ deploy_name }}.png' {{ '%}' }}
+<a href="./figs/pcolor400_{{ deploy_name }}.png"><img src=./figs/pcolor400_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
 
@@ -449,22 +441,22 @@ h3 {font: sans-serif; color: #002277}
 <!--** battery status -- nothing to do iwth glider location nothing to do with what 
 glider is measuring - status of the machine itself** -->
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/battery.png' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/battery.png' {{ '%}' }}
 <a href="./figs/battery.png"><img src=./figs/battery.png></a>
-{%  endif %}
-{%  endfor %}
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 
 <h4> Other</h4>
 <!--** put temp salinity plots separate ** -->
 
-{% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-bb046046/dfo-bb046-20210511/figs/pvp_dfo-bb046-20210511.png' %}
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pvp_{{ deploy_name }}.png' {{ '%}' }}
 
-<a href="./figs/pvp_dfo-bb046-20210511.png"><img src=./figs/pvp_dfo-bb046-20210511.png></a>
-{%  endif %}
-{%  endfor %}
+<a href="./figs/pvp_{{ deploy_name }}.png"><img src=./figs/pvp_{{ deploy_name }}.png></a>
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
 
 </section>
 

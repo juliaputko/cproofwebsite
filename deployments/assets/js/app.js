@@ -335,7 +335,7 @@ var glideLayer = L.layerGroup(null, {name: "Glider Marker"})
 // This won't actually get added to the map, but will populate glideLayer
 var gliderLayer = L.geoJson(null, {
   filter: function(feature, layer) {
-    return feature.geometry.coordinates[0] !== 0 && feature.geometry.coordinates[1] !== 0 &&  feature.properties.active == true;
+    return feature.geometry.coordinates[0] !== 0 && feature.geometry.coordinates[1] !== 0 &&  feature.properties.active == true; //jp changed to false to show gliders on map for testing
   },
   style: function (feature) {
     return {
