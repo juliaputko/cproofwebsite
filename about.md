@@ -24,7 +24,7 @@ The Canadian Pacific Robotic Ocean Observing Facility uses state of the art tech
 <body>
 <h3>What We Do</h3>
 
-C-PROOF deploys <a href= '/platforms/'><strong>autonomous ocean gliders and floats</strong></a> to explore and monitor the ocean. These instruments are equipped with revolutionary new sensors capable of tracking life, measuring ocean nutrients, and quantifying ocean turbulence. We also plan to deploy mooring arrays with innovative instrumentation. Our data is publicly available and is shared with a wide array of partners and user groups for the benefit of Canadians; the data is used to inform ecosystem management, climate predictions, and weather forecasts. C-PROOF helps provide the information we need to make better plans for the future, and helps drive development of the technological solutions needed to enable those plans.
+C-PROOF deploys <a href= '{{ site.baseurl }}/platforms/'><strong>autonomous ocean gliders and floats</strong></a> to explore and monitor the ocean. These instruments are equipped with revolutionary new sensors capable of tracking life, measuring ocean nutrients, and quantifying ocean turbulence. We also plan to deploy mooring arrays with innovative instrumentation. Our data is publicly available and is shared with a wide array of partners and user groups for the benefit of Canadians; the data is used to inform ecosystem management, climate predictions, and weather forecasts. C-PROOF helps provide the information we need to make better plans for the future, and helps drive development of the technological solutions needed to enable those plans.
 
 
 <a href ='{{ site.baseurl }}/search/'><h3>In The News</h3></a>
