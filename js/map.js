@@ -25,7 +25,7 @@ var featureLayer = L.geoJson(null, {
 //maybe add before
 
 var argoIcon = L.icon({
-  iconUrl: 'img/argo-yellow-01.png', ///img/argo-yellow-01.png
+  iconUrl: '/img/argo-yellow-01.png', ///img/argo-yellow-01.png
   iconSize:     [7, 40],
   iconAnchor:   [18, 22]
 });
@@ -125,80 +125,3 @@ var baseLayers = {
 
 var layerControl = L.control.layers(baseLayers, overlayLayers, {
 }).addTo(map);
-
-
-
-
-////jp testing 
-
-
-
-
-
-
-
-
-
-//var century21icon = L.icon({
- // iconUrl: '../gliderdata/deployments/assets/images/slocum_glider.png',
-  //iconSize: [20, 20]
-  //});
-//var maker = L.marker([48.977517, 124.391139],{icon: century21icon}).addTo(map);
-
-
- // var gliderJSON = $.ajax({
-  //      url:options.geojson,
-   //     dataType: "json",
-    //    success: function(){
-     //     console.log("Gliderdata!!! Yay");
-      //  },
-       // error: function (xhr) {
-        //  alert(xhr.statusText)
-       // }
-      //})
-  //$.when(gliderJSON).done(function() {
-  // var glider = gliderJSON.responseJSON
-  //var gliderLayer = L.geoJson(glider, {
-   //     filter: function(feature, layer) {
-    //      return feature.geometry.coordinates[0] !== 0 && feature.geometry.coordinates[1] !== 0 &&  feature.properties.active == false;
-     //   },
-      //  onEachFeature: function (feature, layer) {
-       //   numPts = feature.geometry.coordinates.length;
-        //  var beg = feature.geometry.coordinates[numPts-1];
-         // var marker = L.marker([beg[1], beg[0]],
-       //     {icon: slocumIcon}
-     //     );
-      //    glideLayer.addLayer(marker)
-       // }
-  //});
- // glideLayer.addTo(map);
- // gliderLayer.addTo(map);/
-//});
-
-
-/////////
-
-//var LeafletIcon = L.Icon.extend({
- // options: {
-  //  shadowUrl:`../assets/images/slocum_glider.png`,
-   // iconSize:[38,95],
-    //iconAnchor: [22,94],
- // }
-//})
-
-//v/ar SlocumIcon = new LeadletIcon({iconUrl:'../assets/images/slocum_glider.png'})
-
-//var marker = L.marker([48.487371, -126.182578],{icon:SlocumIcon}).addTo(map);
-
-//windyInit(options, windyAPI => {
-  //const { map } = windyAPI;
-
-  //const MARKER_ICON_URL = `../assets/images/slocum_glider.png`;
-
-  ///const slocumIcon = L.icon({
-    //  iconUrl: MARKER_ICON_URL,
-   //   iconSize:     [19, 22],
-  //    iconAnchor:   [9, 11],
-  //    popupAnchor: [0, 0],
- // });
-

@@ -1,7 +1,7 @@
 ---
 layout: data_jp
 title: "Wget Data"
-description: "C-PROOF Mission"
+description: "C-PROOF Glider Data"
 header-img: "img/MikeSaanich19.jpg"
 ---
 
@@ -48,28 +48,7 @@ function copyToClipboard(element) {
 
 # Downloading Glider Data
 
-## Setup:
-
-You will need to install the wget package onto your system in order to retrieve the data. \
-To show whether the wget package is installed on your system, type the command `wget` in a terminal window and press enter. \
-If you have wget installed, the system will print `wget: missing URL`. \
-Otherwise, it will print `wget command not found`.
-
-### Install using Homebrew on macOS Sierra
-
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy1" onclick="copyToClipboard('#copy1')">brew install wget
-</code></pre></div></div>
-
-### Install on Ubuntu and Debian
-
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy2" onclick="copyToClipboard('#copy2')">sudo apt install wget
-</code></pre></div></div>
-
-### Install on Windows
-
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy3" onclick="copyToClipboard('#copy3')"><a href="https://www.gnu.org/software/wget/">https://www.gnu.org/software/wget/</a> </code></pre></div></div>
-
-## Get mission data:
+## Get glider data:
 
 The science files are created in `L0_timeseries` and `L0_gridfiles`. These are proper nectdf files that have metadata and attributes, and should be compliant with US-IOOS standards.
 
@@ -83,25 +62,19 @@ To download `all mission data`, type command
 <div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy4" onclick="copyToClipboard('#copy4')">wget -N --directory-prefix=outdir --input-file=http://cproof.uvic.ca/gliderdata/deployments/mission_all.txt
 </code></pre></div></div>
 
-To download `individual glider data`, type command 
+To download all the data by glider line or by platform, replace `mission_all.txt` with one of the following:
 
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy5" onclick="copyToClipboard('#copy5')">wget -N --directory-prefix=outdir --input-file=http://cproof.uvic.ca/gliderdata/deployments/dfo-[[ glidername ]].txt
-</code></pre></div></div>
+### Glider lines
 
-Ex. If you wanted all of `dfo-bb046's data`, type command 
+`LineP.txt`
 
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy6" onclick="copyToClipboard('#copy6')">wget -N --directory-prefix=dfo-bb046 --input-file=http://cproof.uvic.ca/gliderdata/deployments/dfo-bb046.txt
-</code></pre></div></div>
+`CalvertLine.txt`
 
-To download data for a particular deployment line, type command
+### Platforms 
 
-Line P deployments
+`dfo-bb046.txt`
 
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy7" onclick="copyToClipboard('#copy7')">wget -N --directory-prefix=linep --input-file=http://cproof.uvic.ca/gliderdata/deployments/LineP.txt
-</code></pre></div></div>
+`dfo-[[ glidername ]].txt`
 
-Calvert Line deployments
 
-<div data-tooltip="Click to copy" class="language-plaintext highlighter-rouge "><div class="highlight"><pre class="highlight"><code id="copy8" onclick="copyToClipboard('#copy8')">wget -N --directory-prefix=calvertline --input-file=http://cproof.uvic.ca/gliderdata/deployments/CalvertLine.txt
-</code></pre></div></div>
 
