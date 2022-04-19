@@ -25,7 +25,7 @@ var featureLayer = L.geoJson(null, {
 //maybe add before
 
 var argoIcon = L.icon({
-  iconUrl: '/img/argo-yellow-01.png', ///img/argo-yellow-01.png
+  iconUrl: '/cproofwebsite/img/argo-yellow-01.png', ///img/argo-yellow-01.png
   iconSize:     [7, 40],
   iconAnchor:   [18, 22]
 });
@@ -63,7 +63,7 @@ var gliderLayer = L.geoJson(null, {
 
 /////slocum icon 
 var slocumIcon = L.icon({
-  iconUrl: '/deployments/assets/images/slocum_glider.png',
+  iconUrl: '/cproofwebsite/gliderdata/deployments/assets/images/slocum_glider.png',
   iconSize:     [38, 45],
   iconAnchor:   [18, 22]
 });
