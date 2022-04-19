@@ -97,7 +97,21 @@ The goal of <a href='https://biogeochemical-argo.org/'>Biogeochemical-Argo</a> i
     <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902553'><b>4902553</b></a></td>
     <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902554'><b>4902554</b></a></td>
     <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902555'><b>4902555</b></a></td>
+     <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902583'><b>4902583</b></a></td>
   </tr>
+
+  <tr>
+    <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902584'><b>4902584</b></a></td>
+    <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902585'><b>4902585</b></a></td>
+    <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902586'><b>4902586</b></a></td>
+     <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902586'><b>4902586</b></a></td>
+  </tr>
+    <tr>
+    <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902587'><b>4902587</b></a></td>
+    <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902588'><b>4902588</b></a></td>
+    <td><a href='https://www.ocean-ops.org/board/wa/Platform?ref=4902589'><b>4902589</b></a></td>
+  </tr>
+
 </table>
 
 
