@@ -329,12 +329,21 @@ h3 {font: sans-serif; color: #002277}
 
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
-    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/map{{ deploy_name }}.png' {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/Explorer19MissionMapBig.png' {{ '%}' }}
 
-<a href="./figs/map{{ deploy_name }}.png"><img src=./figs/map{{ deploy_name }}.png></a>
+<a href="./figs/Explorer19MissionMapBig.png"><img src=./figs/Explorer19MissionMapBig.png></a>
 
 {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
+
+{{ '{%' }} for static_file in site.static_files {{ '%}' }}
+    {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/map{{ deploy_name }}.png' {{ '%}' }}
+
+<a href="./figs/Explorer19MissionMap.png"><img src=./figs/Explorer19MissionMap.png></a>
+
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }}  endfor {{ '%}' }}
+
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
     {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/jp1_map{{ deploy_name }}.png' {{ '%}' }}
@@ -382,7 +391,7 @@ h3 {font: sans-serif; color: #002277}
 
 <h4 id="variable"> Variable plots</h4>
 
-<!--** depth v time plots**  -- super colourful ones -->
+<!--** depth v time plots **-->
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
     {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ title }}/{{ deploy_name }}/figs/pcolor_{{ deploy_name }}_last10d.png' {{ '%}' }}
@@ -404,9 +413,7 @@ h3 {font: sans-serif; color: #002277}
 {{ '{%' }}  endfor {{ '%}' }}
 
 
-
-
-
+<a href="./figs/pcolor_dfo-walle652-20210121_last10d.png"><img src=./figs/pcolor_dfo-walle652-20210121_last10d.png></a>
 
 
 

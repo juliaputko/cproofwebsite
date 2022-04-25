@@ -363,12 +363,21 @@ h3 {font: sans-serif; color: #002277}
 
 
 {% for static_file in site.static_files %}
-    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/mapdfo-walle652-20210121.png' %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/Explorer19MissionMapBig.png' %}
 
-<a href="./figs/mapdfo-walle652-20210121.png"><img src=./figs/mapdfo-walle652-20210121.png></a>
+<a href="./figs/Explorer19MissionMapBig.png"><img src=./figs/Explorer19MissionMapBig.png></a>
 
 {%  endif %}
 {%  endfor %}
+
+{% for static_file in site.static_files %}
+    {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/mapdfo-walle652-20210121.png' %}
+
+<a href="./figs/Explorer19MissionMap.png"><img src=./figs/Explorer19MissionMap.png></a>
+
+{%  endif %}
+{%  endfor %}
+
 
 {% for static_file in site.static_files %}
     {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/jp1_mapdfo-walle652-20210121.png' %}
@@ -416,7 +425,7 @@ h3 {font: sans-serif; color: #002277}
 
 <h4 id="variable"> Variable plots</h4>
 
-<!--** depth v time plots**  -- super colourful ones -->
+<!--** depth v time plots **-->
 
 {% for static_file in site.static_files %}
     {%  if static_file.path contains '/gliderdata/deployments/dfo-walle652/dfo-walle652-20210121/figs/pcolor_dfo-walle652-20210121_last10d.png' %}
@@ -438,9 +447,7 @@ h3 {font: sans-serif; color: #002277}
 {%  endfor %}
 
 
-
-
-
+<a href="./figs/pcolor_dfo-walle652-20210121_last10d.png"><img src=./figs/pcolor_dfo-walle652-20210121_last10d.png></a>
 
 
 
