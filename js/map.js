@@ -23,7 +23,7 @@ var featureLayer = L.geoJson(null, {
 });
 
 // Fetch the GeoJSON file
-$.getJSON("/gliderdata/deployments/cproof-deployments_argo.geojson", function (data) {
+$.getJSON("/gliderdata/deployments/cproof-deployments_all.geojson", function (data) {
   geojson = data;
   features = $.map(geojson.features, function(feature) {
     return feature.properties;
