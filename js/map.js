@@ -63,7 +63,7 @@ var gliderLayer = L.geoJson(null, {
 
 /////slocum icon 
 var slocumIcon = L.icon({
-  iconUrl: '/cproofwebsite/gliderdata/deployments/assets/images/slocum_glider.png',
+  iconUrl: '/gliderdata/deployments/assets/images/slocum_glider.png',
   iconSize:     [38, 45],
   iconAnchor:   [18, 22]
 });
