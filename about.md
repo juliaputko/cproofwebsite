@@ -7,8 +7,7 @@ header-img: "img/MikeSaanich19.jpg"
 
 <body class="about" >
 
-<h4><a href='gliderdata/deployments/calvert.html'>Story Page for Calvert Line</a></h4><br>
-<h4><a href='gliderdata/deployments/linep.html'>Story Page for Line P</a></h4><br>
+
 
 The Canadian Pacific Robotic Ocean Observing Facility uses state of the art technology to observe changes in the Northeast Pacific Ocean. The ocean and marine ecosystems are still poorly understood in many areas largely because of a lack of data. C-PROOF works to understand what drives ocean and climate variability, and our data is used to better predict weather and climate changes across Canada. Additionally, we collaborate with our partners to improve timely predictions of fish stocks so that economic and ecological concerns can be properly addressed. We also want to explore the ocean’s potential as a source of energy, which will help remote coastal communities and the country as a whole move towards carbon-free energy sources that rely on ocean waves and wind.
 </body>
@@ -22,9 +21,17 @@ The Canadian Pacific Robotic Ocean Observing Facility uses state of the art tech
 
 
 <body>
-<h3>What We Do</h3>
+<h3>What We Do</h3> 
 
-C-PROOF deploys <a href= '/platforms/'><strong>autonomous ocean gliders and floats</strong></a> to explore and monitor the ocean. These instruments are equipped with revolutionary new sensors capable of tracking life, measuring ocean nutrients, and quantifying ocean turbulence. We also plan to deploy mooring arrays with innovative instrumentation. Our data is publicly available and is shared with a wide array of partners and user groups for the benefit of Canadians; the data is used to inform ecosystem management, climate predictions, and weather forecasts. C-PROOF helps provide the information we need to make better plans for the future, and helps drive development of the technological solutions needed to enable those plans.
+
+C-PROOF deploys <a href= '/platforms/'><strong>autonomous ocean gliders and floats</strong></a> to explore and monitor the ocean. These instruments are equipped with revolutionary new sensors capable of tracking life, measuring ocean nutrients, and quantifying ocean turbulence. 
+
+Check out our active ocean glider monitoring lines:
+
+<h4><a href='gliderdata/deployments/calvert.html'>Calvert Line </a></h4>
+<h4><a href='gliderdata/deployments/linep.html'>Line P</a></h4>
+
+We also plan to deploy mooring arrays with innovative instrumentation. Our data is publicly available and is shared with a wide array of partners and user groups for the benefit of Canadians; the data is used to inform ecosystem management, climate predictions, and weather forecasts. C-PROOF helps provide the information we need to make better plans for the future, and helps drive development of the technological solutions needed to enable those plans.
 
 
 <a href ='/search/'><h3>In The News</h3></a>

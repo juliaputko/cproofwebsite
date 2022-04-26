@@ -28,6 +28,7 @@
   type: 
   visible: true
   visible2: true
+  calvertline: true
 
 - title: Ocean Gliders of the BC Central Coast
   subtitle: Autonomous robots are dove into Queen Charlotte Sound to discover why it’s so productive and how it is changing.
@@ -38,6 +39,7 @@
   type: 
   visible: true
   visible2: true
+  calvertline: true
 
 - title: WALL-E Returns to Shore for a Tune-Up
   subtitle: Plucking an ocean glider from the sea is anything but simple.
@@ -56,4 +58,5 @@
   url: https://hakai.org/bbs-first-mission/
   type: 
   visible: true
+  calvertline: true
 
