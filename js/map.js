@@ -97,7 +97,7 @@ var gliderLayer2 = L.geoJson(null, {
 //jpend 
 
 // Fetch the GeoJSON file
-$.getJSON("/cproofwebsite/gliderdata/deployments/cproof-deployments_all.geojson", function (data) {
+$.getJSON("cproofwebsite/gliderdata/deployments/cproof-deployments_all.geojson", function (data) {
   geojson = data;
   features = $.map(geojson.features, function(feature) {
     return feature.properties;
