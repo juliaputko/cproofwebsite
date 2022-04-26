@@ -73,7 +73,7 @@ MathJax.Hub.Config({
 
 <style>
 h3 {font: sans-serif; color: #002277}
-.datagrid table { border-collapse: collapse; text-align: left; width: 800px; }
+.datagrid table { border-collapse: collapse; text-align: left; width: 800px;  }
 .datagrid {font: normal 14px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #006699; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; width:800px; }
 .datagrid table td, .datagrid table th { padding: 3px 10px; }
 .datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #0070A8; }
@@ -155,7 +155,7 @@ h3 {font: sans-serif; color: #002277}
 </style>
 
 </head>
-<body>
+<body >
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -215,35 +215,32 @@ h3 {font: sans-serif; color: #002277}
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="site-heading" style="padding: 75px 0">
 
-                <h1>{{ line_ }}</h1>
+
+              {% if att['comment'] == 'Line P deployment Jan 2021.' %}
+                <h1>Line P Glider Line</h1>
                 <hr class="small">
-                <span class="subheading">C-PROOF Data</span>
+                <span class="subheading">Northeast Pacific Ocean</span>
+              {% endif %}
+
+
+              {% if att['comment'] == 'Calvert Island deployment' %}
+                <h1>Calvert Island Glider Line</h1>
+                <hr class="small">
+                <span class="subheading">BC Central Coast</span>
+              {% endif %}
+
+
             </div>
         </div>
     </div>
   </div>
 </header>
 
+
+
 <div class="container"></div>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-<!--div class="container">
-
-  
-  <h3> {{ deploy_name }} </h3>
-  <div class="datagrid">
-    <table>
-        <tr><th>Deployment</th><th>Description</th><th>Dates</th><th>Geographic Extent</th></tr>
-          <tr>
-            <td>{{ att['deployment_name'] }}</td>
-            <td>{{ att['comment'] }}</td>
-            <td>{{ att['time_coverage_start'] }}<br/>{{att['time_coverage_end']}}
-            <td>{{ "%.3f"|format(att['geospatial_lat_min']) }} {{ "%.3f"|format(att['geospatial_lat_max'])}} N<br/>{{"%.3f"|format(att['geospatial_lon_min'])}} {{"%.3f"|format(att['geospatial_lon_max'])}} E</td>
-          </tr>
-    </table>
-  </div-->
-
 
 
 {% if att['comment'] == 'Line P deployment Jan 2021.' %}
@@ -255,24 +252,8 @@ h3 {font: sans-serif; color: #002277}
 <p> {{ '{%' }} include calvertlinetext.html  {{ '%}' }} </p>
 {% endif %}
 
-  <h3> {{ line_ }} Missions </h3>
-  <section>
 
-  {% for mission in all_ %}
-  
-       <a href=" {{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/">{{ mission }}</a> <br/>
- 
-    
-  {% endfor %}
-
-
-
-
-  </section>
-
-
-
-  <h3> Recent Figures </h3>
+<h3> Latest Mission Figures  </h3>
 
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
@@ -282,16 +263,137 @@ h3 {font: sans-serif; color: #002277}
 {{ '{%' }}  endfor {{ '%}' }}
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
-  {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pcolor_{{ deploy_name }}.png' {{ '%}' }}
-    <a href="{{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pcolor_{{ deploy_name }}.png"><img src={{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pcolor_{{ deploy_name }}.png></a>
+  {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pcolor400_{{ deploy_name }}.png' {{ '%}' }}
+    <a href="{{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pcolor400_{{ deploy_name }}.png"><img src={{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pcolor400_{{ deploy_name }}.png></a>
   {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
 
 {{ '{%' }} for static_file in site.static_files {{ '%}' }}
-  {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pvp_{{ deploy_name }}.png' {{ '%}' }}
-    <a href="{{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pvp_{{ deploy_name }}.png"><img src={{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/pvp_{{ deploy_name }}.png></a>
+  {{ '{%' }}  if static_file.path contains '/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/vv_{{ deploy_name }}.png' {{ '%}' }}
+    <a href="{{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/vv_{{ deploy_name }}.png"><img src={{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/figs/vv_{{ deploy_name }}.png></a>
   {{ '{%' }}  endif {{ '%}' }}
 {{ '{%' }}  endfor {{ '%}' }}
+
+
+<br><br>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  /*background-color: rgb(197, 197, 197);*/
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  /* font-size: 15px; */
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  /*background-color: #f1f1f1;*/
+}
+</style>
+
+
+{% for mission in all_ %}
+<button type="button" class="collapsible"><h3> {{ line_ }} Missions<h3></button>
+<div class="content">
+  <a href=" {{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/"><h4>{{ mission }}</h4></a> <br/>
+</div>
+{% endfor %}
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<br><br>
+
+
+
+  <!--h3> {{ line_ }} Missions </h3>
+  <section>
+
+  {% for mission in all_ %}
+  
+       <a href=" {{ '{{' }} site.baseurl {{ '}}' }}/gliderdata/deployments/{{ link_ }}/{{ mission }}/">{{ mission }}</a> <br/>
+ 
+    
+  {% endfor %}
+  </section-->
+
+
+
+
+
+
+
+
+{% if att['comment'] == 'Line P deployment Jan 2021.' %}
+<h3> Line P News </h3>
+
+{{ '{%' }} for post in site.data.inthenews {{ '%}' }}{{ '{%' }} if post.visible == true {{ '%}' }}{{ '{%' }} if post.linep == true {{ '%}' }}
+<ul class="post-preview">   <!---post-preview  -->
+    <a href="{{ '{{' }}  post.url {{ '}}' }}">
+        <h3 class="post-title">   {{ '{{' }} post.title {{ '}}' }}
+        </h3>
+    </a>
+    <p class="post-meta" style="margin-bottom:5px">{{ '{{' }} post.date | date: "%B %-d, %Y" {{ '}}' }}</p>
+    <hr>
+  </ul>
+
+{{ '{%' }} endif {{ '%}' }}
+{{ '{%' }}  endif {{ '%}' }}
+{{ '{%' }} endfor {{ '%}' }}
+
+
+{% endif %}
+
+
+{% if att['comment'] == 'Calvert Island deployment' %}
+<h3> Calvert Line News </h3>
+
+{{ '{%' }} for post in site.data.inthenews {{ '%}' }}{{ '{%' }} if post.visible == true {{ '%}' }}{{ '{%' }} if post.calvertline == true {{ '%}' }}
+<ul class="post-preview">   <!---post-preview  -->
+    <a href="{{ '{{' }}  post.url {{ '}}' }}">
+        <h3 class="post-title">  {{ '{{' }} post.title {{ '}}' }}
+        </h3>
+    </a>
+    <p class="post-meta" style="margin-bottom:5px">{{ '{{' }} post.date | date: "%B %-d, %Y" {{ '}}' }}</p>
+    <hr>
+  </ul>
+
+{{ '{%' }} endif {{ '%}' }}
+{{ '{%' }}  endif {{ '%}' }}
+ {{ '{%' }} endfor {{ '%}' }}
+
+
+{% endif %}
+
+
+
+
+
+
 
 
 
