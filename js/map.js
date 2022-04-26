@@ -63,7 +63,7 @@ var gliderLayer = L.geoJson(null, {
 
 /////slocum icon 
 var slocumIcon = L.icon({
-  iconUrl: '/gliderdata/deployments/assets/images/slocum_glider.png',
+  iconUrl: '/cproofwebsite/gliderdata/deployments/assets/images/slocum_glider.png',
   iconSize:     [38, 45],
   iconAnchor:   [18, 22]
 });
@@ -97,7 +97,7 @@ var gliderLayer2 = L.geoJson(null, {
 //jpend 
 
 // Fetch the GeoJSON file
-$.getJSON("/gliderdata/deployments/cproof-deployments_all.geojson", function (data) {
+$.getJSON("/cproofwebsite/gliderdata/deployments/cproof-deployments_all.geojson", function (data) {
   geojson = data;
   features = $.map(geojson.features, function(feature) {
     return feature.properties;
