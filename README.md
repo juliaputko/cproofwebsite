@@ -1,3 +1,8 @@
+# Julia Putko website version can be accessed here:
+
+https://juliaputko.github.io/cproofwebsite/
+
+
 # Page for C-PROOF website
 
 Based off https://projectpages.github.io.  
